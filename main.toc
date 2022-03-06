@@ -1,0 +1,184 @@
+\selectlanguage *{french}
+\contentsline {chapter}{\numberline {1}Chapitre 1}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}La physique sous l'angle des symétries}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Galilée puis Newton et la philosophie naturelle}{2}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Mécanique analytique, Lagrangien et Lois physiques}{2}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Relativité Restreinte et Mécanique Quantique}{2}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Concept de symétrie en physique}{4}{subsection.1.1.4}%
+\contentsline {section}{\numberline {1.2}La Symétrie de Lorentz}{4}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}L'apparition du groupe $SO(1,3)$}{5}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Les représentations de $SO(1,3)$}{5}{subsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.2.1}Représentation triviale}{5}{subsubsection.1.2.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2.2}Boosts et rotations : représentation fondamentale de $SO(1,3)$}{6}{subsubsection.1.2.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.2.3}Les 2-spineurs : représentation fondamentale de $SU(2)\otimes SU(2)$}{6}{subsubsection.1.2.2.3}%
+\contentsline {subsection}{\numberline {1.2.3}Quantification}{7}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Groupe de Lorentz et Lagrangien}{8}{subsection.1.2.4}%
+\contentsline {section}{\numberline {1.3}Modèle Standard de la physique des particules}{9}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Présentation générale}{9}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Constituants du Modèle Standard}{10}{subsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.2.1}Les fermions}{10}{subsubsection.1.3.2.1}%
+\contentsline {subsubsection}{\numberline {1.3.2.2}Les bosons}{10}{subsubsection.1.3.2.2}%
+\contentsline {subsubsection}{\numberline {1.3.2.3}Les symétries de jauges}{12}{subsubsection.1.3.2.3}%
+\contentsline {subsection}{\numberline {1.3.3}L'électrodynamique quantique (QED)}{12}{subsection.1.3.3}%
+\contentsline {subsubsection}{\numberline {1.3.3.1}L'interaction électromagnétique}{12}{subsubsection.1.3.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.3.2}La symétrie de jauge $U(1)$}{12}{subsubsection.1.3.3.2}%
+\contentsline {subsection}{\numberline {1.3.4}La théorie Électrofaible}{14}{subsection.1.3.4}%
+\contentsline {subsubsection}{\numberline {1.3.4.1}L'interaction faible}{14}{subsubsection.1.3.4.1}%
+\contentsline {subsubsection}{\numberline {1.3.4.2}La symétrie de jauge $U(1)_Y \otimes SU(2)_L$}{14}{subsubsection.1.3.4.2}%
+\contentsline {subsubsection}{\numberline {1.3.4.3}La proposition d'un champ scalaire additionnel}{16}{subsubsection.1.3.4.3}%
+\contentsline {subsubsection}{\numberline {1.3.4.4}Brisure spontanée de symétrie}{17}{subsubsection.1.3.4.4}%
+\contentsline {subsection}{\numberline {1.3.5}La chromodynamique quantique (QCD)}{19}{subsection.1.3.5}%
+\contentsline {subsubsection}{\numberline {1.3.5.1}L'interaction forte}{19}{subsubsection.1.3.5.1}%
+\contentsline {subsubsection}{\numberline {1.3.5.2}La symétrie de jauge $SU(3)_C$}{20}{subsubsection.1.3.5.2}%
+\contentsline {subsection}{\numberline {1.3.6}Densité de probabilité partonique (PDF)}{21}{subsection.1.3.6}%
+\contentsline {subsection}{\numberline {1.3.7}Le Lagrangien complet}{24}{subsection.1.3.7}%
+\contentsline {subsection}{\numberline {1.3.8}Limites du Modèle Standard}{26}{subsection.1.3.8}%
+\contentsline {section}{\numberline {1.4}Extension du Modèle Standard}{27}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Introduction}{27}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Interprétation de la violation de symétrie de Lorentz}{28}{subsection.1.4.2}%
+\contentsline {subsubsection}{\numberline {1.4.2.1}Expérience de pensée}{28}{subsubsection.1.4.2.1}%
+\contentsline {paragraph}{Discussion}{29}{paragraph*.17}%
+\contentsline {subsection}{\numberline {1.4.3}La différence de transformation observateur / particule}{30}{subsection.1.4.3}%
+\contentsline {paragraph}{Fin de l'équivalence}{31}{paragraph*.20}%
+\contentsline {subsection}{\numberline {1.4.4}Formalisme du SME}{31}{subsection.1.4.4}%
+\contentsline {subsubsection}{\numberline {1.4.4.1}Vide et espace-temps constant}{31}{subsubsection.1.4.4.1}%
+\contentsline {paragraph}{Modèle simplifié : Mécanique newtonienne tridimensionnelle}{31}{paragraph*.21}%
+\contentsline {subsubsection}{\numberline {1.4.4.2}Une théorie effective}{32}{subsubsection.1.4.4.2}%
+\contentsline {subsubsection}{\numberline {1.4.4.3}Le formalisme mathématique}{33}{subsubsection.1.4.4.3}%
+\contentsline {subsubsection}{\numberline {1.4.4.4}Le Lagrangien du SME minimal}{35}{subsubsection.1.4.4.4}%
+\contentsline {subsection}{\numberline {1.4.5}L'état de l'art}{35}{subsection.1.4.5}%
+\contentsline {subsection}{\numberline {1.4.6}Conclusion}{37}{subsection.1.4.6}%
+\contentsline {chapter}{\numberline {2}Étude phénoménologique}{39}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Le quark top}{39}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Production du quark top au LHC}{40}{subsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.1.1}Production par paire}{40}{subsubsection.2.1.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.1.2}Production célibataire}{40}{subsubsection.2.1.1.2}%
+\contentsline {subsection}{\numberline {2.1.2}Désintégration du quark top.}{41}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Secteur du quark top dans le SME}{42}{section.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.0.1}Éléments de matrice}{44}{subsubsection.2.2.0.1}%
+\contentsline {subsubsection}{\numberline {2.2.0.2}Poids SME}{46}{subsubsection.2.2.0.2}%
+\contentsline {subsubsection}{\numberline {2.2.0.3}Expériences terrestres}{46}{subsubsection.2.2.0.3}%
+\contentsline {section}{\numberline {2.3}Référentiel de l'expérience CMS}{49}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Changement de mesure temporelle}{49}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Rotation SCF $\rightarrow $ CMS}{52}{subsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.2.1}Matrices de rotation}{53}{subsubsection.2.3.2.1}%
+\contentsline {subsection}{\numberline {2.3.3}Les quantités $A^{\mu \nu }$}{55}{subsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.3.1}La fonction de modulation}{56}{subsubsection.2.3.3.1}%
+\contentsline {subsection}{\numberline {2.3.4}Les équations}{57}{subsection.2.3.4}%
+\contentsline {subsubsection}{\numberline {2.3.4.1}Établissement de l'équation de modulation pour $c_\mathrm {XX} = -c_\mathrm {YY}$}{58}{subsubsection.2.3.4.1}%
+\contentsline {subsubsection}{\numberline {2.3.4.2}Résumé des équations de modulation}{59}{subsubsection.2.3.4.2}%
+\contentsline {subsection}{\numberline {2.3.5}Représentation graphique}{59}{subsection.2.3.5}%
+\contentsline {section}{\numberline {2.4}Sensibilité aux collisionneurs}{60}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Precision attendue au LHC Run II}{60}{subsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.1.1}Le nombre d'événements attendu à CMS}{60}{subsubsection.2.4.1.1}%
+\contentsline {subsubsection}{\numberline {2.4.1.2}La précision par test $\chi ^2$}{61}{subsubsection.2.4.1.2}%
+\contentsline {subsection}{\numberline {2.4.2}Projection pour les collisionneurs futurs}{62}{subsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.2.1}L'influence de l'énergie au centre de masse}{62}{subsubsection.2.4.2.1}%
+\contentsline {subsubsection}{\numberline {2.4.2.2}L'influence de l'orientation du détecteur}{64}{subsubsection.2.4.2.2}%
+\contentsline {subsubsection}{\numberline {2.4.2.3}L'influence de la luminosité}{65}{subsubsection.2.4.2.3}%
+\contentsline {section}{\numberline {2.5}Conclusion}{67}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Le dispositif expérimental}{69}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Large Hadron Collider}{70}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Accélération de protons}{70}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Les expériences}{71}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Luminosité}{72}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Empilement}{73}{subsection.3.1.4}%
+\contentsline {section}{\numberline {3.2}L'expérience CMS (\emph {Compact Muon Solenoid})}{74}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Système de coordonnées}{75}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Aimant solénoïdal}{76}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Le trajectographe : pixels et pistes de silicium}{77}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Calorimètre électromagnétique}{77}{subsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.4.1}Les cristaux}{79}{subsubsection.3.2.4.1}%
+\contentsline {subsubsection}{\numberline {3.2.4.2}Le détecteur à pied de gerbe}{80}{subsubsection.3.2.4.2}%
+\contentsline {subsubsection}{\numberline {3.2.4.3}Performances}{80}{subsubsection.3.2.4.3}%
+\contentsline {subsection}{\numberline {3.2.5}Calorimètre hadronique}{81}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}Chambres à muons}{83}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.2.7}Système de déclenchement}{85}{subsection.3.2.7}%
+\contentsline {section}{\numberline {3.3}Mesure de la luminosité}{86}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Simulation et reconstruction des évènements}{89}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Génération des évènements}{89}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}L'événement dur}{89}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}De l'événement dur aux particules dans le détecteur}{90}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Simulation du détecteur}{92}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Reconstruction des évènements}{92}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}L'algorithme \emph {Particle-Flow} (PF)}{92}{subsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}Trajectographie itérative}{92}{subsubsection.4.2.1.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.2}Vertex d'interaction : reconstruction et empilement}{93}{subsubsection.4.2.1.2}%
+\contentsline {subsubsection}{\numberline {4.2.1.3}Agglomération calorimétrique}{93}{subsubsection.4.2.1.3}%
+\contentsline {subsubsection}{\numberline {4.2.1.4}L'algorithme de liaison}{95}{subsubsection.4.2.1.4}%
+\contentsline {subsubsection}{\numberline {4.2.1.5}Reconstruction des muons}{96}{subsubsection.4.2.1.5}%
+\contentsline {subsubsection}{\numberline {4.2.1.6}Reconstruction des électrons}{97}{subsubsection.4.2.1.6}%
+\contentsline {subsubsection}{\numberline {4.2.1.7}Reconstruction des photons et hadrons neutres}{97}{subsubsection.4.2.1.7}%
+\contentsline {subsection}{\numberline {4.2.2}Isolation des leptons et des photons}{98}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}Corrections $\Delta \beta $}{99}{subsubsection.4.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}Corrections à la surface effective}{99}{subsubsection.4.2.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Reconstruction des jets}{99}{subsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.3.1}Calibration des jets}{101}{subsubsection.4.2.3.1}%
+\contentsline {subsection}{\numberline {4.2.4}Étiquetage des jets issus de quarks $b$}{102}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Énergie transverse manquante}{105}{subsection.4.2.5}%
+\contentsline {section}{\numberline {4.3}Conclusion}{105}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Recherche d'une violation de la symétrie de Lorentz avec CMS au LHC}{107}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Reconstruction des évènements et identification des objets}{108}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Sélection des évènements}{109}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Sélection sur les chemins de déclenchement}{109}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Sélection hors-ligne}{109}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Reconstruction de la masse dilepton}{111}{subsection.5.2.3}%
+\contentsline {section}{\numberline {5.3}Les bruits de fond}{111}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Corrections des simulations Monte-Carlo}{114}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Corrections appliquées aux évènements}{114}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Pondérations dues à la reconstruction et identification des leptons}{115}{subsection.5.4.2}%
+\contentsline {section}{\numberline {5.5}Comparaison données/simulations}{117}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Validation des coupures}{119}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Comparaison sur des observables}{119}{subsection.5.5.2}%
+\contentsline {section}{\numberline {5.6}Test statistique et incertitudes systématiques}{120}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}L'ajustement par maximum de vraisemblance}{120}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}La méthode $\textrm {CL}_s$}{123}{subsection.5.6.2}%
+\contentsline {subsection}{\numberline {5.6.3}Liste des incertitudes systématiques}{124}{subsection.5.6.3}%
+\contentsline {subsubsection}{\numberline {5.6.3.1}Incertitudes indépendantes du temps}{124}{subsubsection.5.6.3.1}%
+\contentsline {subsection}{\numberline {5.6.4}Incertitudes dépendantes du temps}{126}{subsection.5.6.4}%
+\contentsline {section}{\numberline {5.7}Extraction du signal}{126}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Mesure différentielle en fonction du temps }{129}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Mesure des paramètres $c_{\mu \nu }$ dans le SME}{131}{subsection.5.7.2}%
+\contentsline {subsection}{\numberline {5.7.3}Impacts des incertitudes systématiques}{133}{subsection.5.7.3}%
+\contentsline {subsection}{\numberline {5.7.4}Discussion}{136}{subsection.5.7.4}%
+\contentsline {chapter}{Conclusion}{137}{chapter*.107}%
+\contentsline {chapter}{\numberline {A}Annexe : Outils mathématiques}{139}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Structure algébrique}{139}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Groupe}{139}{subsection.A.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}Algèbre}{140}{subsection.A.1.2}%
+\contentsline {section}{\numberline {A.2}Groupe et algèbre de Lie}{140}{section.A.2}%
+\contentsline {subsection}{\numberline {A.2.1}Algèbre et crochet de Lie}{141}{subsection.A.2.1}%
+\contentsline {section}{\numberline {A.3}Théorie des représentations}{141}{section.A.3}%
+\contentsline {subsection}{\numberline {A.3.1}Définition}{141}{subsection.A.3.1}%
+\contentsline {subsection}{\numberline {A.3.2}La représentation triviale}{142}{subsection.A.3.2}%
+\contentsline {subsection}{\numberline {A.3.3}La représentation fondamentale}{142}{subsection.A.3.3}%
+\contentsline {subsection}{\numberline {A.3.4}Exemples de groupes présent en physique}{142}{subsection.A.3.4}%
+\contentsline {chapter}{\numberline {B}Annexe : Approfondissement SME}{143}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Les $ A^{\mu \nu } $}{143}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Les fonctions $f(t)$}{145}{section.B.2}%
+\contentsline {subsection}{\numberline {B.2.1}$c_\mathrm {XY} = c_\mathrm {YX}$}{146}{subsection.B.2.1}%
+\contentsline {subsection}{\numberline {B.2.2}$c_\mathrm {XZ} = c_{ZX}$}{146}{subsection.B.2.2}%
+\contentsline {subsection}{\numberline {B.2.3}$c_\mathrm {YZ} = c_\mathrm {ZY}$}{147}{subsection.B.2.3}%
+\contentsline {subsection}{\numberline {B.2.4}Les cas $c_{Ti}$ avec $i=X,Y,Z$}{147}{subsection.B.2.4}%
+\contentsline {section}{\numberline {B.3}Tracés des coefficients de Wilson}{148}{section.B.3}%
+\contentsline {subsection}{\numberline {B.3.1}$c_{R\mu \nu } $}{148}{subsection.B.3.1}%
+\contentsline {subsection}{\numberline {B.3.2}$c_{\mu \nu } $}{149}{subsection.B.3.2}%
+\contentsline {subsection}{\numberline {B.3.3}$d_{\mu \nu } $}{149}{subsection.B.3.3}%
+\contentsline {section}{\numberline {B.4}Moyenne d'éléments de matrice $\langle A_{\mu \nu } \rangle $}{150}{section.B.4}%
+\contentsline {section}{\numberline {B.5}Maximum de modulation fonction de la latitude et de l'azimut}{151}{section.B.5}%
+\contentsline {subsection}{\numberline {B.5.1}$c_\mathrm {XX} = -c_\mathrm {YY}$}{152}{subsection.B.5.1}%
+\contentsline {subsection}{\numberline {B.5.2}$c_\mathrm {XY} = c_\mathrm {YX}$}{152}{subsection.B.5.2}%
+\contentsline {subsection}{\numberline {B.5.3}$c_\mathrm {XZ} = c_{ZX}$}{152}{subsection.B.5.3}%
+\contentsline {subsection}{\numberline {B.5.4}$c_\mathrm {YZ} = c_\mathrm {YX}$}{153}{subsection.B.5.4}%
+\contentsline {chapter}{\numberline {C}Annexe : Complément d'analyse}{155}{appendix.C}%
+\contentsline {section}{\numberline {C.1}Datasets pour les données 2016 et 2017}{155}{section.C.1}%
+\contentsline {subsection}{\numberline {C.1.1}Liste des déclencheurs}{155}{subsection.C.1.1}%
+\contentsline {subsection}{\numberline {C.1.2}Liste des échantillons Monte-Carlo}{156}{subsection.C.1.2}%
+\contentsline {subsection}{\numberline {C.1.3}Liste des échantillons de données}{156}{subsection.C.1.3}%
+\contentsline {section}{\numberline {C.2}Facteurs correctifs sur les Monte-Carlo}{157}{section.C.2}%
+\contentsline {subsection}{\numberline {C.2.1}Reconstruction, isolation, identification, des électrons et des muons}{157}{subsection.C.2.1}%
+\contentsline {subsection}{\numberline {C.2.2}$b$-, $c$-, light-jets tagging}{160}{subsection.C.2.2}%
+\contentsline {section}{\numberline {C.3}Comparaison DATA/Monte-Carlo pré-fits}{162}{section.C.3}%
+\contentsline {section}{\numberline {C.4}Incertitudes systématiques}{166}{section.C.4}%
+\contentsfinish 
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

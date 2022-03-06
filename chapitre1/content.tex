@@ -1,0 +1,1186 @@
+\chapter{Chapitre 1} \label{chap:chap1}
+
+\begin{fmffile}{chapitre1}
+
+
+
+\section{La physique sous l'angle des symétries}
+
+Les réflexions sur la nature du monde qui nous entoure sont apparues avec nous. Pourtant, les premières traces de pensées philosophiques de la nature semblent très récentes à l'échelle de notre histoire (Antiquité). Si les balbutiements de ce que l'on nomme aujourd'hui la physique peuvent trouver des racines dans les textes d'Aristote, d'Empédocle ou encore de Démocrite, il semble plus pertinent de considérer l'apparition de la physique durant la Renaissance.
+
+\subsection{Galilée puis Newton et la philosophie naturelle}
+La proposition fondatrice de la physique est la citation de Galilée dans \emph{l'Essayeur} en 1623, "La nature est écrite en langage mathématique ". Cette idée que nous savons \emph{a posteriori} profondément fructueuse connaîtra la consécration absolue lors de la publication en 1687 du \emph{Philosophiae naturalis principia mathematica} d'Isaac Newton. Ce traité donnera les clés de la construction mathématique des comportements dynamiques des objets (ou mécanique). Cette mécanique dite newtonienne, plus que de par ses innombrables prédictions vérifiées depuis plus de trois siècles, ira jusqu'à amener Urbain Le Verrier, en 1846, à postuler, par le calcul, l'existence d'une planète encore inconnue à l'époque : Neptune. 
+
+\subsection{Mécanique analytique, Lagrangien et Lois physiques}\label{lagrangien}
+Émergeant des travaux de Lagrange, Euler, Maupertuis, D'Alembert (fin du XVIIIe siècle) ou encore Hamilton (XIXe siècle), une reformulation de la mécanique newtonienne apparaît. Cette proposition théorique est basée sur l'existence d'une quantité mathématique nommée Lagrangien $L$ homogène à une énergie. L'intégrale des Lagrangiens sur toute une période de temps joignant deux évènements $A$ et $B$ se nomme action $S$.
+\begin{equation*}
+    S = \int_{t_A}^{t_B} L \mathrm{d}t
+\end{equation*}  
+Il est alors possible, par une proposition philosophique très élégante, de reconstruire intégralement la mécanique newtonienne. Ce principe appelé principe de moindre action stipule que : " Entre deux évènements $A$ et $B$, la nature choisira la voie qui minimisera son action ".
+Cette formulation est mathématiquement équivalente à l'équation d'Euler-Lagrange : 
+\begin{equation*}
+\frac{\mathrm{d}}{\mathrm{d}t}\left( \frac{\partial L}{\partial \dot{q}}\right) - \frac{\partial L}{\partial q} = 0 
+\end{equation*}
+avec $q$ et $\dot{q}$ respectivement les coordonnées généralisées et leur dérivée temporelle.
+Le Lagrangien muni du principe de moindre action, suffit à générer, pour une théorie donnée, l'ensemble des relations mathématiques régissant les phénomènes physiques (observables, mesurables). Autrement dit, cette quantité peut aisément s'interpréter comme représentant le concept de "Loi Physique".
+
+\subsection{Relativité Restreinte et Mécanique Quantique}
+Coup sur coup, la physique du XXe siècle va connaître deux révolutions. La première viendra de l'unification sous un même formalisme de l'électromagnétisme et de la mécanique. En effet, la fin du XIXe siècle est marquée par le triomphe de la théorie de l'électromagnétisme. Cette théorie permet la description de tous les phénomènes électromagnétiques grâce aux équations pilotant les champs électrique et magnétique, les équations de Maxwell
+\begin{align*}\label{Maxwell}
+    &\vec{\nabla} \cdot \vec{E} = \frac{\rho}{\epsilon_{0}} \qquad \qquad \vec{\nabla} \wedge \vec{E} = - \frac{\partial \vec{B}}{\partial t} \\
+    &\vec{\nabla} \cdot \vec{B} = 0 \qquad  \qquad \vec{\nabla} \wedge \vec{B} = \mu_0 \vec{j} + \epsilon_{0}\mu_0 \frac{\partial \vec{E}}{\partial t}
+\end{align*}
+Il semblait y avoir une dualité entre la mécanique newtonienne et l'électromagnétisme. Lors d'un changement de référentiel inertiel, la mécanique newtonienne doit transformer ses équations sous transformation de Galilée pour assurer l'invariance de leur forme mathématique. Les équations de Maxwell, elles, se transforment par transformations de Lorentz. Cette transformation est pilotée par le facteur de Lorentz :
+\begin{equation}
+    \gamma = \frac{1}{\sqrt{1- \beta^2}}
+\end{equation} 
+avec $\beta$ le rapport de la vitesse entre les deux référentiels et la vitesse de la lumière dans le vide. L'ensemble des transformation est résumé dans la table \tablename{\ref{tab:transformations}}.
+\begin{table}
+\begin{center}
+\begin{tabular}{cc}
+        \noalign{\smallskip}\hline\noalign{\smallskip}
+        Transformation de Galilée & Transformation de Lorentz \\
+        \noalign{\smallskip}
+        \hline \hline
+        \noalign{\smallskip}
+        $\left\{ \begin{matrix}
+        t' = t \\
+        \vec{r\,}' = \vec{r} - \vec{v}t
+        \end{matrix}  \right.$
+        &
+        $\left\{ \begin{matrix}
+        ct' = \gamma \left(ct - \vec{\beta} \cdot \vec{r}_\parallel  \right) \\
+        \vec{r}\,'_\parallel =\gamma \left(\vec{r}_\parallel - c t\vec{\beta}   \right) \\
+        \vec{r}\,'_{\perp} = \vec{r}_{\perp}
+        \end{matrix}  \right.$ \\
+        \noalign{\smallskip}\hline\noalign{\smallskip}
+\end{tabular}
+\caption{Résumé des transformations de coordonnées dans le cas newtonien (Galilée) et dans le cas relativiste (Lorentz). Le vecteur position $\vec{r}$ est décomposé en une composante parallèle ($\parallel$) et une composante perpendiculaire ($\perp$). Autrement dit $\vec{r} = \vec{r}_{\parallel} +\vec{r}_{\perp}$.}
+\label{tab:transformations}
+\end{center}
+\end{table}
+
+S'appuyant sur les travaux de Poincaré, Lorentz, Minkowski, Einstein va construire en 1905 une théorie unificatrice qui présentera la dynamique des corps dont les changements de coordonnées se feront par transformation de Lorentz. Il s'agit de la Relativité Restreinte.
+La deuxième révolution viendra avec la découverte d'objets infiniment petits comme l'électron par Thomson à la fin du XIXe siècle. Des problématiques conceptuelles amèneront les physiciens comme Bohr, Dirac, Schrödinger, Pauli ou encore Heisenberg à créer une nouvelle mécanique de description du monde infinitésimal, la mécanique quantique. Très vite, la volonté de description des champs dans cette mécanique nouvelle vont conduire à la proposition théorique, aujourd'hui encore d'actualité : la Théorie Quantique des Champs. Dans cette théorie les particules sont vues comme des excitations de champs quantiques.
+
+\subsection{Concept de symétrie en physique}
+Le concept de symétrie est omniprésent en physique. Bien que présent dès les débuts de la physique, ce n'est qu'à la fin du XIXe siècle que Pierre Curie proposera explicitement d'élever le concept de symétrie en principe physique. " Lorsque certaines causes produisent certains effets, les éléments de symétrie des causes doivent se retrouver dans les effets produits. ". Dans les premiers temps, c'est le domaine de la cristallographie qui usera de ce principe. Mais au début du XXe siècle, la mathématicienne Amalie (Emmy) Noether introduisit un théorème associant à chaque conservation (ou symétrie) du Lagrangien (par un paramètre donné), une quantité conservée. Par exemple la conservation du Lagrangien au cours du temps induira la conservation de l'énergie totale d'un système, la symétrie du lagrangien par translation induira la conservation de la quantité de mouvement.
+\newline
+
+Le théorème de Noether au début du XXe siècle marquera un changement de paradigme au sein de la physique. Depuis lors, les théories fondamentales de physique sont toujours bâties autour d'un Lagrangien et des symétries qu'il porte. Dans la suite de ce chapitre seront introduits les symétries et le Lagrangien permettant la compréhension des particules élémentaires dans le cadre théorique de la théorie quantique des champs et plus précisément du Modèle Standard de la physique des particules.
+
+
+\section{La Symétrie de Lorentz}\label{sec:symetrie_de_lorentz}
+
+La Relativité Restreinte, après plus d'un siècle de réussite, est aujourd'hui la théorie centrale de la physique moderne. Elle est le socle commun à la Relativité Générale et à la Théorie Quantique des champs. Une approche telle que la théorie quantique des champs, qui se veut descriptive de la nature, doit respecter la Relativité Restreinte. Il est possible de reconstruire la Relativité Restreinte sous l'angle des symétries.
+Cela consiste simplement à postuler la conservation de l'intervalle d'espace-temps $ds$ défini par :
+
+ \begin{equation}
+ \boxed{
+     \mathrm{d}s^2 = c^2 \mathrm{d}t^2 - \mathrm{d}\vec{r}\,^2 = \sum_{\mu=0}^{3}  \sum_{\nu=0}^{3} g_{\mu\nu}\mathrm{d}x^{\mu}\mathrm{d}x^{\nu}
+ }
+ \end{equation}
+ avec $c$ la vitesse de la lumière dans le vide et 
+ \begin{equation}
+     (g_{\mu\nu}) =
+     \begin{pmatrix}
+         1 & 0 & 0 & 0 \\
+         0 & -1 & 0 & 0 \\
+         0 & 0 & -1 & 0 \\
+         0 & 0 & 0 & -1 
+     \end{pmatrix}
+ \end{equation}
+
+La manipulation des symétries va faire appel à des structures mathématiques nommées groupes dont un bref rappel est présent en annexe \ref{A:groupe}. 
+
+\subsection{L'apparition du groupe $SO(1,3)$}
+Dans la suite de ce manuscrit seront utilisées les lettres grecques en guise d'indices d'espace-temps ainsi que la convention de sommation d'Einstein\footnote{Les symboles $\sum$ sont omis en cas de sommation sur des indices d'espace-temps.}. En développant le postulat, pour deux référentiels inertiels, dont un symbolisé par "'", on a :
+\begin{align*}
+ \mathrm{d}s^2 &= \mathrm{d}s\,'^2 \\
+ g_{\mu\nu}\mathrm{d}x^{\mu}\mathrm{d}x^{\nu} &= g_{\alpha\beta}\mathrm{d}x\,'^{\alpha}\mathrm{d}x\,'^{\beta} \\
+  &= g_{\alpha\beta}\Lambda^\alpha_{\,\,\mu}\mathrm{d}x^{\mu} \Lambda^\beta_{\,\,\nu}  \mathrm{d}x^{\nu} \\
+&= \Lambda^\alpha_{\,\,\mu} g_{\alpha\beta} \Lambda^\beta_{\,\,\nu} \mathrm{d}x^{\mu} \mathrm{d}x^{\nu}
+\end{align*}
+où les éléments $\Lambda$ sont nommés transformations de Lorentz.
+
+Finalement, la Relativité Restreinte peut s'exprimer comme l'invariance des lois physiques sous l'application d'un groupe de symétrie composé d'objets $\Lambda$ répondant à l'équation : 
+
+\begin{equation}\label{lorentz}
+    g = \Lambda^t g \Lambda
+\end{equation}
+
+Cette relation fait de $\Lambda$ un élément du groupe $\mathrm{O}(1,3)$.
+Il est possible de déduire de \eqref{lorentz} :
+\begin{equation}
+    \mathrm{det}(\Lambda) = \pm 1
+\end{equation}
+ainsi que :
+\begin{align}
+    \left(\Lambda^0_0\right)^2 &= 1 + \sum_{i=1}^{3} \left( \Lambda^i_0  \right)^2 \nonumber\\
+    | \Lambda^0_0 | & > 1
+\end{align}
+
+ Lorsque $\Lambda^0_0 > 1$ la sous-structure est dite orthochrone, non-orthochrone sinon. Il est à noter que seule la sous-structure spéciale ($\mathrm{det}(\Lambda) =  +1$) orthochrone est un groupe. Il s'agit du groupe $SO(1,3)$ ou groupe de Lorentz réduit.
+
+
+\subsection{Les représentations de $SO(1,3)$}
+
+La théorie mathématique des groupes fournit une grille de lecture avec la théorie des représentations qui est fondamentale en physique des particules. Dans ce contexte, chacune des représentations de $SO(1,3)$ peut nous donner des objets exploitables en physique.
+
+\subsubsection{Représentation triviale}
+
+En théorie des groupes, tout groupe possède une représentation dite triviale qui consiste à représenter chaque élément par une matrice unité. Cela implique que les objets sur lesquels sont appliquées ces transformations sont de type scalaire à l'image des champs quantiques de spin 0.
+
+
+\subsubsection{Boosts et rotations : représentation fondamentale de $SO(1,3)$}
+
+De manière triviale, on peut décomposer les éléments de $SO(1,3)$ en combinaison linéaire sur la base composée de $ R_{i=1,2,3}$ et $B_{i=1,2,3}$ suivante : 
+
+\begin{align}\label{rotboost}
+    &R_\mathrm{x} =
+    \begin{pmatrix}
+        1 & 0 & 0 & 0 \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & \cos(\theta) & -\sin(\theta) \\
+        0 & 0 &\sin(\theta) & \cos(\theta)
+    \end{pmatrix}
+    &B_\mathrm{x} =
+    \begin{pmatrix}
+        \cosh(\eta) &\sinh(\eta) & 0 & 0 \\
+        \sinh(\eta) & \cosh(\eta) & 0 & 0 \\
+        0 & 0 & 1 & 0 \\
+        0 & 0 & 0 & 1
+    \end{pmatrix}
+    \nonumber \\
+    &R_\mathrm{y} =
+    \begin{pmatrix}
+        1 & 0 & 0 & 0 \\
+        0 & \cos(\theta) & 0 &  \sin(\theta) \\
+        0 & 0 & 1 & 0 \\
+        0 &-\sin(\theta) &0 & \cos(\theta)
+    \end{pmatrix}
+    &B_\mathrm{y} =
+    \begin{pmatrix}
+        \cosh(\eta) & 0 & \sinh(\eta) & 0 \\
+        0 &1  & 0 & 0 \\
+        \sinh(\eta) & 0 & \cosh(\eta) & 0 \\
+        0 & 0 & 0 & 1
+    \end{pmatrix}
+    \\
+    &R_\mathrm{z} =
+    \begin{pmatrix}
+        1 & 0 & 0 & 0 \\
+        0 & \cos(\theta) &-\sin(\theta)  &  0 \\
+        0 & \sin(\theta) &\cos(\theta) & 0 \\
+        0 & 0 &0 & 1
+    \end{pmatrix}
+    &B_\mathrm{z} =
+    \begin{pmatrix}
+        \cosh(\eta) &  0 & 0 & \sinh(\eta) \\
+        0 & 1& 0 & 0 \\
+        0 & 0 & 1 & 0 \\
+        \sinh(\eta) & 0 & 0 & \cosh(\eta) 
+    \end{pmatrix}
+    \nonumber
+\end{align}
+
+Ces matrices représentent les rotations et les boosts selon les axes $\{x,y,z\}$. Elles s'appliquent sur des objets nommés 4-vecteurs. Ces derniers comportent tous une composante temporelle et 3 spatiales. Ces objets sont par exemple les 4-vecteurs dynamiques (position, vitesse, ...), électromagnétiques (courant) mais aussi, on le verra dans la suite, des champs quantiques de spin 1 comme le champ photonique $A^\mu$.
+
+\subsubsection{Les 2-spineurs : représentation fondamentale de $SU(2)\otimes SU(2)$}
+
+Dans la théorie des groupes, un ensemble spécifique de groupes nommé groupes de Lie (précisions dans l'annexe \ref{A:Lie}), dont $SO(1,3)$ est un des représentants, porte des propriétés particulièrement utiles. Il est possible de reconstruire intégralement le groupe grâce à une relation impliquant des matrices $4\times4$ dites générateurs infinitésimaux. Pour $\Lambda \in SO(1,3)$ :
+\begin{equation}
+\Lambda = \exp\left\lbrace {\sum_{i=1}^{3} \theta_i J^i + \sum_{j=1}^{3}\eta_j K^j } \right\rbrace
+\end{equation}
+$J_i$, $K_i$ représentent les générateurs infinitésimaux respectivement des rotations et des boosts présentés à \eqref{rotboost}.
+
+Dans le cas où le groupe possède plusieurs générateurs, ces derniers peuvent être caractérisés par des relations définissant une algèbre de Lie (voir \ref{A:algebre}). 
+L'algèbre de Lie des générateurs de $SO(1,3)$ est définie par les commutateurs (ou crochets de Lie):
+\begin{equation*}
+    [J_a, J_b] = - [K_a,K_b] = i \sum_{c=1}^{3} \epsilon_{abc}J_c 
+\end{equation*}
+\begin{equation}
+    [J_a,K_b] = i \sum_{c=1}^{3} \epsilon_{abc}K_c
+\end{equation} 
+avec $\epsilon_{abc}$ le symbole de Levi-Civita totalement antisymétrique sur ses indices. On nomme cette algèbre $\mathfrak{so}(1,3)$.
+Il existe une application bijective qui permet de créer un nouveau jeu de générateurs:
+\begin{equation}
+    J^+_a = \frac{1}{2}\left( J_a + i K_a \right) \qquad J^-_a = \frac{1}{2}\left( J_a - i K_a \right) 
+\end{equation}
+Avec ces nouveaux générateurs, les algèbres de Lie sont données par : 
+\begin{align}
+    [J^+_a, J^+_b] &= \frac{i}{2} \sum_{c=1}^{3}\epsilon_{abc}J^+_c \nonumber \\
+    [J^-_a, J^-_b] &= \frac{i}{2} \sum_{c=1}^{3}\epsilon_{abc}J^-_c \nonumber \\
+    [J^+_a, J^-_b] &= 0 
+\end{align}
+Il s'agit là d'un des résultats les plus spectaculaires de la théorie des groupes. En effet, il est possible de transformer l'algèbre $\mathfrak{so}(1,3)$ en une combinaison de deux algèbres indépendantes $\mathfrak{su}(2)$. Autrement dit, on a la relation d'isomorphie :
+
+\begin{equation}
+    \mathfrak{so}(1,3) \simeq \mathfrak{su}(2) \oplus \mathfrak{su}(2)
+\end{equation}
+A partir de cette algèbre on peut construire le groupe $SU(2)\otimes SU(2)$.
+A l'instar des éléments de $SO(1,3)$ qui agissent sur des 4-vecteurs, les éléments du groupe $SU(2)\otimes SU(2)$ agissent sur des objets de type 2-spineurs. Ces 2-spineurs sont des objets mathématiques qui décrivent des entités comme les champs quantiques de spin \sfrac{1}{2} (par exemple le champ électronique).
+
+\subsection{Quantification} 
+
+Le respect de la symétrie de Lorentz pour les lois physiques impose la nature possible des champs quantiques (scalaires , 4-vecteurs, 2-spineurs). Il est nécessaire d'établir des équations d'états pour ces champs. Une procédure plus standard est utilisée dans cette section\footnote{Il est possible par la théorie des groupes d'accéder à ces équations, mais l'approche est très complexe.}. Elle consiste à quantifier l'équation d'énergie totale relativiste grâce au principe de correspondance de Bohr:
+\begin{align*}
+    \hat{H} &\rightarrow i\partial_t \\
+    \hat{\vec{P}} &\rightarrow -i\vec{\nabla} 
+\end{align*}
+Avec $\hbar = c = 1$ (système d'unités naturelles)
+\begin{equation}
+    E^2 = p^2 + m^2 \, \Longrightarrow \, -\partial_t^2 = -\triangle + m^2
+\end{equation}
+En notation indicielle appliquée sur un champ scalaire, on a :
+\begin{equation}\label{klein}
+\left( \partial_\mu\partial^\mu - m^2 \right)\phi = 0 \qquad \textrm{(équation de Klein-Gordon)}
+\end{equation}
+L'équation étant la version quantique de la relation d'énergie totale, elle est respectée par tout champs. Cependant, la structure des 2-spineurs demande une adaptation de l'équation de Klein-Gordon. La linéarisation de cette équation, que l'on doit à Dirac, permet cela tout en intégrant naturellement les matrices de Pauli (opérateurs de spin \sfrac{1}{2}). 
+\begin{equation}\label{dirac}
+\left(i\gamma^\mu \partial_\mu - m \right)\psi = 0   \qquad \textrm{(équation de Dirac)}
+\end{equation}
+Pour respecter l'équation \eqref{klein}, on voit que les matrices $4\times4$ dite de Dirac doivent respecter une relation d'algèbre de Clifford : 
+\begin{equation}
+    \{\gamma^\mu,  \gamma^\nu \} = \frac{1}{2}g^{\mu\nu}
+\end{equation}
+Pour les champs 4-vectoriels, l'équation de Klein-Gordon est suffisante. Pour avoir une expression la plus générale possible on peut utiliser l'invariance de jauge provenant de l'électromagnétisme. Cela donne l'équation :
+\begin{equation}\label{proca}
+ \partial_\mu\partial^\mu A^\nu - \partial^\nu \partial_\mu A^\mu - m^2 A^\nu = 0 \qquad \textrm{(équation de Proca)}
+\end{equation}
+
+\subsection{Groupe de Lorentz et Lagrangien}
+
+La théorie quantique des champs utilise le formalisme Lagrangien (présenté au chapitre \ref{lagrangien}). Les champs étant des entités définies sur les quatre dimensions d'espace-temps, il est plus pertinent d'utiliser des densités lagrangiennes $\mathcal{L}$.
+Cette dernière diffère du Lagrangien traditionnel par sa généralisation au paramétrage quadridimensionnel. Autrement dit $L(t) \rightarrow \mathcal{L}(t,x,y,z)$. Nous utiliserons dans la suite Lagrangien ou densité lagrangienne indifféremment. Devant respecter la relativité restreinte, donc la symétrie $SO(1,3)$, son Lagrangien doit être un scalaire de Lorentz. 
+De plus, en unité naturelle, le lagrangien est de dimension $[\mathcal{L}] = M^{4}$, ce qui va contraindre la forme des scalaires de Lorentz.
+
+Quelques scalaires de Lorentz construits à partir des champs quantiques sont résumés dans la table \tablename{\ref{scalaire}}.
+\begin{table}
+\begin{center}
+    \begin{tabular}{ccc}
+    \noalign{\smallskip}\hline\noalign{\smallskip}
+     Termes de masse & Scalaires dynamiques & Termes couplés \\
+     \noalign{\smallskip}
+     \hline \hline
+     \noalign{\smallskip}
+        $m^2\phi^\dagger \phi $&$ \partial_\mu \phi^\dagger \partial^\mu\phi$ & $\bar{\psi}\phi\psi$\\
+        $m\bar{\psi}\psi $&  $\bar{\psi}\gamma^\mu\gamma_5 \partial_\mu\psi \quad \bar{\psi}\gamma^\mu \partial_\mu\psi$ &  $\bar{\psi}\gamma_\mu A^\mu\psi$\\
+        $m^2A_\mu A^\mu$& $ \partial_\mu\partial^\mu \partial_\nu A^\nu $  & $\alpha \bar{\psi}A^\mu \partial_\mu\psi$\\
+     \noalign{\smallskip}\hline\noalign{\smallskip}
+    \end{tabular}
+    \caption{Table des combinaisons de champs quantiques respectant la symétrie de Lorentz. Les coefficients $m$ de dimension $[m] = M$ et $\alpha$ de dimension $[\alpha] = M^{-1}$ assurent la dimension $M^4$ aux différents termes.}
+    \label{scalaire}
+\end{center}
+\end{table}
+
+\section{Modèle Standard de la physique des particules}
+
+\subsection{Présentation générale}
+
+Le Modèle Standard de la physique des particules est une proposition théorique décrivant les  particules élémentaires ainsi que leurs interactions. Il est construit autour d'une symétrie locale $U(1)_Y \otimes SU(2)_L  \otimes SU(3)_C $ des lois physiques, dite symétrie de jauge.
+Parmi les interactions fondamentales, celle qui est la mieux connue est l'interaction électromagnétique, responsable de la cohésion des atomes, couplant les particules portant une charge électrique. Cette interaction est décrite par la théorie de l'électrodynamique quantique ou QED (\emph{Quantum electro-dynamics}). La deuxième interaction, interaction faible est responsable des phénomènes radioactifs. Elle est décrite au sein de la théorie électro-faible ou EW (\emph{ElectroWeak}) élaborée par Sheldon Glashow \cite{Glashow} et complétée par Steven Weinberg \cite{Weinberg} et Abdus Salam \cite{Salam} en 1967 avec l'introduction du mécanisme de Higgs développé par Robert Brout, François Englert\cite{Englert} et Peter Higgs \cite{Higgs} en 1964, permettant entre autre de générer la masse des bosons de jauge \PW et \PZ. La théorie est confirmée avec la découverte des bosons massifs \PWpm et \PZzero en 1983, et la découverte du boson de Higgs, pièce manquante du puzzle, le 4 juillet 2012 par les collaborations ATLAS \cite{higgs_atlas} et CMS \cite{higgs_cms} du LHC, un triomphe pour le Modèle Standard. Cette proposition unifie l'interaction faible et le formalisme de QED. Enfin, le Modèle Standard tient compte de l'interaction forte responsable de la cohésion atomique restreinte aux particules portant des charges de couleurs. Cette interaction est décrite par une théorie parallèle mais non unifiée avec l'interaction électrofaible (dans le Modèle Standard) qu'est la chromodynamique quantique ou QCD (\emph{Quantum ChromoDynamics}).
+L'interaction gravitationnelle n'est pas décrite par le Modèle Standard.
+
+\subsection{Constituants du Modèle Standard}
+
+\begin{figure}
+\begin{center}
+  \includegraphics[height=0.4\textwidth]{Standard_Model_of_Elementary_Particles.pdf}
+  \caption{Les particules élémentaires du Modèle Standard.}
+    \label{fig:sm}
+\end{center}
+\end{figure}
+
+\subsubsection{Les fermions}
+Les fermions sont les particules de matière. Ils ont un spin \sfrac{1}{2}. Ils suivent la statistique de Fermi-Dirac qui implique le principe d'exclusion de Pauli : deux fermions identiques ne peuvent pas occuper le même état quantique. Ceci explique la raison d'être des couches électroniques d'un atome.
+Les fermions sont pilotés par l'équation de Dirac \eqref{dirac}. Étant des représentations de $SU(2)\times SU(2)$, les fermions sont des doubles doublets représentant, selon le choix des matrices de Dirac  $\gamma^\mu$, des doublets particule/antiparticule (réalisation de Dirac) ou des doublets gauche/droit (réalisation de Weyl). Ces formes sont présentées dans la figure \figurename{\ref{tab:spineurs}}.
+\newline
+
+\begin{table}
+\begin{center}
+    \begin{tabular}{ccc}
+    \noalign{\smallskip}\hline\noalign{\smallskip}
+    &Réalisation de Dirac & Réalisation de Weyl \\
+ \noalign{\smallskip}
+ \hline \hline
+ \noalign{\smallskip}
+    Fermion  &  $ \Psi = 
+    \begin{pmatrix}
+            \Psi_\textrm{particule} \\
+           \Psi_\textrm{antiparticule} 
+        \end{pmatrix}
+        $
+      &   $ \Psi = 
+          \begin{pmatrix}
+                  \Psi_\textrm{gauche} \\
+                 \Psi_\textrm{droit} 
+              \end{pmatrix}
+              $  \\
+      \noalign{\smallskip}\hline\noalign{\smallskip}
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+      \multirow{5}{*}{Matrices de Dirac} &  $ \gamma^0 = 
+      \begin{pmatrix} 
+              \mathbbm{1}_2 & 0 \\
+             0 & -\mathbbm{1}_2
+          \end{pmatrix}
+          $
+        &    $ \gamma^0 = 
+              \begin{pmatrix} 
+                       0 & \mathbbm{1}_2 \\
+                      \mathbbm{1}_2 & 0
+                  \end{pmatrix}
+                  $\\
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+       &  $ \gamma^i = 
+      \begin{pmatrix} 
+              0 & -\sigma_i\\
+              \sigma_i & 0
+          \end{pmatrix}
+          $
+        &   $ \gamma^i = 
+              \begin{pmatrix} 
+                      0 & -\sigma_i\\
+                      \sigma_i & 0
+                  \end{pmatrix}
+                  $ \\
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+       &  $ \gamma^5 = 
+      \begin{pmatrix} 
+               0 & \mathbbm{1}_2 \\
+              \mathbbm{1}_2 & 0
+          \end{pmatrix}
+          $
+        &  $ \gamma^5 =  \begin{pmatrix} 
+                      -\mathbbm{1}_2 & 0 \\
+                     0 & \mathbbm{1}_2
+                  \end{pmatrix}
+                  $  \\
+    \noalign{\smallskip}\hline\noalign{\smallskip}
+  \end{tabular}
+  \caption{Résumé des représentations de fermions. Les $\sigma_i$ sont les matrices de Pauli.}
+  \label{tab:spineurs}
+\end{center}
+\end{table}
+
+\begin{description}
+\item [Les leptons] Ce sont les fermions insensibles à l'interaction forte. Ils sont colorés en vert dans la figure \figurename{\ref{fig:sm}}. 
+\item [Les quarks] Ce sont les fermions sensibles aux l'interactions électromagnétique, faible et forte. Ils sont colorés en violet dans la figure \figurename{\ref{fig:sm}}. Les quarks sont les composants des noyaux atomiques.
+\end{description}
+
+\subsubsection{Les bosons}
+Les bosons sont des particules de spin entier. Ils suivent la statistique de Bose-Einstein. Ils sont vecteurs d'interaction et leurs caractéristiques sont résumées dans la table \tablename{\ref{tab:interactions}}.
+
+\begin{table}
+\begin{center}
+    \begin{tabular}{@{}ccccc@{}}
+    \noalign{\smallskip}\hline\noalign{\smallskip}
+    Interaction & boson(s) & masse (\SI{}{\GeV})\cite{PDG} & intensité relative & portée (m) \\
+ \noalign{\smallskip}
+ \hline \hline
+ \noalign{\smallskip}
+     forte & \Pgluon & 0 & 1 &  \SI{\sim e-15}{} \\
+     électromagnétique & \Pgamma & 0 & \num{e-2} & $\infty$ \\
+    \multirow{2}{*}{faible} & \PWpm & \SI{80.385 \pm 0.015} & \multirow{2}{*}{\num{e-5}} & \multirow{2}{*}{\SI{\sim e-18}} \\
+     & \PZzero & \SI{91.1876 \pm 0.0021 } & & \\
+    \noalign{\smallskip}\hline\noalign{\smallskip}
+  \end{tabular}
+  \caption{Les interactions fondamentales et leurs bosons médiateurs.}
+  \label{tab:interactions}
+\end{center}
+\end{table}
+
+
+\subsubsection{Les symétries de jauges}
+
+La grande force du Modèle Standard est sa capacité à décrire les résultats expérimentaux. A l'instar de la symétrie de Lorentz qui contraint la forme des objets répondant aux lois physiques, les symétries de jauge vont contraindre les formes des interactions entre particules tout en introduisant naturellement les bosons vecteurs de ces interactions. Si dans le chapitre précédent c'est à partir d'une quantité fondamentale (l'intervalle d'espace-temps) qu'a été construite la symétrie de Lorentz ainsi que ses conséquences, pour la compréhension des symétries de jauge, c'est la conservation de la densité lagrangienne qui va être nécessaire.
+
+Une symétrie de jauge correspond à la conservation du Lagrangien après une transformation qui dépend des coordonnées d'espace-temps (ou locale). Les transformations de jauge validées expérimentalement à ce jour sont éléments des groupes $U(1)$, $SU(2)$ et $SU(3)$ dont les définitions sont rappelées en annexe \ref{A:groupedesymetrie}.
+
+
+\subsection{L'électrodynamique quantique (QED)}
+
+\subsubsection{L'interaction électromagnétique}
+
+La QED (pour \emph{Quantum Electro-Dynamic}) a pour but de décrire au sein de la théorie quantique des champs, l'interaction électromagnétique. Pour ce faire elle doit à la fois présenter la charge fondamentale $e = \SI{1,602176634e-19}{\coulomb}$, ainsi que les champs électrique $\vec{E}$ et magnétique $\vec{B}$, condensés dans le tenseur de Maxwell-Faraday (ou tenseur électromagnétique) $F^{\mu\nu}$. Cette théorie propose que l'interaction électromagnétique consiste en un échange d'un boson électromagnétique (le photon) entre deux particules chargées. La charge électrique est donc élevée au statut de nombre quantique et est par conséquent valeur propre d'un opérateur de charge (noté $C$).
+
+\subsubsection{La symétrie de jauge $U(1)$}
+La QED est l'approche théorique proposant la conservation de la symétrie de jauge la plus simple. Premièrement, le groupe de symétrie conservé est $U(1)_\mathrm{em}$ autrement dit l'ensemble des nombres complexes de module $1$. Ensuite, le Lagrangien est minimal. Il ne comporte qu'une partie cinétique pour les fermions et le boson électromagnétique (photon). 
+Le Lagrangien composé de champs libres est donné par\footnote{Cette forme exotique de l'écriture de la partie cinétique des fermion fait apparaître la notation $A\overset{\leftrightarrow}{\partial_\mu}B =  A\partial_\mu B - \partial_\mu(A)B$.} :
+\begin{equation}
+    \mathcal{L} = \underbrace{\frac{i}{2}\bar{\psi}\gamma^\mu\overset{\leftrightarrow}{\partial_\mu}\psi - m\bar{\psi} \psi}_\textrm{équation de Dirac}  \underbrace{-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}}_\textrm{équation de Maxwell}
+\end{equation}
+avec $F^{\mu\nu} =  \partial^\mu A^\nu - \partial^\nu A^\mu$. Pour un champ $\psi$ répondant à une transformation $U(1)$ locale de forme
+\begin{align*}
+    \psi \rightarrow \psi' &= e^{i\theta(x)C} \psi \\
+    \bar{\psi} \rightarrow \bar{\psi}' &= \bar{\psi}e^{-i\theta(x)C}
+\end{align*}
+avec $C$ le générateur de $U(1)$ et $\theta(x)$ une fonction quelconque dérivable dépendant de la coordonnée d'espace-temps $x$. On observe que : 
+\begin{equation}
+ \mathcal{L}' = \frac{i}{2}\bar{\psi}\gamma^\mu\overset{\leftrightarrow}{\partial_\mu}\psi - m\bar{\psi} \psi  \underbrace{-C \bar{\psi} \gamma^\mu\psi\partial_\mu \theta(x)}_\textrm{rémanence de la transformation} -\frac{1}{4}F_{\mu\nu}F^{\mu\nu}
+\end{equation}
+La symétrie de jauge n'est clairement pas conservée car $\mathcal{L}' \neq \mathcal{L}$. La proposition forte de la QED est de régler le problème du couplage fermions/photon en forçant la symétrie de jauge. 
+Pour cela on construit un objet nommé dérivée covariante $D_\mu$ qui est la dérivée corrigée par un terme portant le photon $A^\mu$ :
+\begin{equation}
+D_\mu = \partial_\mu + ieCA_\mu
+\end{equation}
+Ce terme additionnel porte la charge électrique élémentaire $e$ et l'opérateur de charge judicieusement appelé également $C$. Cet opérateur a pour valeur propre $\pm 1$ pour les leptons, $\mp \frac{1}{3}$ et $\pm \frac{2}{3}$ pour les quarks et est également un générateur du groupe $U(1)$.
+La dérivée covariante placée dans notre Lagrangien, on a après transformation : 
+\begin{equation}
+ \mathcal{L}' = \frac{i}{2}\bar{\psi}\gamma^\mu\overset{\leftrightarrow}{\partial_\mu}\psi - m\bar{\psi} \psi   \underbrace{- e\bar{\psi} \gamma^\mu C A_\mu \psi}_\textrm{couplage fermion/photon} - C\bar{\psi} \gamma^\mu\psi\partial_\mu \theta(x) \quad -\frac{1}{4}F_{\mu\nu}F^{\mu\nu}
+\end{equation}
+Le couplage central de cette théorie est présent mais l'invariance de jauge $U(1)$ n'est toujours pas respectée. C'est en remarquant le terme de couplage linéaire en $A^\mu$ que l'on peut faire appel à une propriété déjà connue dans la théorie classique de l'électromagnétisme : l'invariance de jauge du potentiel vecteur. En effet les équations de Maxwell sous forme covariante :
+\begin{equation}
+\partial_\mu  F^{\mu\nu}  = j^\nu
+\end{equation}
+laissent entendre que le 4-potentiel $A^\mu$ est défini à un gradient arbitraire près sans perte de généralité. En choisissant ce gradient de sorte que :
+\begin{equation}
+ A^\mu \rightarrow  A^\mu - \frac{1}{e} \partial^\mu \theta(x)
+\end{equation}
+alors l'invariance de jauge $U(1)$ est respectée.
+
+Finalement l'électrodynamique quantique s'exprime : 
+\begin{equation}\boxed{
+ \mathcal{L}_\mathrm{QED} = \frac{i}{2}\bar{\psi}\gamma^\mu\overset{\leftrightarrow}{D_\mu}\psi - m\bar{\psi} \psi -\frac{1}{4}F_{\mu\nu}F^{\mu\nu}
+ }
+\end{equation}
+avec les transformations de jauge $U(1)$ : 
+\begin{align*}
+ \psi &\rightarrow e^{i\theta(x)C}\psi \\
+ A^\mu &\rightarrow  A^\mu - \frac{1}{e} \partial^\mu \theta(x)
+\end{align*}
+On remarque que si l'on associait un terme de masse supplémentaire au photon $\propto A^\mu A_\mu$ on briserait l'invariance de jauge sans compensation possible. Ceci corrobore la donnée empirique de l'absence de masse du photon.
+
+Ce paragraphe a souligné la puissance des symétries appliquées à la théorie quantique des champs. Si imposer la symétrie de Lorentz permet de construire les champs quantiques des particules de spin \sfrac{1}{2} et de spin 1, imposer la symétrie de jauge $U(1)$ permet de décrire naturellement l'interaction électromagnétique. Les autres interactions sont aussi déduites d'une procédure de conservation de jauge. 
+
+\subsection{La théorie Électrofaible}
+
+\subsubsection{L'interaction faible}
+
+De nombreuses expériences sur la radioactivité $\beta$ telle que l'expérience de Chien-Shiung Wu \cite{MmeWu} démontrèrent la violation de la parité chez les leptons. Cela implique que la radioactivité n'agit pas de manière identique selon les particules. Pour rappel les fermions répondant à l'équation de Dirac sont des représentations du groupe $SU(2)\otimes SU(2)$. On peut les considérer comme des doublets $SU(2)$ indépendants (simple spineur) appelés spineur droit et spineur gauche. Seuls les spineurs gauches interagissent faiblement. Ainsi la symétrie associée $SU(2)$ sera $L$ (pour \emph{left}).
+
+\subsubsection{La symétrie de jauge $U(1)_Y \otimes SU(2)_L$}
+
+Si le principe général de la symétrie de jauge $U(1)$ est présent, la présence de subtilités avec l'interaction faible implique un travail plus profond. 
+Pour construire la théorie il est nécessaire de traiter les fermions gauches et droits indépendamment. Les fermions gauches seront traités en doublet $SU(2)_L$ par paire interagissant durant une désintégration. Les fermions droits sont représentés en singlet. Les objets respectant la symétrie $U(1)_Y \otimes SU(2)_L$ sont résumés dans la table \tablename{\ref{tab:su2}}.
+\begin{table}
+\begin{center}
+\begin{tabular}{c|cc}
+    \noalign{\smallskip}\hline\noalign{\smallskip}
+    & Doublet d'isospin & Singlet d'isospin \\
+    \noalign{\smallskip}
+    \hline \hline
+    \noalign{\smallskip}
+    Leptons & $L_A = \begin{pmatrix} \nu_A \\ \ell_A \end{pmatrix}_L$ & $R_A = (\ell_A)_R$ \\
+    Quarks & $Q_A = \begin{pmatrix} u_A \\ d_A  \end{pmatrix}_L$ & $ U_A = (u_A)_R$, $D_A = (d_A)_R$\\
+    \noalign{\smallskip}\hline\noalign{\smallskip}
+\end{tabular}
+\caption{Notation des objets respectant la symétrie $U(1)_Y \otimes SU(2)_L$. Les indices $A = 1,2,3$ représentent la génération de la particule associée.}
+\label{tab:su2}
+\end{center}
+\end{table}
+Avec une procédure similaire à la QED, la symétrie de jauge $U(1)_Y \otimes SU(2)_L$ du Lagrangien est respectée sous les transformations : 
+\begin{align}
+    Q &\rightarrow e^{i\vec{\theta}(x)\cdot \vec{T} + i\vartheta(x)Y}Q \label{transfosu2} \\
+    U &\rightarrow e^{i\vartheta(x)Y}U
+\end{align}
+avec $T_{i=1,2,3}$ les générateurs du groupe $SU(2)$ et $Y$, nommé l'hypercharge, le générateur du groupe $U(1)$. On remarque dans l'équation \eqref{transfosu2} que les générateurs de $SU(2)$ étant au nombre de trois, la notation traditionnelle du produit scalaire dans $\mathbb{R}^3$ est utilisée en guise de sommation. Les générateurs de $SU(2)$ répondent à la relation $T_i = \frac{1}{2}\sigma_i$ où les $\sigma_i$ sont les matrices de Pauli :
+\begin{equation}
+\sigma_x = \begin{pmatrix} 0 & 1 \\ 1 &0\end{pmatrix} 
+\quad \sigma_y = \begin{pmatrix} 0 & -i \\ i &0\end{pmatrix}
+\quad \sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1\end{pmatrix} 
+\end{equation}
+Les dérivées covariantes s'écrivent :
+\begin{align}\label{covSU2}
+    D_\mu &= \partial_\mu + ig_W \vec{T} \cdot \vec{W}_\mu + i g_B \frac{Y}{2}B_\mu & \textrm{appliqué sur les doublets} \nonumber \\
+    D_\mu &= \partial_\mu + i g_B \frac{Y}{2}B_\mu & \textrm{appliqué sur les singlets} 
+\end{align}
+Les champs bosoniques se transforment ici avec: 
+\begin{align}
+    B_\mu &\rightarrow  B_\mu - \frac{1}{g_B} \partial^\mu \vartheta(x) \nonumber\\
+    \vec{W}_\mu &\rightarrow \vec{W}_\mu - \frac{1}{g_W} \partial_\mu \vec{\theta}(x)  - \vec{\theta}(x) \wedge \vec{W}_\mu
+\end{align}
+Le produit vectoriel $\vec{\theta}(x) \wedge \vec{W}_\mu$ \footnote{Il est très courant en physique des particules que la formulation $\sum_{b=1}^{3} \sum_{c=1}^{3} \epsilon^{abc} f^b f^c_\nu$ ou encore $\epsilon^{abc} f^b f^c_\nu$ (par sommation implicite) soit préférée à la notation $\vec{f} \wedge \vec{g}$ de l'algèbre de l'espace $\mathbb{R}^3$ pour des raisons de généralisation à plus grande dimension.} provient du fait que le groupe n'est pas abélien. Autrement dit, les générateurs ne commutent pas. Pour établir le Lagrangien, il suffit d'ajouter les termes cinétiques des bosons.
+\begin{align}
+B_{\mu\nu} &=  \partial_\mu B_\nu - \partial_\nu B_\mu \nonumber \\
+\vec{W}_{\mu\nu} &=  \partial_\mu \vec{W}_\nu - \partial_\nu \vec{W}_\mu - g_W \vec{W}_\mu \wedge \vec{W}_\nu
+\end{align}
+Finalement le Lagrangien se présente sous la forme : 
+\begin{equation}
+ \mathcal{L} = \frac{i}{2}\bar{Q}_A\gamma^\mu\overset{\leftrightarrow}{D_\mu}Q_A + \frac{i}{2}\bar{L}_A\gamma^\mu\overset{\leftrightarrow}{D_\mu}L_A -\frac{1}{4}B_{\mu\nu}B^{\mu\nu} -\frac{1}{4}\vec{W}_{\mu\nu}\cdot \vec{W}^{\mu\nu}
+\end{equation}
+Expérimentalement, les observations des décroissances radioactives montrent que pour le cas des quarks, est observé un mix intergénérationnel. Pour résoudre ce problème on applique sur un vecteur d'états propres de l'interaction faible une matrice dont les composantes représentent l'amplitude de probabilité de couplage faible. Cette matrice se nomme la matrice Cabibbo-Kobayashi-Maskawa \cite{CKM} ou matrice CKM.
+\begin{equation}
+    \begin{pmatrix} d' & s' & b' \end{pmatrix} =
+    \begin{pmatrix}
+    V_{ud} & V_{us} & V_{ub} \\
+    V_{cd} & V_{cs} & V_{cb} \\
+    V_{td} & V_{ts} & V_{tb}
+    \end{pmatrix}
+    \begin{pmatrix} d \\ s \\ b \end{pmatrix}
+\end{equation}
+Soit expérimentalement \cite{PDG}:
+\begin{equation}\label{CKM}
+    V_\mathrm{CKM} =
+    \begin{pmatrix}
+    0.97401 \pm 0.00011 & 0.22650 \pm 0.00048 & 0.00361^{+0.00011}_{-0.00009} \\
+    0.22636 \pm 0.00048 & 0.97320 \pm 0.00011 &  0.04053^{+0.00083}_{-0.00061} \\
+    0.00854^{+0.00023}_{-0.00016} & 0.03978^{+0.00082}_{-0.00060} & 0.999172^{+0.000024}_{-0.000035}
+    \end{pmatrix}
+\end{equation}
+
+Reste le problème des masses des bosons de l'interaction faible et des masses des fermions qui implique des formes de type $\propto \bar{Q} U$ qui violent explicitement $U(1)_Y \otimes SU(2)_L$. C'est fort de ce constat que naturellement la proposition du boson de Higgs pour régler les problèmes de masses est apparue.
+
+\subsubsection{La proposition d'un champ scalaire additionnel}
+
+Avec le postulat d'un nouveau champ scalaire (invariant de Lorentz) de spin $0$ et doublet de $SU(2)$ alors il devient naturel de considérer sa dynamique avec un terme cinétique de type :
+\begin{equation}\label{dynamichiggs}
+ \mathcal{L}_\mathrm{Higgs} = D_\mu \phi^\dagger D^\mu \phi
+\end{equation} 
+avec la dérivée covariante à $SU(2)_L$ définie par \eqref{covSU2}. De par la forme des dérivées covariantes, le développement laisse apparaître des termes de masse pour les bosons, c'est à dire des termes de type $\propto W_\mu W^\mu$. Un couplage de ce nouveau champ scalaire avec les fermions droits et gauches permet l'apparition de termes ressemblant aux termes de masse tout en respectant $U(1)_Y \otimes SU(2)_L$ : 
+\begin{equation}\label{yukawahiggs}
+ \mathcal{L}_\mathrm{Yukawa} = y_1 \bar{Q}_A \phi U_A + y_2 \bar{Q}_A \phi D_A + y_3 \bar{L}_A \phi R_A +\mathrm{h.c.}
+\end{equation}
+avec $y_1$, $y_2$ et $y_3$ des constantes à définir, nommées couplage de Yukawa. 
+
+Le Lagrangien actuel n'est pas encore suffisant. En effet, deux problèmes se posent. Premièrement, l'observation montre que seuls les bosons faibles sont massifs mais pour l'instant rien ne permet de dire qu'un des bosons introduits par la symétrie est de masse nulle comme attendu pour un photon. Le second problème provient du fait que le champ scalaire couplé aux fermions ressemble à un terme de masse mais n'en sera complètement un que lorsque le couplage fermion gauche/droit sera constant. Ce problème est résolu grâce au concept de brisure spontanée de la symétrie de  $U(1)_Y \otimes SU(2)_L$.
+
+\subsubsection{Brisure spontanée de symétrie}
+
+La théorie quantique des champs offre un cadre formel dans lequel une symétrie totalement vérifiée par un Lagrangien peut spontanément se briser par l'hypothèse d'un vide quantique non nul. Le principe de brisure spontanée repose sur l'idée qu'à un niveau d'énergie donnée, le minimum de potentiel d'un champ est plus bas que le minimum de potentiel avant brisure. Pour le champ scalaire le potentiel le plus simple permettant une brisure est : 
+\begin{equation}
+    V(\phi) = \mu^2 \phi^\dagger \phi + \lambda (\phi^\dagger \phi)^2
+\end{equation}
+avec $\lambda > 0$. Au niveau du minimum de potentiel $\frac{\partial V}{\partial \phi} = 0$
+\begin{equation}
+ \frac{\partial V}{\partial \phi} = 0 \quad \Longrightarrow  \quad \| \phi \|^2 = v^2 = - \frac{\mu^2}{\lambda}
+\end{equation}
+Si $\mu^2 \geq 0$, alors le potentiel n'admet qu'un seul minimum de potentiel en $\phi = 0 $. En revanche, si $\mu^2 < 0$ alors $\phi$ admet une infinité de minima de potentiel différents de  $\phi = 0 $ sur le cercle complexe de module $v$. Dans ce dernier cas, ce potentiel est souvent nommé potentiel sombrero (voir figure \figurename{\ref{sombrero}}). 
+
+\begin{figure}
+\begin{center}
+\input{./chapitre1/figs/fig-pyplot_higgs.pgf}
+\caption{Forme du potentiel de Higgs $V$ selon le signe de $\mu$}
+\label{sombrero}
+\end{center}
+\end{figure}
+
+
+Le champ, à l'issue de la brisure de symétrie électrofaible, va se placer dans un minimum de potentiel : il va atteindre la valeur attendue dans le vide ou \emph{vev} (pour \emph{vacuum expectation value}). Cette transition marque la brisure spontanée de $U(1)_Y \otimes SU(2)_L$ du Lagrangien.  
+La symétrie brisée, on peut fixer la jauge qui nous amène sans perte de généralité à poser :
+\begin{equation}
+\phi(x) = \frac{1}{\sqrt{2}} \begin{pmatrix}
+0 \\
+v + h(x)
+\end{pmatrix}
+\end{equation}
+où $v$ est la valeur du vide et $h(x)$ le boson de Higgs. Cette simple valeur du vide va résoudre l'ensemble des problèmes amenés par la symétrie $SU(2)_L$. En reprenant l'équation \eqref{dynamichiggs} et en se focalisant sur le partie bosonique, on a après brisure :
+
+\begin{align*}
+\mathcal{L}_\mathrm{Higgs-Boson} & =  \phi_{vev}^\dagger  \left( ig_W \vec{T} \cdot \vec{W}_\mu + i g_B \frac{Y}{2}B_\mu \right)^\dagger \left( ig_W \vec{T} \cdot \vec{W}_\mu + i g_B \frac{Y}{2}B_\mu \right) \phi_{vev}  \\
+& = \frac{1}{8} \begin{pmatrix} 0 & v \end{pmatrix} \left|
+\begin{pmatrix}
+    g_W W_3^\mu + g_B Y B^\mu &  g_W(W_1^\mu -i W_2^\mu) \\ g_W (W_1^\mu +i W_2^\mu ) & -g_W W_3^\mu + g_B Y B^\mu
+\end{pmatrix}\right|^2
+ \begin{pmatrix} 0 \\ v \end{pmatrix}  \\  \\
+ &= \frac{(g_Wv)^2}{4} W^-_\mu { W^+}^\mu +\frac{(g_Wv)^2}{4} {W_3}_\mu W_3^\mu   + \frac{(g_Bv)^2}{8} B_\mu B^\mu  + \frac{g_W g_B Y v^2}{8} W_3^\mu B_\mu
+\end{align*}
+sachant que  
+\begin{equation}
+{W^\pm}^\mu = \frac{1}{\sqrt{2}}\left(W^\mu_1 \pm iW^\mu_2\right)
+\end{equation}
+On a l'apparition d'un terme de masse pour les champs $W^\pm$ avec $m_W = \frac{1}{2}g_Wv$ qui représente les bosons \PWpm. Il reste cependant à régler le terme de masse $\propto W_3^\mu B_\mu$. En effet, ce terme induit un couplage entre les deux bosons de type 
+\begin{figure}[H]
+\begin{center} \begin{fmfgraph*}(180,30)
+  \fmfleft{i1} \fmfright{o1}
+  \fmf{boson,label=$W^\mu$}{i1,v1}
+  \fmf{boson,label=$B^\mu$}{v1,o1}
+  \fmfdot{v1}
+\end{fmfgraph*} \end{center}
+\end{figure}
+Un tel type de couplage n'est pas physique. En considérant que le doublet de Higgs possède une hypercharge $Y=1 $ alors on peut construire le mélange de masse de ces deux bosons sous la forme : 
+\begin{equation}
+\frac{1}{8} v^2 \rowvec{2}{W_{3\mu}}{B_\mu} \begin{pmatrix}
+   g_W^2 & - g_W g_B \\
+   - g_W g_B & g_B^2
+ \end{pmatrix} \colvec{2}{W_3^\mu}{B^\mu}
+\end{equation}
+
+En diagonalisant la matrice de masse on se retrouve avec le couple de valeurs propres de masses :
+\begin{equation}
+m_Z = g_W^2 + g_B^2 \quad \textrm{ et }  \quad m_A = 0
+\end{equation}
+En utilisant la matrice de passage 
+\begin{equation}
+		\begin{pmatrix}
+		\cos(\theta_W) & - \sin(\theta_W) \\ \sin(\theta_W) & \cos(\theta_W)
+		\end{pmatrix} = 
+        \frac{1}{\sqrt{g_W^2 + g_B^2}}
+		\begin{pmatrix}
+		g_B & g_W \\ -g_W & g_B
+		\end{pmatrix}
+\end{equation}
+où $\theta_W$ est un angle dit de Weinberg. On déduit les vecteurs propres associés respectivement à $ m_A$ et $ m_Z$ :
+\begin{equation}\label{bosons_electrofaible}
+    A^\mu = \frac{g_B W_3^\mu + g_W B^\mu}{\sqrt{g_W^2 + g_B^2}}
+    \quad \textrm{ et }  \quad 
+    Z^\mu = \frac{ g_B B^\mu - g_W W_3^\mu}{\sqrt{g_W^2 + g_B^2}}
+\end{equation}
+
+Avec une masse nulle, on obtient le candidat idéal pour le photon. De plus, les valeurs propres de masse différentes pour $W^\pm_\mu$ et $Z_\mu$ confortent les observations de masse des \PWpm et du \PZzero (respectivement \SI{\sim 80}{\GeV} et \SI{\sim91}{\GeV}).
+Le problème de masse des bosons électrofaibles est résolu. La présence d'une valeur du vide $v$ induisant la brisure spontanée électrofaible, permet d'expliquer les masses des bosons vecteurs de l'interaction faible et l'absence de masse du photon, grâce à la paramétrisation :
+\begin{align}
+m_W & = \frac{1}{2}g_Wv\\
+m_A & = 0 \\
+m_Z & =  \frac{1}{2}v\sqrt{g_W^2+g_B^2} \\ 
+m_h & = \sqrt{2\lambda} v    
+\end{align}
+Le point culminant de cette théorie unificatrice réside dans le fait qu'en imposant que 
+\begin{equation}
+g_W \sin(\theta_W) = g_B \cos(\theta_W) = e
+\end{equation}
+avec $e$ la charge électrique élémentaire, alors on peut déduire la relation de Gell-Mann Nishijima : 
+\begin{equation}
+ C = T_3 + \frac{Y}{2}
+\end{equation}
+reliant les nombres quantiques électromagnétiques et faibles. L'ensemble des valeurs des différentes charges au sein du Modèle Standard est présenté dans la table \tablename{\ref{tab:SMvalues}}.
+
+De la même manière, le vide non nul implique que l'on peut dégager à partir de l'équation \eqref{yukawahiggs} des termes de masses pour les fermions. 
+\begin{equation}
+\mathcal{L} \supset vy_1 \bar{Q}_A \phi U_A + vy_2 \bar{Q}_A \phi D_A + vy_3 \bar{L}_A \phi R_A +\mathrm{h.c.}
+\end{equation}
+En choisissant, pour chaque saveur $I$, les couplages de Yukawa $y_I$ tels que les masses des fermions $m_I$ soient données par : 
+\begin{equation}
+    m_I = vy_I
+\end{equation}
+Il est aisé de conclure que la symétrie $U(1)_Y \otimes SU(2)_L$ ainsi que sa brisure spontanée permet de donner un cadre formel très robuste pour la description des particules élémentaires et de leurs interactions à l'exception de l'interaction forte.
+
+\subsection{La chromodynamique quantique (QCD)}
+
+\subsubsection{L'interaction forte}
+La dernière interaction est introduite par le groupe de symétrie $SU(3)_C$ où $C$ fait référence à l'espace des couleurs. Cette théorie présente les quarks comme porteurs d'une charge tri-polaire, analogue donc aux trois couleurs primaires. Cette idée est apparue lors de l'observation des baryons $\PDelta^{++}$, $\PDelta^{-}$ \cite{color1, color2, color3} et $\POmegaminus$ \cite{color4} qui, dans le modèle des quarks, violaient le principe d'exclusion de Pauli par répétition de même saveur.
+\begin{equation}
+\PDelta^{++} = (\Pup\Pup\Pup), \quad \PDelta^{-} = (\Pdown\Pdown\Pdown), \quad  \POmegaminus = (\Pstrange\Pstrange\Pstrange)
+\end{equation}
+La couleur comme nouveau nombre quantique permet de régler ce problème. Ainsi, chaque quark porte une couleur différente :
+\begin{equation}
+\PDelta^{++} = (\textcolor{red}{\Pup}\textcolor{blue}{\Pup}\textcolor{green}{\Pup}), \quad \PDelta^{-} = (\textcolor{red}{\Pdown}\textcolor{blue}{\Pdown}\textcolor{green}{\Pdown}), \quad  \POmegaminus = (\textcolor{red}{\Pstrange}\textcolor{blue}{\Pstrange}\textcolor{green}{\Pstrange})
+\end{equation}
+
+\begin{figure}
+    \begin{center}
+    \begin{subfigure}[b]{0.3\textwidth}
+    \begin{center}
+        \includegraphics[width=0.8\textwidth]{QCD_colors.pdf}
+        \caption{Baryon stable constitué de trois quarks.}
+    \end{center}
+    \end{subfigure}
+    \hspace{0.2cm}
+    \begin{subfigure}[b]{0.3\textwidth}
+        \begin{center}
+          \includegraphics[width=0.8\textwidth]{QCD_anticolors.pdf}
+            \caption{Antibaryon stable constitué de trois antiquarks.}
+        \end{center}
+    \end{subfigure}
+    \hspace{0.2cm}
+    \begin{subfigure}[b]{0.3\textwidth}
+        \begin{center}
+            \includegraphics[width=0.8\textwidth]{QCD_color_anticolor.pdf}
+            \caption{Mesons stables constitués d'une paire quark-antiquark.}
+        \end{center}
+    \end{subfigure}
+    \caption{Représentation de hadrons stables à l'interaction de couleur (blanche).}
+    \label{fig:interactionforte}
+    \end{center}
+\end{figure}
+
+L'interaction décrit un échange de gluons qui provoque un changement de couleur des quarks. Une interaction est stable lorsque la charge de couleur globale est blanche (par exemple : $\mathrm{bleu} + \mathrm{vert} + \mathrm{rouge}$ ou encore $\mathrm{bleu}+\mathrm{antibleu}$). On retrouve majoritairement dans la nature des baryons composés de trois quarks (protons, neutron, $\PDelta^{++}$, ...) ou bien des mésons composés d'un quark et d'un anti-quark. Une illustration est montrée sur la figure \figurename{\ref{fig:interactionforte}}.
+
+\subsubsection{La symétrie de jauge $SU(3)_C$}
+
+De manière absolument similaire aux autres symétries de jauge on a : 
+\begin{equation}
+\psi \rightarrow e^{i \sum_{a=1}^{8} \alpha^a(x)T^a} \psi
+\end{equation}
+où les matrices $T^{a =1, ... , 8}$ sont les générateurs de $SU(3)$. Ils répondent à la relation $T^a = \frac{1}{2}\lambda^a$ où les $\lambda^a$ sont les matrices de Gell-Mann :
+\begin{align}
+  \lambda^1 = \begin{pmatrix}0&1&0\\1&0&0\\0&0&0 \end{pmatrix}
+  &\quad\lambda^2 = \begin{pmatrix}0&-i&0\\i&0&0\\0&0&0 \end{pmatrix}
+  \quad\lambda^3 = \begin{pmatrix}1&0&0\\0&-1&0\\0&0&0 \end{pmatrix} \nonumber \\
+  \lambda^4 = \begin{pmatrix}0&0&1\\0&0&0\\1&0&0 \end{pmatrix}
+  &\quad\lambda^5 = \begin{pmatrix}0&0&-i\\0&0&0\\i&0&0 \end{pmatrix}
+  \quad\lambda^6 = \begin{pmatrix}0&0&0\\0&0&1\\0&1&0 \end{pmatrix} \\
+  \quad\lambda^7 = &\begin{pmatrix}0&0&0\\0&0&-i\\0&i&0 \end{pmatrix} 
+  \quad\lambda^8 = \frac{1}{\sqrt{3}} \begin{pmatrix}1&0&0\\0&1&0\\0&0&-2 \end{pmatrix} \nonumber
+\end{align}
+
+Ce groupe n'étant pas abélien il faudra s'attendre à des termes de corrections comme pour $U(1)_Y \otimes  SU(2)_L $
+\begin{equation}
+D_\mu = \partial_\mu + ig_S  \sum_{a=1}^{8}  T^a W_\mu^a
+\end{equation}
+Les champs bosoniques se transforment ici avec: 
+\begin{equation}
+    G^a_\mu \rightarrow G^a_\mu - \frac{1}{g_S} \partial_\mu \alpha^a(x)   \underbrace{-  \sum_{b=1}^{8}  \sum_{c=1}^{8}  f^{abc}\alpha^b(x) G^c_\mu}_\textrm{terme non-abélien}
+\end{equation}
+Le tenseur de champ associé aux bosons est donné par :
+\begin{equation}
+G^a_{\mu\nu} =  \partial_\mu G^a_\nu - \partial_\nu G^a_\mu - g_S \sum_{b=1}^{8}  \sum_{c=1}^{8} f^{abc}G^b_\mu G^c_\nu
+\end{equation} 
+Le terme non-abélien $g_S \sum_{b=1}^{8}  \sum_{c=1}^{8} f^{abc}G^b_\mu G^c_\nu$ fait apparaître dans le Lagrangien des termes d'auto-couplage à trois et quatre gluons, à l'origine du confinement des quarks.
+
+
+\subsection{Densité de probabilité partonique (PDF)} \label{sec:pdf}
+
+Les hadrons peuvent être vus comme une soupe statistique de partons avec, en permanence,  création et annihilation de couples quark-antiquark. Autrement dit, quand l'on parle de protons composés de deux quarks up et d'un down, on commet un abus de langage. En effet, la QCD implique que si l'on pouvait prendre en photo, un grand nombre de fois, un proton alors, statistiquement, nous observerions qu'il est composé la plupart du temps de deux quarks up et d'un down. Pour le calcul des sections efficaces des processus faisant intervenir des hadrons on utilise les densités de probabilité partonique $f_i\left( x_i, \mu_F^2 \right)$ (ou PDF pour \emph{Parton distribution function}).
+Ces fonctions ne peuvent être calculées analytiquement à cause de l'échelle d'énergie empêchant le calcul perturbatif, le calcul sur réseau et valable uniquement dans le cas ultra-relativiste. Ces fonctions sont obtenues expérimentalement à partir d'ajustements sur les données. Les expériences de diffusion inélastique des leptons sur les hadrons, dont fait partie par exemple l'expérience HERA \cite{DESYpdf} (collisionneur \Pepm-\Pproton du laboratoire DESY à Hambourg en Allemagne) jouent un rôle majeur dans l'ajustement des PDF.
+
+Les PDF dépendent de la variable de Bjorken $x$ qui représente la fraction d'énergie emportée par le parton considéré et de l'échelle en énergie du processus $Q^2$ (transfert d'impulsion). En toute rigueur, les PDF sont évaluées à une échelle d'énergie donnée dite échelle de factorisation $\mu_F^2$ qu'on choisit de l'ordre de grandeur de l'échelle d'énergie du processus étudié : $\mu_F \equiv Q$. Pour les déterminer, on fait le choix d'une paramétrisation à une échelle d'énergie $Q_0$ donnée. La forme la plus générale est : 
+\begin{equation}
+xf\left( x,Q_0^2 \right) = A_f x^{a_f} (1 - x)^{b_f} I_f(x)
+\end{equation}
+L'annulation des PDF pour $x \rightarrow 1$ est assurée par le terme $(1 - x)^{b_f}$. $a_f$ et $b_f$ sont les paramètres à déterminer à partir des données expérimentales. Cette forme de PDF est attendue avec la règle de comptage des quarks \cite{Brodsky:1973kr}. La dépendance en $Q^2$ est obtenue à l'aide des équations d'évolution \emph{DGLAP} (Dokshitzer–Gribov–Lipatov–Altarelli–Parisi) \cite{ALTARELLI, Dokshitzer:1977sg, Gribov:1972ri}. Elles sont essentielles pour prédire à partir des valeurs collectées à bas $Q^2$, les PDF à hautes valeurs de $Q^2$ non explorées par les données mais nécessaires au LHC. 
+
+Les PDF utilisées pour produire des simulations ont été fournies par le groupe CTEQ \cite{Owens:2012bv} (voir la figure \figurename{\ref{fig:cj12}}) et NNPDF \cite{Ball2015}. De plus le groupe de travail PDF4LHC \cite{Butterworth_2016} effectue des études comparatives des différentes PDF et des prévisions au LHC. Il fournit également une méthode standard pour l'estimation des incertitudes liées aux PDF au LHC grâce à une combinaison des résultats des différents groupes.
+
+
+\begin{figure}
+  \begin{center}
+  \subcaptionbox{\label{fig:pdgleft}}[0.45\textwidth]{\includegraphics[width=0.4\textwidth]{parton_pdf_100_GeV2.pdf}}\hfill
+  \subcaptionbox{\label{fig:pdgright}}[0.45\textwidth]{\includegraphics[width=0.4\textwidth]{parton_pdf_10000_GeV2.pdf}}
+  \caption{Fonctions de densité partonique pour une échelle en énergie  (\subref{fig:pdgleft}) $\mu^2 (= Q^2) =  \SI{10}{\GeV^2}$ et  (\subref{fig:pdgright}) $\mu^2 (= Q^2) = \SI{e4}{\GeV^2}$ \cite{Debbio2018}.}
+  \label{fig:cj12}
+\end{center}    
+\end{figure}
+
+
+\subsection{Le Lagrangien complet}
+On peut résumer toutes les informations précédentes pour bâtir le Lagrangien du Modèle Standard avant brisure de symétrie $U(1)_Y \otimes  SU(2)_L $. Ce Lagrangien est donc symétrique à $SO(1,3)$ et $U(1)_Y \otimes  SU(2)_L \otimes SU(3)_C $, entre autres.
+\begin{align}
+\mathcal{L}_\textrm{MS} &= \underbrace{\frac{i}{2}\bar{Q}_A\gamma^\mu\overset{\leftrightarrow}{D_\mu}Q_A + \frac{i}{2}\bar{U}_A\gamma^\mu\overset{\leftrightarrow}{D_\mu}U_A + \frac{i}{2}\bar{D}_A\gamma^\mu\overset{\leftrightarrow}{D_\mu}D_A}_{\substack{\text{cinétique des quarks} \\ \text{interaction quarks/bosons de jauge}}} \\
+&\underbrace{+\frac{i}{2}\bar{L}_A\gamma^\mu\overset{\leftrightarrow}{D_\mu}L_A +\frac{i}{2}\bar{R}_A\gamma^\mu\overset{\leftrightarrow}{D_\mu}R_A}_{\substack{\text{cinétique des leptons} \\ \text{interaction leptons/bosons de jauge}}} \nonumber \\ 
+    & \underbrace{-\frac{1}{4}B_{\mu\nu}B^{\mu\nu} -\frac{1}{4}\vec{W}_{\mu\nu}\cdot \vec{W}^{\mu\nu}}_\textrm{cinétique des bosons de jauge $U(1)_Y \otimes  SU(2)_L$} \qquad  \underbrace{-\frac{1}{4} \sum_{a=1}^{8} G^a_{\mu\nu}G_a^{\mu\nu}}_\textrm{cinétique des bosons de jauge $SU(3)_C $} \nonumber \\
+    &  \underbrace{+vy_1 \bar{Q}_A \phi U_A + vy_2 \bar{Q}_A \phi D_A + vy_3 \bar{L}_A \phi R_A +\mathrm{h.c.} }_\textrm{couplage de Yukawa des fermions} \nonumber \\
+    &  \underbrace{+D_\mu \phi^\dagger D^\mu \phi + \mu^2 \phi^\dagger \phi + \lambda (\phi^\dagger \phi)^2}_\textrm{secteur du champs de Higgs}
+\end{align}
+
+
+\begin{landscape}
+
+\begin{table}
+\begin{center}
+    \begin{tabular}{cccc|ccc|cccc}
+    \noalign{\smallskip}\hline\noalign{\smallskip}
+      & I & II& III & $U(1)_Y $ & $SU(2)_L$ & $SU(3)_C $   &I&$I^3$&$C$&$Y$\\
+ \noalign{\smallskip}
+ \hline \hline
+ \noalign{\smallskip}
+    \multirow{2}{*}{Leptons} &  $\begin{pmatrix} \Pnue \\ \Pelectron \end{pmatrix}_L$ &  $\begin{pmatrix} \Pnum \\ \Pmuon \end{pmatrix}_L$ &  $\begin{pmatrix} \Pnut \\  \Ptau \end{pmatrix}_L$ 
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    & - \sfrac{1}{2}&2&1  
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     &+\sfrac{1}{2}&$\begin{matrix} \textrm{+\sfrac{1}{2}}\\ \textrm{-\sfrac{1}{2}}\end{matrix}$&$\begin{matrix} \textrm{0}\\\textrm{-1}\end{matrix}$&-1\\
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    & $\Pelectron_R$ & $\Pmuon_R$  & $\Ptauon_R$  
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    & -1 & 1 & 1  
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    &0&0&-1&-2 \\
+    \noalign{\smallskip}\hline\noalign{\smallskip}
+    \multirow{3}{*}{Quarks} &  $\begin{pmatrix} \Pup \\ \Pdown' \end{pmatrix}_L$ &  $\begin{pmatrix} \Pcharm \\ \Pstrange' \end{pmatrix}_L$ &  $\begin{pmatrix} \Ptop \\  \Pbottom' \end{pmatrix}_L$ 
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    &\sfrac{1}{6}&2&3 
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     &\sfrac{1}{2}&$\begin{matrix} \textrm{+\sfrac{1}{2}}\\ \textrm{-\sfrac{1}{2}}\end{matrix}$&$\begin{matrix} \textrm{+\sfrac{2}{3}}\\ \textrm{-\sfrac{1}{3}}\end{matrix}$&+\sfrac{1}{3}\\
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    & $\Pup_R$ & $\Pcharm_R$  & $\Ptop_R$  
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    &\sfrac{2}{3}&1&3  
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    &0 &0 & +\sfrac{2}{3}   & +\sfrac{4}{3} \\
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    & $\Pdown_R$ & $\Pstrange_R$  & $\Pbottom_R$ 
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    &-\sfrac{1}{3}&1& 3 
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    &0 &0 & -\sfrac{1}{3}   & -\sfrac{2}{3} \\
+    \noalign{\smallskip}\hline\noalign{\smallskip}
+    \multirow{3}{*}{Bosons de jauge} &  & $B^\mu$  & 
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    &0&1&1  
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    &1&0, $\pm$1&0, $\pm$1&0 \\
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    &  & $W^\mu_i$  & 
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    &0&3&1  
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    &0&0&0&0 \\
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    &  & $G^\mu_a$  & 
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    &0&1& 8   
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    &0&0&0&0 \\
+    \noalign{\smallskip}\hline\noalign{\smallskip}
+  \end{tabular}
+  \caption{Contenu en particules du Modèle Standard. Les bosons de jauge et le doublet de Higgs sont également représentés. Pour les quarks, $\Pup_i$ représente les états propres de masse tandis que $\Pdown'_i$ représente les états propres d’interaction faible. On donne également la représentation du champ dans les groupes $SU(3)_C$ et $SU(2)_L$ (1 pour singlet, 2 pour doublet, ...)}
+  \label{tab:SMvalues}
+\end{center}
+\end{table}
+
+\end{landscape}
+
+
+
+
+\subsection{Limites du Modèle Standard}
+Malgré un succès évident, le Modèle Standard porte des limitations théoriques et expérimentales. Ces dernières mènent à croire que le Modèle Standard est une approximation à basse énergie d'une théorie plus fondamentale. Ci-dessous quelques unes de ces limitations.
+
+\begin{description}
+\item[L'unification des interactions de jauge] 
+\begin{sloppypar}
+Comme montré précédemment, si les interactions faible et électromagnétique ont pu être unifiées, la chromodynamique quantique, elle, est ajoutée de manière indépendante et coexiste avec la théorie électrofaible sans unité. Des propositions comme la supersymétrie semblent pouvoir apporter un cadre théorique pour cette unification des interactions de jauges.
+\end{sloppypar}
+\item[La matière noire] 
+\begin{sloppypar}
+Une autre limitation est l’absence de candidats pour la matière noire. En effet, les mesures cosmologiques semblent indiquer que la matière décrite par le Modèle Standard ne représente que \SI{5}{\%} de la densité d’énergie de l’Univers, la majeure partie étant composée de matière noire (\SI{\sim27}{\%} ) et d’énergie noire (\SI{\sim 68}{\%} ). Une approche prometteuse postule l'existence de particules au-delà du Modèle Standard massives et faiblement interagissantes avec la matière, les WIMPs (\emph{Weakly Interacting Massive Particles}). Il est à noter que certaines approches supersymétriques offrent un candidat sérieux avec le neutralino par exemple.
+\end{sloppypar}
+\item[La masse des neutrinos] 
+\begin{sloppypar}
+Par construction, le Modèle Standard postule une masse nulle pour les neutrinos. Cependant des mesures de neutrinos solaires et atmosphériques \cite{neutrino_mixing_1}, \cite{neutrino_mixing_2} mettent en évidence le phénomène de changement de saveur appelé oscillation des neutrinos. Un analogue à la matrice CKM peut être introduit, la  matrice de Pontecorvo-Maki-Nakagawa-Sakata, qui permet de décrire le mélange de saveurs et le découplage entre état faible et état de masse. Cependant une telle présence n'explique pas \emph{a priori} la faible masse des neutrinos mesurée (inférieure à l'\si{\electronvolt}). Si on postule que les neutrinos sont des particules qui sont leur propre antiparticule (dite particule de Majorana) alors l'explication des masses peut être donnée par un mécanisme de \emph{seesaw} conduisant à des neutrinos droits stériles lourds et des neutrinos gauches de relativement faibles masses.
+\end{sloppypar}
+\item[De trop nombreux paramètres libres] 
+\begin{sloppypar}
+Le Modèle Standard contient 19 paramètres libres, c’est-à-dire non prédits et qu’il faut évaluer à travers l’expérience: les 3 masses des leptons, les 6 masses des quarks, les 3 couplages de jauge, les 2 paramètres du potentiel de Higgs, les 4 paramètres de la matrice CKM et la phase de violation de CP forte. Une proposition théorique élégante générera ces paramètres sans postuler leur existence de manière \emph{ad-hoc}.
+\end{sloppypar}
+\item[Le problème de la gravitation]
+\begin{sloppypar}
+En physique moderne, la gravitation est décrite dans le cadre de la Relativité Générale. Il existe une incompatibilité intrinsèque de cette dernière avec le Modèle Standard qui est une théorie quantique des champs. En effet, en Relativité Générale l'espace-temps est une entité dynamique, en théorie quantique des champs il est un simple contexte figé et immuable. Les tentatives de pratiquer naïvement de la théorie quantique des champs en espace-temps dynamique échouent. Cette pratique est pourtant une nécessité pour comprendre les phénomènes pour lesquels la taille de l'espace-temps atteint l'échelle de Planck $ \sim$ \SI{e19}{\GeV} où les phénomènes quantiques deviennent non négligeables (mur de Planck, singularité de trou noir). La solution pour la description d'une gravitation quantique est de construire une proposition théorique unifiée dont la Relativité Générale et le Modèle Standard seraient des théories effectives à basse énergie.
+\end{sloppypar}
+\end{description}
+
+\section{Extension du Modèle Standard}\label{sec:TheSME}
+
+\subsection{Introduction}
+
+Le problème de la gravitation quantique est l'un des enjeux majeurs de la physique moderne. Les paragraphes précédents ont montré le fait que le Modèle Standard, à lui seul, ne peut prendre en compte le phénomène de gravitation. Nous avons également mentionné le fait qu'une théorie unificatrice doit avoir le Modèle Standard comme théorie effective à basse énergie.
+Quelques exemples de propositions théoriques en cours de développement sont présentées rapidement ici :
+
+\begin{description}
+\item[La géométrie non commutative]
+\begin{sloppypar}
+ Il s'agit d'une approche mathématique qui postule que l'espace dans lequel les particules évoluent est intrinsèquement non-commutatif. Elle repose sur une branche des mathématiques développée en grande partie par Alain Connes \cite{Connes}. On peut résumer l'idée de base  par l'équation :
+\begin{equation}
+[ x^\mu, x^\nu ] = i \theta^{\mu\nu}
+\end{equation}
+Si cette approche n'a pas explicitement pour but de créer une théorie quantique unifiée, elle propose de réunir sous un même Lagrangien et un même formalisme mathématique le Modèle Standard et la Relativité Générale. Si cette approche n'est pas majoritaire elle a tout de même le mérite de donner une interprétation au champ de Higgs comme émergeant naturellement de l'espace-temps non-commutatif.
+\end{sloppypar}
+\item [La gravitation quantique à boucle]
+\begin{sloppypar}
+Cette approche est une théorie de gravitation quantique qui postule l'idée que l'espace-temps est quantifié. Partie d'une reformulation de la Relativité Générale par Abhay Ashtekar elle deviendra indépendante de la RG elle-même et sera développée en partie par Lee Smolin \cite{smolin} et Carlo Rovelli \cite{rovelli}.
+\end{sloppypar}
+\item [La théorie des cordes] 
+\begin{sloppypar}
+Cette proposition se veut une théorie du tout. Introduite par  Sergio Fubini, Gabriele Veneziano \cite{fubini} et Leonard Susskind \cite{susskind} comme proposition pour l'explication de l'interaction forte, elle se développera comme une théorie de gravitation quantique. Elle consiste à décrire les particules comme ayant une structure interne composée d'objets en 1 dimension nommés cordes avec une taille de l'ordre de la longueur de Planck ( \SI{\sim e-33}{\cm} ).
+\end{sloppypar}
+\end{description}
+
+Quelles que soient les approches de gravitation quantique, chacune d'entre elles admet la possibilité d'une brisure de la symétrie de Lorentz. Cette violation peut être explicite à la théorie comme en gravitation quantique à boucle \cite{LIVloop} ou en géométrie non-commutative \cite{LIVnoncomm}. Elle peut également être spontanée comme en théorie des cordes \cite{LIVstring}. Cette universalité rend intéressante la recherche d'une brisure de symétrie de Lorentz.
+
+\subsection{Interprétation de la violation de symétrie de Lorentz}
+
+Comme discuté au tout début de la section \ref{sec:symetrie_de_lorentz}, la violation de symétrie de Lorentz correspond à la non conservation de l'intervalle $\mathrm{d}s^2$ par changement de référentiel inertiel. Cette proposition est très radicale puisque de simples opérations sur l'espace-temps telle qu'une rotation peuvent engendrer des transformations sur les lois physiques (les Lagrangiens). Pour mieux saisir la prudence dont il faut faire preuve, faisons une expérience de pensée.
+
+\subsubsection{Expérience de pensée}
+
+Imaginons un phénomène $X$ émettant une radiation $\gamma$ de manière probabiliste. Notons cette probabilité $\mathcal{P}(X\rightarrow\gamma, \theta)$ avec $\theta$ un angle en guise de paramètre et $X\rightarrow\gamma$ l'évènement du phénomène $X$ qui émet la radiation $\gamma$. On considère un premier référentiel $\mathcal{R}$ dans lequel on a $\mathcal{P}$ et un second référentiel $\mathcal{R}'$ obtenu du premier par transformation de Lorentz dans lequel on a $\mathcal{P}'$.
+Par définition, la violation de la symétrie de Lorentz impliquera que 
+\begin{equation}\label{paradoxe}
+\mathcal{P}(X\rightarrow\gamma, \theta) \neq \mathcal{P}'(X\rightarrow\gamma, \Lambda \theta)
+\end{equation}
+où $\Lambda$ représente une transformation de Lorentz (rotation dans ce cas précis).
+
+Installons ce phénomène dans un système où les radiations émises seront orientées vers un miroir semi-réfléchissant. Soient deux observateurs distincts : Grégoire (noté $G$ attaché à $\mathcal{R}$) et Quentin (noté $Q$ attaché à $\mathcal{R}'$) que l'on installe respectivement dans les alignements des radiations réfractée et transmise (voir figure \figurename{\ref{expCarleUhlrich}}). Les observateurs (donc référentiels) seront tournés l'un par rapport à l'autre de \SI{90}{\degree}. Ainsi, en vertu de l'équation \eqref{paradoxe}, les probabilités d'émission de radiation seront différentes. Après un certain nombre d'itérations de l'expérience, on obtiendra un cas où l'évènement aura lieu dans un des deux référentiels mais pas dans l'autre. 
+
+Si nous nous trouvons dans ce cas, pour $G$, l'émission existe et il observe l'évènement $X\rightarrow\gamma$. Cependant pour $Q$ l'émission n'existe pas. Après avoir été informé par $Q$ que l'évènement n'a pas eu lieu (noté\footnote{la notation $\neg A$ est empruntée à la logique est signifie "non $A$".} $\neg (X\rightarrow\gamma)$ dans la figure \figurename{\ref{expCarleUhlrich}}), $G$ sera dans la position où il a connaissance de deux réalités distinctes qui ont eu lieu simultanément.
+
+\begin{figure}[H]
+\begin{center}
+    \includegraphics[width=0.6\textwidth]{exppensee.pdf}
+    \caption{Expérience de pensée menant au paradoxe d'un phénomène qui s'est à la fois produit et pas produit en même temps.}
+    \label{expCarleUhlrich}
+\end{center}
+\end{figure}
+
+
+\paragraph{Discussion} 
+Cette petite expérience de pensée amène un paradoxe qui n'est soluble que de deux manières possibles. Soit il faut admettre que plusieurs réalités contradictoires peuvent coexister, ce qui n'est pas envisageable à l'heure actuelle dans le domaine de la physique. Soit il faut renoncer à la possibilité que deux évènements puissent être simultanés. En effet, on peut lever le paradoxe en considérant que l'on abandonne la possibilité que les deux observateurs puissent se synchroniser pour s'assurer qu'ils observent un même évènement.
+\newline
+
+On constate donc que la violation de la symétrie de Lorentz ne peut pas être introduite sans précaution. Pour autant, il est possible de construire une physique qui viole la symétrie de Lorentz sans pour autant être soumise au paradoxe précédent. La stratégie consiste à abandonner une équivalence entre les transformations de Lorentz passives et les transformations de Lorentz actives, présente en théorie quantique des champs. La théorie développant les manipulations de violation de Lorentz, présentée en détails dans le paragraphe \ref{sec:sme}, préfère les appellations de transformation "observateur" et transformation "particule" qui sont assimilables dans le cadre de cette thèse aux transformations passive et active usuelles. La terminologie observateur/particule sera utilisée dans le reste de cette thèse. 
+
+\subsection{La différence de transformation observateur / particule}\label{sec:particuleobservateur}
+
+La transformation de Lorentz observateur est un changement de pures coordonnées. Le phénomène, lui, est le même. Le système de l'expérience de pensée précédente met en scène une transformation observateur. Et c'est pour ne pas tomber dans l'écueil du paradoxe, que l'on considérera que la symétrie de Lorentz est conservée par transformation observateur. La transformation particule, elle, consiste à considérer que c'est le phénomène qui subit la transformation. Cependant le jeu de coordonnées reste le même. 
+\begin{figure}[H]
+\begin{center}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \begin{center}
+            \includegraphics[height=0.7\textwidth]{passif.pdf}
+            \caption{Transformation observateur (passive) où le repère est modifié mais le phénomène est inchangé.}
+        \end{center}
+    \end{subfigure}
+    \hspace{0.4cm}
+        \begin{subfigure}[b]{0.45\textwidth}
+            \begin{center}
+              \includegraphics[height=0.7\textwidth]{actif.pdf}
+                \caption{Transformation particule (active) où le repère est inchangé mais le phénomène est transformé.}
+            \end{center}
+        \end{subfigure}
+    \end{center}
+\end{figure}
+
+
+Il est possible de construire formellement ces deux types de transformations. En prenant deux nouveaux observateurs : Jean-François et Lucas.
+\begin{description}
+\item [Transformation observateur]
+\begin{sloppypar}
+Soit  Jean-François, qui dans son référentiel observe un phénomène $\mathcal{O}$ dépendant des coordonnées d'espace-temps $x$. Alors la forme mathématique de son observation est $\mathcal{O}(x)$. Lucas, dans son propre référentiel, observe le même phénomène avec ses propres coordonnées. Il observera $\mathcal{O}'(x')$. Par essence, les deux observations sont égales.  
+\begin{equation}
+ \mathcal{O}(x) = \mathcal{O}'(x')
+\end{equation}
+avec $x' = \Lambda x$.
+\end{sloppypar}
+\item [Transformation particule]
+\begin{sloppypar}
+Soit  Jean-François, qui, de la même manière que précédemment observe $\mathcal{O}(x)$. La différence de perspective arrive avec Lucas qui dans son propre référentiel observe un phénomène similaire en utilisant le même jeu de coordonnées que Jean-François. Alors Lucas observera $\mathcal{O}'(x)$. Du point de vue de Jean-François les coordonnées de Lucas sont données par $x' = \Lambda x$. Comme les deux phénomènes sont différents mais mathématiquement équivalents, alors il y a égalité entre le phénomène vu par Lucas avec ses propres coordonnées et celui vu par Jean-François avec ses coordonnées exprimées par rapport à celles de Lucas. Soit 
+\begin{equation}
+ \mathcal{O}'(x) = \mathcal{O}(\Lambda^{-1}x')
+\end{equation}
+\end{sloppypar}
+\end{description}
+Un résumé de ces transformations est présenté dans la figure \tablename{\ref{tab:passif_actif}}.
+
+\begin{table}
+\begin{center}
+    \begin{tabular}{c|cc}
+    \noalign{\smallskip}\hline\noalign{\smallskip}
+    Transformation & Observateur & Particule \\
+ \noalign{\smallskip}
+ \hline \hline
+ \noalign{\smallskip}
+    Coordonnées&$x \rightarrow x' = \Lambda x$ & $x \rightarrow x$\\
+    Observation &$\mathcal{O} \rightarrow \mathcal{O}'(x') = \mathcal{O}(x)$ & $\mathcal{O}  \rightarrow \mathcal{O}'(x) = \mathcal{O}(\Lambda^{-1}x)$ \\
+    \noalign{\smallskip}\hline\noalign{\smallskip}
+  \end{tabular}
+  \caption{Résumé des transformations observateur/particule. Avec $\Lambda$ une transformation de Lorentz et $\mathcal{O}$ un phénomène observé.}
+  \label{tab:passif_actif}
+\end{center}
+\end{table}
+
+
+
+\paragraph{Fin de l'équivalence}
+Dans une théorie quantique des champs traditionnelle, ces deux transformations sont absolument équivalentes et interchangeables. On a vu que l'on ne peut pas laisser une transformation observateur violer la symétrie de Lorentz sans conséquences. Cependant la violation d'une transformation particule n'induit pas de paradoxe. La distinction de ces deux types de transformations est un point de départ nécessaire.
+
+
+\subsection{Formalisme du SME}\label{sec:sme}
+
+Pour réaliser des mesures expérimentales de la violation de la symétrie de Lorentz à basse énergie, il est commode d'employer une théorie effective. La théorie qui permet l'étude des violations de Lorentz est l'Extension du Modèle Standard (ou SME pour \emph{Standard Model Extension}). Elle a été introduite par Alan Kostelecký et Don Colladay \cite{SME1}, \cite{SME2}. Le but du SME est de fournir un cadre traitant de toutes violations de Lorentz possibles en physique des particules.
+
+\subsubsection{Vide et espace-temps constant}
+
+L'idée clé du SME est que le vide n'est pas symétrique sous transformation de Lorentz. Pour se le représenter, on peut imaginer qu'il existerait en tous points de l'espace-temps une entité constante de faible amplitude venant s'ajouter aux quantités physiques. Cette vue de l'esprit est représentée dans la figure \figurename{\ref{fig:SMEvacuum}}. 
+
+
+\paragraph{Modèle simplifié : Mécanique newtonienne tridimensionnelle}\mbox{} 
+
+En physique classique, une particule libre dans un référentiel inertiel est pilotée par le Lagrangien libre : 
+\begin{equation}
+    L = \frac{1}{2}m \vec{v}^2 = \frac{1}{2}m \delta_{ij} v^i v^j 
+\end{equation}
+avec $\delta_{ij = 1,2,3}$ la représentation indicielle d'une métrique d'espace-temps euclidienne en 3D.
+En ajoutant à l'espace un champ additionnel orienté constant sous forme d'une matrice $c$ de dimensions $3\times3$, le Lagrangien devient en notation indicielle :
+\begin{equation}
+L = \frac{1}{2}m (\delta_{ij} + c_{ij}) v^i v^j 
+\end{equation}
+ce qui donne après application du principe de moindre action, la deuxième loi de Newton modifiée : 
+\begin{equation}
+    \vec{F} = m\vec{a} + mc\circ \vec{v}
+\end{equation}
+où $c\circ \vec{v}$ est la multiplication matricielle entre la matrice $c$ et le vecteur vitesse $\vec{v}$. Dans le cas le plus général possible, cette équation donne un terme additionnel à la second loi de Newton qui ne suit pas nécessairement la direction de l'accélération. L'effet s'interprète comme une petite force qui en tous points de l'espace est appliquée aux objets.
+
+L'application de ce principe à l'espace-temps est une interprétation possible du SME. Dans le cadre de cette théorie effective, un champ $c_{\mu\nu}$ est additionné au champ métrique $g_{\mu\nu}$. De plus, devant suivre le principe de distinction transformation particule/ observateur (vu dans la section précédente \ref{sec:particuleobservateur}), alors les coefficients $c_{\mu\nu}$\footnote{Étant une théorie effective, ces coefficients se nomment coefficients de Wilson mais les propriétés de transformations de ces coefficients justifieraient un nom distinctif comme coefficients de Wilson "semi-covariants" par exemple.} introduits ont les propriétés de transformations suivantes : 
+\begin{align}\label{wilson_def}
+    c_{\mu\nu} &\rightarrow \Lambda^\alpha_\mu \Lambda^\beta_\nu c_{\alpha\beta} &\textrm{pour une transformation observateur} \nonumber \\
+    c_{\mu\nu} &\rightarrow \delta^\alpha_\mu \delta^\beta_\nu  c_{\alpha\beta} = c_{\mu\nu} &\textrm{pour une transformation particule} 
+\end{align}
+
+
+\begin{figure}
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{champSME.pdf}
+    \caption{Représentation de la Terre plongée dans un espace comportant un champ additionnel orienté constant, symbolisé par des flèches rouges.}
+    \label{fig:SMEvacuum}
+\end{center}
+\end{figure}
+
+
+\subsubsection{Une théorie effective}
+
+LE SME est une théorie effective, c'est-à-dire qu'elle n'est pas construite pour donner une proposition de fonctionnement de la Nature mais simplement pour tester des configurations de Lagrangien afin de mesurer des paramètres et exclure des modèles. La puissance de cette théorie effective est qu'elle se veut universelle. En d'autres termes, elle est construite de telle sorte que toute théorie fondamentale violant la symétrie de Lorentz devrait converger, en approximation à basse énergie, vers le SME. Pour cela plusieurs contraintes doivent être respectées. 
+
+\begin{itemize}[label=$\triangleright$]
+\item Symétrique à la jauge $U(1)_Y \otimes  SU(2)_L \otimes SU(3)_C $
+\item Conservation de l'énergie et de l'impulsion
+\item Positivité de l'énergie
+\item Hermiticité des opérateurs
+\item Conservation de la microcausalité
+\item Renormalisabilité
+\end{itemize}
+De plus dans sa version dite "minimale" le SME est valable pour un espace-temps en $D=4$ dimensions et postule qu'il n'y a pas de particules additionnelles aux champs du Modèle Standard.
+
+Une fois toutes ces propriétés prises en compte, l'étape suivante consiste en l'élaboration d'une nouvelle densité lagrangienne. L'aspect effectif du SME permet de construire cette densité en y incorporant tous les coefficients possibles de brisure de Lorentz.
+
+
+\subsubsection{Le formalisme mathématique}
+
+Le SME est une théorie qui conserve la symétrie de Lorentz observateur. Cela implique que la construction d'un Lagrangien scalaire de Lorentz reste valide. Pour se donner une idée, on peut écrire le Lagrangien de Dirac \cite{Lehnert} dans le SME :
+\begin{equation}
+    \mathcal{L} = \frac{i}{2} \bar{\psi} \Gamma^\mu \overset{\leftrightarrow}{\partial_\mu} \psi - \bar{\psi} M \psi
+\end{equation}
+avec: 
+\begin{align}
+ \Gamma^\mu &\doteq \gamma^\mu + c^{\mu\nu}\gamma_\nu + d^{\mu\nu}\gamma_5 \gamma_\nu + e^\mu + if^\nu\gamma_5 + \frac{1}{2}g^{\lambda \mu\nu}\sigma_{\lambda \nu} \\
+ M &\doteq m + a_\mu \gamma^\mu + b_\mu\gamma_5\gamma^\mu + \frac{1}{2} H^{\mu\nu}\sigma_{\mu\nu}
+\end{align}
+L'entité $ \Gamma^\mu$ signe l'aspect effectif du SME. En effet, on a toutes les combinaisons possibles de scalaires de Lorentz à l'ordre 1. Ainsi, dans l'espace des scalaires de Lorentz défini par la base $(\mathbbm{1},\gamma^\mu, i\gamma_5, \gamma_5\gamma^\mu,\sigma_{\mu\nu})$, les coefficients $a_\mu$, $b_\mu$, $c_{\mu\nu}$,  $d_{\mu\nu}$, $e_\mu$, $f_\mu$, $g_{\lambda \mu\nu}$ et $H^{\mu\nu}$ sont des coefficients de Wilson répondant à la propriété \eqref{wilson_def}.
+Par exemple, dans le cas simplifié d'une particule où seul le coefficient $a_\mu$ est non nul, avec la relation de transformation des 2-spineurs et des matrices de Dirac :
+\begin{align*}
+ \psi &\rightarrow \psi' = S(\Lambda) \psi \\
+ \gamma^\mu &\rightarrow  S(\Lambda) \gamma^\mu S^{-1}(\Lambda) \triangleq \Lambda^\mu_\alpha \gamma^{\alpha}
+\end{align*}
+où $ S(\Lambda)$ est la transformation de Lorentz des 2-spineurs, on a, pour le terme de masse : 
+\begin{align}
+    \bar{\psi'} (m + a'_\mu \gamma^{\mu\prime}) \psi' &=\bar{\psi} (m + a_\mu \gamma^\mu) \psi &\textrm{(observateur)} \\
+    \bar{\psi'} (m + a'_\mu \gamma^{\mu\prime}) \psi' &=\bar{\psi} (m + a_\beta \Lambda^\beta_\mu \gamma^\mu) \psi &\textrm{(particule)} 
+\end{align}
+
+
+\subsubsection{Le Lagrangien du SME minimal}
+
+Toutes les bases étant posées on peut construire le Lagrangien du SME minimal $\mathcal{L}_\mathrm{SME}$ \cite{SME1}. En vertu des principes précédents, le Lagrangien du SME minimal avant brisure électrofaible s'écrit :
+\begin{align*}
+\mathcal{L}_\textrm{SME} &= \mathcal{L}_\textrm{MS} \\ &\\
+    &+\frac{i}{2} (c_Q)_{\mu \nu A B} \bar{Q}_A \gamma^\mu \overset{\leftrightarrow}{D^\nu} Q_B
+    +  \frac{i}{2} (c_U)_{\mu \nu A B} \bar{U}_A \gamma^\mu \overset{\leftrightarrow}{D^\nu} U_B + \frac{i}{2} (c_D)_{\mu \nu A B} \bar{D}_A \gamma^\mu \overset{\leftrightarrow}{D^\nu} D_B\\
+    &\underbrace{-(a_Q)_{\mu A B} \bar{Q}_A \gamma^\mu Q_B -(a_U)_{\mu A B} \bar{U}_A \gamma^\mu U_B -(a_D)_{\mu A B} \bar{D}_A \gamma^\mu D_B \qquad\qquad\qquad\quad}_{\substack{\text{cinétique des quarks et interaction quarks/bosons de jauge} \\ \text{violant la symétrie de Lorentz}}} \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+& +\frac{i}{2} (c_L)_{\mu \nu A B} \bar{L}_A \gamma^\mu \overset{\leftrightarrow}{D^\nu} L_B
+    +  \frac{i}{2} (c_R)_{\mu \nu A B} \bar{R}_A \gamma^\mu \overset{\leftrightarrow}{D^\nu} R_B\\ 
+&\underbrace{-(a_L)_{\mu A B} \bar{L}_A \gamma^\mu L_B - (a_R)_{\mu A B} \bar{R}_A \gamma^\mu R_B\qquad\qquad\quad}_{\substack{\text{cinétique des leptons et interaction leptons/bosons de jauge}\\ \text{violant la symétrie de Lorentz}}} \nonumber \\ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    & \underbrace{-\frac{1}{4}(k_B)_{\kappa\lambda\mu\nu}B^{\kappa\lambda}B^{\mu\nu} -\frac{1}{2}(k_W)_{\kappa\lambda\mu\nu}\vec{W}^{\kappa\lambda}\cdot \vec{W}^{\mu\nu} -\frac{1}{2} (k_G)_{\kappa\lambda\mu\nu} \sum_{a=1}^{8}G_a^{\kappa\lambda}G_a^{\mu\nu}  }_{\substack{\textrm{cinétique des bosons de jauge $U(1)_Y \otimes  SU(2)_L$ et $SU(3)_C $}\\ \text{violant la symétrie de Lorentz}}}   \nonumber \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    &  \underbrace{-\frac{1}{2} \left\{ (H_L)_{\mu \nu A B} \bar{L}_A \phi \sigma^{\mu\nu} R_B + (H_U)_{\mu \nu A B} \bar{Q}_A \phi^c \sigma^{\mu\nu} U_B +(H_D)_{\mu \nu A B} \bar{Q}_A \phi \sigma^{\mu\nu} D_B \right\} +\mathrm{h.c.} }_{\substack{\textrm{couplage de Yukawa des fermions}\\ \text{violant la symétrie de Lorentz}}}    \nonumber \\
+    & + \frac{1}{2} (k_{\phi\phi})^{\mu\nu}  D_\mu \phi^\dagger D_\nu \phi +\mathrm{h.c.} \\
+    &  \underbrace{ - \frac{1}{2} (k_{\phi B})^{\mu\nu} \phi^\dagger \phi B_{\mu\nu}  - \frac{1}{2} (k_{\phi W})^{\mu\nu} \phi^\dagger W_{\mu\nu} \phi +  i (k_{\phi})^{\mu} \phi^\dagger D_{\mu} \phi +\mathrm{h.c.} }_{\substack{\textrm{secteur du champ de Higgs}\\ \text{violant la symétrie de Lorentz}}}
+\end{align*}
+avec $A,B = 1,2,3$ les indices de saveurs.
+
+\subsection{L'état de l'art}
+
+Diverses limites sur les coefficients de Wilson du SME ont été établies par un grand nombre d'expériences. Ces limites sont résumées dans des tableaux récapitulatifs visibles dans la référence \cite{datatable}. 
+\newline
+
+L'unique expérience ayant posé des contraintes dans le secteur du quark top est celle faite avec la collaboration D$\emptyset$ \cite{D0}. Les limites sont résumées dans le tableau \tablename{\ref{tab:top}} et ne présentent aucune violation de symétrie de Lorentz avec une incertitude absolue d'environ \SI{10}{\%}. Ce sont ces limites que le travail de recherche décrit dans cette thèse a pour but de repousser.
+
+
+\begin{table}[H]
+\begin{center}
+    \begin{tabular}{cccc}
+    \noalign{\smallskip}\hline\noalign{\smallskip}
+    Coefficient & Résultats & Secteur expérimental & Référence \\
+    \noalign{\smallskip}
+    \hline \hline
+    \noalign{\smallskip}
+    $(c_Q)_{XX 33}$ & \num[parse-numbers=false]{ -0.12 \pm 0.11 \pm 0.02 } & Production \ttbar & \cite{D0} \\
+    $(c_Q)_{YY 33}$ & \num[parse-numbers=false]{ 0.12 \pm 0.11 \pm 0.02 } &  & \cite{D0} \\
+    $(c_Q)_{XY 33}$ & \num[parse-numbers=false]{ -0.04 \pm 0.11 \pm 0.01 } & & \cite{D0} \\
+    $(c_Q)_{XZ 33}$ & \num[parse-numbers=false]{ 0.15 \pm 0.08 \pm 0.01 } &  & \cite{D0} \\
+    $(c_Q)_{YZ 33}$ & \num[parse-numbers=false]{ -0.03 \pm 0.08 \pm 0.02 } &  & \cite{D0} \\
+    \noalign{\smallskip}\hline\noalign{\smallskip}
+    $(c_U)_{XX 33}$ & \num[parse-numbers=false]{ 0.1 \pm 0.09 \pm 0.02 } & Production \ttbar & \cite{D0} \\
+    $(c_U)_{YY 33}$ & \num[parse-numbers=false]{ -0.1 \pm 0.09 \pm 0.02 } &  & \cite{D0} \\
+    $(c_U)_{XY 33}$ & \num[parse-numbers=false]{ 0.04 \pm 0.09 \pm 0.01 } & & \cite{D0} \\
+    $(c_U)_{XZ 33}$ & \num[parse-numbers=false]{ -0.14 \pm 0.07 \pm 0.02 } &  & \cite{D0} \\
+    $(c_U)_{YZ 33}$ & \num[parse-numbers=false]{ 0.01 \pm 0.07 \pm <0.01 } &  & \cite{D0} \\
+        \noalign{\smallskip}\hline\noalign{\smallskip}
+    $d_{XX}$ & \num[parse-numbers=false]{ -0.11 \pm 0.1 \pm 0.02 } & Production \ttbar & \cite{D0} \\
+    $d_{YY}$ & \num[parse-numbers=false]{ 0.11 \pm 0.1 \pm 0.02 } &  & \cite{D0} \\
+    $d_{XY}$ & \num[parse-numbers=false]{ -0.04 \pm 0.1 \pm 0.01 } & & \cite{D0} \\
+    $d_{XZ}$ & \num[parse-numbers=false]{ 0.14 \pm 0.07 \pm 0.02 } &  & \cite{D0} \\
+    $d_{YZ}$ & \num[parse-numbers=false]{ -0.02 \pm 0.07 \pm <0.01 } &  & \cite{D0} \\
+    \noalign{\smallskip}\hline\noalign{\smallskip}
+    \end{tabular}
+    \caption{Exemples de mesures sur les coefficients de Wilson du SME dans le secteur du quark top.}
+    \label{tab:top}
+\end{center}
+\end{table}
+
+
+
+A titre illustratif, quelques exemples de valeurs de limites dans d'autres secteurs sont présentées dans les tables \tablename{\ref{tab:top}, \ref{tab:elec}, \ref{tab:photon}}.
+On peut, par exemple, constater que le secteur de l'électron est très contraint avec des valeurs de précision de l'ordre de \num{e-14}.
+
+\begin{table}[H]
+\begin{center}
+    \begin{tabular}{cccc}
+    \noalign{\smallskip}\hline\noalign{\smallskip}
+    Coefficient & Résultats & Secteur expérimental & Référence \\
+    \noalign{\smallskip}
+    \hline \hline
+    \noalign{\smallskip}
+    $\tilde{H}_{ZT}$ & \SI[parse-numbers=false]{ (-4.1\pm2.4)\times 10^{-27} }{\GeV} & Pendule de torsion  & \cite{Heckel_2008} \\
+    $\tilde{H}_{YT} - \tilde{d}_{ZX}$ & \SI[parse-numbers=false]{ (-4.9\pm8.9)\times 10^{-27} }{\GeV} &   & \cite{Heckel_2008} \\
+    $|d_{XX}|$ & \num{ < 2e-14 } & Astrophysique & \cite{Altschul_2007} \\
+    $|d_{XY}|$ & \num{ < 2e-15 } &  & \cite{Altschul_2007} \\
+    $|d_{TZ}|$ & \num{ < 8e-17 } &  & \cite{Altschul_2007} \\
+    \noalign{\smallskip}\hline\noalign{\smallskip}
+    \end{tabular}
+    \caption{Exemples de mesures sur les coefficients de Wilson du SME dans le secteur de l'électron.}
+    \label{tab:elec}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+    \begin{tabular}{cccc}
+    \noalign{\smallskip}\hline\noalign{\smallskip}
+    Coefficient & Résultats & Secteur expérimental & Référence \\
+    \noalign{\smallskip}
+    \hline \hline
+    \noalign{\smallskip}
+    $\tilde{\kappa}_{e-}^{XY}$ & \num[parse-numbers=false]{ (-0.7\pm1.6)\times 10^{-18} } & Oscillateur saphir  & \cite{Nagel_2015} \\
+    $\tilde{\kappa}_{e-}^{XZ}$ &  \num[parse-numbers=false]{ (-5.5\pm4.0)\times 10^{-18} }  &   & \cite{Nagel_2015} \\
+    $\tilde{\kappa}_{e-}^{YZ}$ &  \num[parse-numbers=false]{ (1.7\pm1.3)\times 10^{-18} }  &   & \cite{Nagel_2015} \\
+    $k^{(3)}_{(V)00}$ &  \SI[parse-numbers=false]{ (1.1\pm1.3\pm1.5)\times 10^{-43} }{\GeV} & Polarisation du CMB & \cite{Komatsu_2011} \\
+    $k^{Z}_{AF}$ &  \SI{ < e-19 }{\GeV} & Spectroscopie à Hydrogène & \cite{Gomes_2016} \\
+    \noalign{\smallskip}\hline\noalign{\smallskip}
+    \end{tabular}
+    \caption{Exemples de mesures sur les coefficients de Wilson du SME dans le secteur du photon.}
+    \label{tab:photon}
+\end{center}
+\end{table}
+
+
+\subsection{Conclusion}
+
+Le Modèle Standard de la physique des particules, bien que couronné de succès expérimentaux, présente des zones d'ombres théoriques. Si la masse des neutrinos et la matière noire sont des problématiques importantes, c'est bien la question de la gravitation quantique qui demeure une des plus grandes questions de la physique moderne. Plusieurs approches de nouvelles physiques sont proposées dans le monde de la physique par le biais de théories au-delà du Modèle Standard. Une violation de la symétrie de Lorentz pourrait être le dénominateur commun de théories proposant des solutions au problème de la gravitation quantique. Nous avons vu que le SME (pour \emph{Standard Model Extension}) se propose comme théorie effective pour l'étude de la violation de la symétrie de Lorentz. Dans les prochains chapitres, elle sera le socle théorique à partir duquel nous préparerons et exécuterons le projet expérimental de cette thèse. 
+
+\end{fmffile}

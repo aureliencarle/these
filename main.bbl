@@ -1,0 +1,754 @@
+\begin{thebibliography}{105}
+\ProvideTextCommand{\guillemotleft}{OT1}{%
+  \leavevmode\raise .27ex\hbox{$\scriptscriptstyle\ll$}}
+\ProvideTextCommand{\guillemotright}{OT1}{%
+  \leavevmode\raise .27ex\hbox{$\scriptscriptstyle\gg$}}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{Glashow et~al.(1970)}]{Glashow}
+S.~L. Glashow, et~al.
+\newblock \enquote{Weak interactions with lepton-hadron symmetry}.
+\newblock \emph{Phys. Rev. D}, 2:1285--1292, 1970.
+
+\bibitem[{Weinberg(1967)}]{Weinberg}
+S.~Weinberg.
+\newblock \enquote{{A Model of Leptons}}.
+\newblock \emph{Physical Review Letters}, 19:1264--1266, 1967.
+\newblock \doi{10.1103/PhysRevLett.19.1264}.
+
+\bibitem[{Salam et Ward(1959)}]{Salam}
+A.~Salam et J.~C. Ward.
+\newblock \enquote{{Weak and electromagnetic interactions}}.
+\newblock \emph{Il Nuovo Cimento}, 11:568--577, 1959.
+\newblock \doi{10.1007/BF02726525}.
+
+\bibitem[{Englert et Brout(1964)}]{Englert}
+F.~Englert et R.~Brout.
+\newblock \enquote{Broken symmetry and the mass of gauge vector mesons}.
+\newblock \emph{Phys. Rev. Lett.}, 13:321--323, 1964.
+
+\bibitem[{Higgs(1964)}]{Higgs}
+P.~W. Higgs.
+\newblock \enquote{{Broken Symmetries and the Masses of Gauge Bosons}}.
+\newblock \emph{Physical Review Letters}, 13:508--509, 1964.
+\newblock \doi{10.1103/PhysRevLett.13.508}.
+
+\bibitem[{Aad et~al.(2012{\natexlab{a}})}]{higgs_atlas}
+G.~Aad et~al. (ATLAS Collaboration).
+\newblock \enquote{{Observation of a new particle in the search for the
+  Standard Model Higgs boson with the ATLAS detector at the LHC}}.
+\newblock \emph{Phys.Lett.}, B716:1--29, 2012{\natexlab{a}}.
+
+\bibitem[{Chatrchyan et~al.(2012{\natexlab{a}})}]{higgs_cms}
+S.~Chatrchyan et~al. (CMS Collaboration).
+\newblock \enquote{{Observation of a new boson at a mass of 125 GeV with the
+  CMS experiment at the LHC}}.
+\newblock \emph{Phys.Lett.}, B716:30--61, 2012{\natexlab{a}}.
+
+\bibitem[{Zyla et~al.(2020)}]{PDG}
+P.~Zyla et~al. (Particle Data Group).
+\newblock \enquote{{Review of Particle Physics}}.
+\newblock \emph{PTEP}, 2020(8):083C01, 2020.
+\newblock \doi{10.1093/ptep/ptaa104}.
+
+\bibitem[{Wu et~al.(1957)}]{MmeWu}
+C.~S. Wu, et~al.
+\newblock \enquote{Experimental test of parity conservation in beta decay}.
+\newblock \emph{Phys. Rev.}, 105:1413--1415, 1957.
+\newblock \doi{10.1103/PhysRev.105.1413}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRev.105.1413}.
+
+\bibitem[{{Kobayashi} et {Maskawa}(1973)}]{CKM}
+M.~{Kobayashi} et T.~{Maskawa}.
+\newblock \enquote{{CP-Violation in the Renormalizable Theory of Weak
+  Interaction}}.
+\newblock \emph{Progress of Theoretical Physics}, 49(2):652--657, 1973.
+\newblock \doi{10.1143/PTP.49.652}.
+
+\bibitem[{Hahn et~al.(1952)}]{color1}
+T.~M. Hahn, et~al.
+\newblock \enquote{Neutrons and gamma-rays from the proton bombardment of
+  beryllium}.
+\newblock \emph{Phys. Rev.}, 85:934--934, 1952.
+\newblock \doi{10.1103/PhysRev.85.934}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRev.85.934}.
+
+\bibitem[{Anderson et~al.(1952{\natexlab{a}})}]{color2}
+H.~L. Anderson, et~al.
+\newblock \enquote{Total cross section of negative pions in hydrogen}.
+\newblock \emph{Phys. Rev.}, 85:934--935, 1952{\natexlab{a}}.
+\newblock \doi{10.1103/PhysRev.85.934.2}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRev.85.934.2}.
+
+\bibitem[{Anderson et~al.(1952{\natexlab{b}})}]{color3}
+H.~L. Anderson, et~al.
+\newblock \enquote{Total cross sections of positive pions in hydrogen}.
+\newblock \emph{Phys. Rev.}, 85:936--936, 1952{\natexlab{b}}.
+\newblock \doi{10.1103/PhysRev.85.936}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRev.85.936}.
+
+\bibitem[{Barnes et~al.(1964)}]{color4}
+V.~E. Barnes, et~al.
+\newblock \enquote{Observation of a hyperon with strangeness minus three}.
+\newblock \emph{Phys. Rev. Lett.}, 12:204--206, 1964.
+\newblock \doi{10.1103/PhysRevLett.12.204}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevLett.12.204}.
+
+\bibitem[{Willeke et Germany(2006)}]{DESYpdf}
+F.~Willeke et H.~Germany.
+\newblock \enquote{Hera and the next generation of lepton-ion colliders}.
+\newblock \emph{EPAC 2006 - Contributions to the Proceedings}, 2006.
+
+\bibitem[{Brodsky et Farrar(1973)}]{Brodsky:1973kr}
+S.~J. Brodsky et G.~R. Farrar.
+\newblock \enquote{{Scaling Laws at Large Transverse Momentum}}.
+\newblock \emph{Phys. Rev. Lett.}, 31:1153--1156, 1973.
+\newblock \doi{10.1103/PhysRevLett.31.1153}.
+
+\bibitem[{Altarelli et Parisi(1977)}]{ALTARELLI}
+G.~Altarelli et G.~Parisi.
+\newblock \enquote{Asymptotic freedom in parton language}.
+\newblock \emph{Nuclear Physics B}, 126(2):298--318, 1977.
+\newblock ISSN 0550-3213.
+\newblock \doi{https://doi.org/10.1016/0550-3213(77)90384-4}.
+\newblock
+  \urlprefix\url{https://www.sciencedirect.com/science/article/pii/0550321377903844}.
+
+\bibitem[{Dokshitzer(1977)}]{Dokshitzer:1977sg}
+Y.~L. Dokshitzer.
+\newblock \enquote{{Calculation of the Structure Functions for Deep Inelastic
+  Scattering and e+ e- Annihilation by Perturbation Theory in Quantum
+  Chromodynamics.}}
+\newblock \emph{Sov. Phys. JETP}, 46:641--653, 1977.
+
+\bibitem[{Gribov et Lipatov(1972)}]{Gribov:1972ri}
+V.~N. Gribov et L.~N. Lipatov.
+\newblock \enquote{{Deep inelastic e p scattering in perturbation theory}}.
+\newblock \emph{Sov. J. Nucl. Phys.}, 15:438--450, 1972.
+
+\bibitem[{Owens et~al.(2013)}]{Owens:2012bv}
+J.~Owens, et~al.
+\newblock \enquote{{Global parton distributions with nuclear and finite-$Q^2$
+  corrections}}.
+\newblock \emph{Phys.Rev.}, D87(9):094012, 2013.
+
+\bibitem[{Ball et~al.(2015)}]{Ball2015}
+R.~D. Ball, et~al.
+\newblock \enquote{Parton distributions for the lhc run ii}.
+\newblock \emph{Journal of High Energy Physics}, 2015(4):40, 2015.
+\newblock ISSN 1029-8479.
+\newblock \doi{10.1007/JHEP04(2015)040}.
+\newblock \urlprefix\url{https://doi.org/10.1007/JHEP04(2015)040}.
+
+\bibitem[{Butterworth et~al.(2016)}]{Butterworth_2016}
+J.~Butterworth, et~al.
+\newblock \enquote{Pdf4lhc recommendations for lhc run ii}.
+\newblock \emph{Journal of Physics G: Nuclear and Particle Physics},
+  43(2):023001, 2016.
+\newblock ISSN 1361-6471.
+\newblock \doi{10.1088/0954-3899/43/2/023001}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1088/0954-3899/43/2/023001}.
+
+\bibitem[{{Del Debbio}(2018)}]{Debbio2018}
+L.~{Del Debbio}.
+\newblock \enquote{{Parton distributions in the LHC era}}.
+\newblock Dans \enquote{European Physical Journal Web of Conferences}, tome 175
+  de \emph{European Physical Journal Web of Conferences}, page 01006. 2018.
+\newblock \doi{10.1051/epjconf/201817501006}.
+
+\bibitem[{{Pontecorvo}(1968)}]{neutrino_mixing_1}
+B.~{Pontecorvo}.
+\newblock \enquote{{Neutrino Experiments and the Problem of Conservation of
+  Leptonic Charge}}.
+\newblock \emph{Soviet Journal of Experimental and Theoretical Physics},
+  26:984, 1968.
+
+\bibitem[{Maki et~al.(1962)}]{neutrino_mixing_2}
+Z.~Maki, et~al.
+\newblock \enquote{Remarks on the unified model of elementary particles}.
+\newblock \emph{Progress of Theoretical Physics}, 28(5):870--880, 1962.
+
+\bibitem[{Connes(1994)}]{Connes}
+A.~Connes.
+\newblock \enquote{Noncommutative geometry}.
+\newblock 1994.
+
+\bibitem[{Smolin(2004)}]{smolin}
+L.~Smolin.
+\newblock \enquote{An invitation to quantum loop gravity.}
+\newblock \emph{Quantum Theory and Symmetries}, 2004.
+\newblock \doi{10.1142/9789812702340_0078}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1142/9789812702340_0078}.
+
+\bibitem[{Rovelli(1998)}]{rovelli}
+C.~Rovelli.
+\newblock \enquote{Loop quantum gravity}.
+\newblock \emph{Living Reviews in Relativity}, 1(1), 1998.
+\newblock ISSN 1433-8351.
+\newblock \doi{10.12942/lrr-1998-1}.
+\newblock \urlprefix\url{http://dx.doi.org/10.12942/lrr-1998-1}.
+
+\bibitem[{Fubini et Veneziano(1969)}]{fubini}
+S.~Fubini et G.~Veneziano.
+\newblock \enquote{Level structure of dual-resonance models}.
+\newblock \emph{Il Nuovo Cimento A (1965-1970)}, 64(4):811--840, 1969.
+\newblock ISSN 1826-9869.
+\newblock \doi{10.1007/BF02758835}.
+\newblock \urlprefix\url{https://doi.org/10.1007/BF02758835}.
+
+\bibitem[{Susskind(1970)}]{susskind}
+L.~Susskind.
+\newblock \enquote{Structure of hadrons implied by duality}.
+\newblock \emph{Phys. Rev. D}, 1:1182--1186, 1970.
+\newblock \doi{10.1103/PhysRevD.1.1182}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevD.1.1182}.
+
+\bibitem[{Kosteleck\'y et Samuel(1989{\natexlab{a}})}]{LIVloop}
+V.~A. Kosteleck\'y et S.~Samuel.
+\newblock \enquote{Spontaneous breaking of lorentz symmetry in string theory}.
+\newblock \emph{Phys. Rev. D}, 39:683--685, 1989{\natexlab{a}}.
+\newblock \doi{10.1103/PhysRevD.39.683}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevD.39.683}.
+
+\bibitem[{Carroll et~al.(2001)}]{LIVnoncomm}
+S.~M. Carroll, et~al.
+\newblock \enquote{Noncommutative field theory and lorentz violation}.
+\newblock \emph{Phys. Rev. Lett.}, 87:141601, 2001.
+\newblock \doi{10.1103/PhysRevLett.87.141601}.
+\newblock
+  \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevLett.87.141601}.
+
+\bibitem[{Kosteleck\'y et Samuel(1989{\natexlab{b}})}]{LIVstring}
+V.~A. Kosteleck\'y et S.~Samuel.
+\newblock \enquote{Spontaneous breaking of lorentz symmetry in string theory}.
+\newblock \emph{Phys. Rev. D}, 39:683--685, 1989{\natexlab{b}}.
+\newblock \doi{10.1103/PhysRevD.39.683}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevD.39.683}.
+
+\bibitem[{Colladay et Kosteleck\'y(1998)}]{SME1}
+D.~Colladay et V.~A. Kosteleck\'y.
+\newblock \enquote{Lorentz-violating extension of the standard model}.
+\newblock \emph{Phys. Rev. D}, 58:116002, 1998.
+\newblock \doi{10.1103/PhysRevD.58.116002}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevD.58.116002}.
+
+\bibitem[{Colladay et Kosteleck\'y(1997)}]{SME2}
+D.~Colladay et V.~A. Kosteleck\'y.
+\newblock \enquote{$\mathrm{CPT}$ violation and the standard model}.
+\newblock \emph{Phys. Rev. D}, 55:6760--6774, 1997.
+\newblock \doi{10.1103/PhysRevD.55.6760}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevD.55.6760}.
+
+\bibitem[{Lehnert(2004)}]{Lehnert}
+R.~Lehnert.
+\newblock \enquote{Dirac theory within the standard-model extension}.
+\newblock \emph{Journal of Mathematical Physics}, 45(8):3399–3412, 2004.
+\newblock ISSN 1089-7658.
+\newblock \doi{10.1063/1.1769105}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1063/1.1769105}.
+
+\bibitem[{Kostelecký et Russell(2011)}]{datatable}
+V.~A. Kostelecký et N.~Russell.
+\newblock \enquote{Data tables for lorentz and cptviolation}.
+\newblock \emph{Reviews of Modern Physics}, 83(1):11–31, 2011.
+\newblock ISSN 1539-0756.
+\newblock \doi{10.1103/revmodphys.83.11}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1103/RevModPhys.83.11}.
+
+\bibitem[{Abazov et~al.(2012)}]{D0}
+V.~M. Abazov, et~al.
+\newblock \enquote{{Search for Violation of Lorentz Invariance in Top Quark
+  Pair Production and Decay}}.
+\newblock \emph{Physical Review Letters}, 108(26):261603, 2012.
+\newblock \doi{10.1103/PhysRevLett.108.261603}.
+\newblock \eprint{1203.6106}.
+
+\bibitem[{Heckel et~al.(2008)}]{Heckel_2008}
+B.~R. Heckel, et~al.
+\newblock \enquote{Preferred-frame andcp-violation tests with polarized
+  electrons}.
+\newblock \emph{Physical Review D}, 78(9), 2008.
+\newblock ISSN 1550-2368.
+\newblock \doi{10.1103/physrevd.78.092006}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1103/PhysRevD.78.092006}.
+
+\bibitem[{Altschul(2007)}]{Altschul_2007}
+B.~Altschul.
+\newblock \enquote{Bounds on spin-dependent lorentz violation from inverse
+  compton observations}.
+\newblock \emph{Physical Review D}, 75(4), 2007.
+\newblock ISSN 1550-2368.
+\newblock \doi{10.1103/physrevd.75.041301}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1103/PhysRevD.75.041301}.
+
+\bibitem[{Nagel et~al.(2015)}]{Nagel_2015}
+M.~Nagel, et~al.
+\newblock \enquote{Direct terrestrial test of lorentz symmetry in
+  electrodynamics to 10−18}.
+\newblock \emph{Nature Communications}, 6(1), 2015.
+\newblock ISSN 2041-1723.
+\newblock \doi{10.1038/ncomms9174}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1038/ncomms9174}.
+
+\bibitem[{Komatsu et~al.(2011)}]{Komatsu_2011}
+E.~Komatsu, et~al.
+\newblock \enquote{Seven-year wilkinson microwave anisotropy probe (wmap)
+  observations: Cosmological interpretation}.
+\newblock \emph{The Astrophysical Journal Supplement Series}, 192(2):18, 2011.
+\newblock ISSN 1538-4365.
+\newblock \doi{10.1088/0067-0049/192/2/18}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1088/0067-0049/192/2/18}.
+
+\bibitem[{Gomes et Malta(2016)}]{Gomes_2016}
+Y.~Gomes et P.~Malta.
+\newblock \enquote{Laboratory-based limits on the carroll-field-jackiw
+  lorentz-violating electrodynamics}.
+\newblock \emph{Physical Review D}, 94(2), 2016.
+\newblock ISSN 2470-0029.
+\newblock \doi{10.1103/physrevd.94.025031}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1103/PhysRevD.94.025031}.
+
+\bibitem[{Czakon et~al.(2013)}]{mitov}
+M.~Czakon, et~al.
+\newblock \enquote{Total top-quark pair-production cross section at hadron
+  colliders througho(αs4)}.
+\newblock \emph{Physical Review Letters}, 110(25), 2013.
+\newblock ISSN 1079-7114.
+\newblock \doi{10.1103/physrevlett.110.252004}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1103/PhysRevLett.110.252004}.
+
+\bibitem[{Brucherseifer et~al.(2014)}]{singletopNNLO}
+M.~Brucherseifer, et~al.
+\newblock \enquote{On the nnlo qcd corrections to single-top production at the
+  lhc}.
+\newblock \emph{Physics Letters B}, 736:58–63, 2014.
+\newblock ISSN 0370-2693.
+\newblock \doi{10.1016/j.physletb.2014.06.075}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1016/j.physletb.2014.06.075}.
+
+\bibitem[{Berger et~al.(2016)}]{KosteleckyPheno}
+M.~h.~S. Berger, et~al.
+\newblock \enquote{Lorentz and $cpt$ violation in top-quark production and
+  decay}.
+\newblock \emph{Phys. Rev. D}, 93:036005, 2016.
+\newblock \doi{10.1103/PhysRevD.93.036005}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevD.93.036005}.
+
+\bibitem[{Chatrchyan et~al.(2008)}]{CMSExperiment}
+S.~Chatrchyan et~al. (CMS).
+\newblock \enquote{{The CMS Experiment at the CERN LHC}}.
+\newblock \emph{JINST}, 3:S08004, 2008.
+\newblock \doi{10.1088/1748-0221/3/08/S08004}.
+
+\bibitem[{McCarthy et~al.(2008)}]{McCarthy_2008}
+D.~D. McCarthy, et~al.
+\newblock \enquote{{THE} {PHYSICAL} {BASIS} {OF} {THE} {LEAP} {SECOND}}.
+\newblock \emph{The Astronomical Journal}, 136(5):1906--1908, 2008.
+\newblock \doi{10.1088/0004-6256/136/5/1906}.
+\newblock \urlprefix\url{https://doi.org/10.1088/0004-6256/136/5/1906}.
+
+\bibitem[{Aoki et~al.(1981)}]{Aoki}
+S.~Aoki, et~al.
+\newblock \enquote{{The New definition of Universal Time}}.
+\newblock \emph{Astronomy and Astrophysics}, 1981.
+
+\bibitem[{Jones(2005)}]{Jones}
+M.~Jones.
+\newblock \enquote{{Computation of WGS83 geodetic coordinates and azimuths at
+  the LHC interaction points}}.
+\newblock 2005.
+
+\bibitem[{Alwall et~al.(2014)}]{Madgraph}
+J.~Alwall, et~al.
+\newblock \enquote{{The automated computation of tree-level and next-to-leading
+  order differential cross sections, and their matching to parton shower
+  simulations}}.
+\newblock \emph{Journal of High Energy Physics}, 7:79, 2014.
+\newblock \doi{10.1007/JHEP07(2014)079}.
+\newblock \eprint{1405.0301}.
+
+\bibitem[{Ball(2013)}]{PDF}
+R.~e.~a. Ball.
+\newblock \emph{Nuclear Physics B}, 867:244--289, 2013.
+
+\bibitem[{Carle et~al.(2020{\natexlab{a}})}]{Carle_2020}
+A.~Carle, et~al.
+\newblock \enquote{Prospects for lorentz invariance violation searches with top
+  pair production at the lhc and future hadron colliders}.
+\newblock \emph{The European Physical Journal C}, 80(2), 2020{\natexlab{a}}.
+\newblock ISSN 1434-6052.
+\newblock \doi{10.1140/epjc/s10052-020-7715-2}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1140/epjc/s10052-020-7715-2}.
+
+\bibitem[{Khachatryan et~al.(2017)}]{Khachatryan_2017}
+V.~Khachatryan, et~al.
+\newblock \enquote{{Measurement of the $\mathrm{t}\overline{\mathrm{t}}$
+  production cross section using events in the $\mathrm{e}\mu$ final state in
+  pp collisions at $\sqrt{s}=13 \mathrm{TeV}$ }}.
+\newblock \emph{The European Physical Journal C}, 77(3), 2017.
+\newblock ISSN 1434-6052.
+\newblock \doi{10.1140/epjc/s10052-017-4718-8}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1140/epjc/s10052-017-4718-8}.
+
+\bibitem[{Carle et~al.(2019)}]{Carle_CPT19}
+A.~Carle, et~al.
+\newblock \enquote{{Prospects for Lorentz-Violation Searches with Top Pair
+  Production at the LHC and Future Colliders}}.
+\newblock Dans \enquote{{8th Meeting on CPT and Lorentz Symmetry}}, 2019.
+\newblock \doi{10.1142/9789811213984_0052}.
+\newblock \eprint{1909.01990}.
+
+\bibitem[{Brüning et~al.(2004)}]{LHC}
+O.~S. Brüning, et~al.
+\newblock \emph{{LHC Design Report}}.
+\newblock CERN Yellow Reports: Monographs. CERN, Geneva, 2004.
+\newblock \doi{10.5170/CERN-2004-003-V-1}.
+\newblock \urlprefix\url{http://cds.cern.ch/record/782076}.
+
+\bibitem[{Aamodt et~al.(2008)}]{alice}
+K.~Aamodt et~al. (ALICE Collaboration).
+\newblock \enquote{{The ALICE experiment at the CERN LHC}}.
+\newblock \emph{JINST}, 3:S08002, 2008.
+
+\bibitem[{Aad et~al.(2012{\natexlab{b}})}]{atlas}
+G.~Aad, et~al.
+\newblock \enquote{{Observation of a new particle in the search for the
+  Standard Model Higgs boson with the ATLAS detector at the LHC}}.
+\newblock \emph{Physics Letters B}, 716:1--29, 2012{\natexlab{b}}.
+\newblock \doi{10.1016/j.physletb.2012.08.020}.
+\newblock \eprint{1207.7214}.
+
+\bibitem[{Chatrchyan et~al.(2012{\natexlab{b}})}]{cms}
+S.~Chatrchyan, et~al.
+\newblock \enquote{{Observation of a new boson at a mass of 125 GeV with the
+  CMS experiment at the LHC}}.
+\newblock \emph{Physics Letters B}, 716:30--61, 2012{\natexlab{b}}.
+\newblock \doi{10.1016/j.physletb.2012.08.021}.
+\newblock \eprint{1207.7235}.
+
+\bibitem[{Alves et~al.(2008)}]{lhcb}
+J.~Alves, A.~Augusto et~al. (LHCb Collaboration).
+\newblock \enquote{{The LHCb Detector at the LHC}}.
+\newblock \emph{JINST}, 3:S08005, 2008.
+
+\bibitem[{Aaij et~al.(2013)}]{lhcb_bs}
+R.~Aaij et~al. (LHCb collaboration).
+\newblock \enquote{{First observation of $CP$ violation in the decays of
+  $B^0_s$ mesons}}.
+\newblock \emph{Phys.Rev.Lett.}, 110:221601, 2013.
+
+\bibitem[{Adriani et~al.(2008)}]{lhcf}
+O.~Adriani et~al. (LHCf Collaboration).
+\newblock \enquote{{The LHCf detector at the CERN Large Hadron Collider}}.
+\newblock \emph{JINST}, 3:S08006, 2008.
+
+\bibitem[{Pinfold et~al.(2009)}]{moedal}
+J.~Pinfold, et~al. (MoEDAL Collaboration).
+\newblock \enquote{{Technical Design Report of the MoEDAL Experiment}}.
+\newblock Rapport technique CERN-LHCC-2009-006. MoEDAL-TDR-001, CERN, Geneva,
+  2009.
+
+\bibitem[{Anelli et~al.(2008)}]{totem}
+G.~Anelli et~al. (TOTEM Collaboration).
+\newblock \enquote{{The TOTEM experiment at the CERN Large Hadron Collider}}.
+\newblock \emph{JINST}, 3:S08007, 2008.
+
+\bibitem[{Dominguez et~al.(2012)}]{CMStechnical}
+A.~Dominguez, et~al.
+\newblock \enquote{{CMS Technical Design Report for the Pixel Detector
+  Upgrade}}.
+\newblock Rapport technique, 2012.
+\newblock Additional contacts: Jeffrey Spalding, Fermilab,
+  Jeffrey.Spalding@cern.ch Didier Contardo, Universite Claude Bernard-Lyon I,
+  didier.claude.contardo@cern.ch,
+  \urlprefix\url{https://cds.cern.ch/record/1481838}.
+
+\bibitem[{of~the CMS~Collaboration(2020)}]{CMStrackerUpdate}
+T.~T.~G. of~the CMS~Collaboration.
+\newblock \enquote{The cms phase-1 pixel detector upgrade}.
+\newblock 2020.
+\newblock \eprint{2012.14304}.
+
+\bibitem[{Collaboration(2014)}]{Collaboration_2014}
+T.~C. Collaboration.
+\newblock \enquote{Description and performance of track and primary-vertex
+  reconstruction with the {CMS} tracker}.
+\newblock \emph{Journal of Instrumentation}, 9(10):P10009--P10009, 2014.
+\newblock \doi{10.1088/1748-0221/9/10/p10009}.
+\newblock \urlprefix\url{https://doi.org/10.1088/1748-0221/9/10/p10009}.
+
+\bibitem[{CMS(2019{\natexlab{a}})}]{CMS-DP-2019-005}
+CMS Collaboration.
+\newblock \enquote{{CMS ECAL Response to Laser Light}}.
+\newblock 2019{\natexlab{a}}.
+\newblock \urlprefix\url{https://cds.cern.ch/record/2668200}.
+
+\bibitem[{Mans et~al.(2012)}]{Mans:1481837}
+J.~Mans, et~al.
+\newblock \enquote{{CMS Technical Design Report for the Phase 1 Upgrade of the
+  Hadron Calorimeter}}.
+\newblock Rapport technique, 2012.
+\newblock Additional contact persons: Jeffrey Spalding, Fermilab,
+  spalding@cern.ch, Didier Contardo, Universite Claude Bernard-Lyon I,
+  contardo@cern.ch, \urlprefix\url{https://cds.cern.ch/record/1481837}.
+
+\bibitem[{Elvira(2004)}]{Elvira:800406}
+V.~D. Elvira.
+\newblock \enquote{{Measurement of the Pion Energy Response and Resolution in
+  the CMS HCAL Test Beam 2002 Experiment}}.
+\newblock Rapport technique, CERN, Geneva, 2004.
+\newblock \urlprefix\url{http://cds.cern.ch/record/800406}.
+
+\bibitem[{Khachatryan et~al.(2016)}]{CMStrigger}
+V.~Khachatryan, et~al. (CMS Collaboration).
+\newblock \enquote{{The CMS trigger system. The CMS trigger system}}.
+\newblock \emph{JINST}, 12:P01020. 122 p, 2016.
+\newblock \doi{10.1088/1748-0221/12/01/P01020}.
+\newblock Replaced with the published version. Added the journal reference and
+  DOI. All the figures and tables can be found at
+  http://cms-results.web.cern.ch/cms-results/public-results/publications/TRG-12-001/index.html,
+  \eprint{1609.02366}, \urlprefix\url{https://cds.cern.ch/record/2212926}.
+
+\bibitem[{Balagura(2021)}]{Balagura_2021}
+V.~Balagura.
+\newblock \enquote{Van der meer scan luminosity measurement and beam–beam
+  correction}.
+\newblock \emph{The European Physical Journal C}, 81(1), 2021.
+\newblock ISSN 1434-6052.
+\newblock \doi{10.1140/epjc/s10052-021-08837-y}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1140/epjc/s10052-021-08837-y}.
+
+\bibitem[{CMS(2019{\natexlab{b}})}]{CMS-PAS-LUM-18-002}
+CMS Collaboration.
+\newblock \enquote{{CMS luminosity measurement for the 2018 data-taking period
+  at $\sqrt{s} = 13~\mathrm{TeV}$}}.
+\newblock Rapport technique, CERN, Geneva, 2019{\natexlab{b}}.
+\newblock \urlprefix\url{https://cds.cern.ch/record/2676164}.
+
+\bibitem[{Alioli et~al.(2010)}]{Alioli:2010xd}
+S.~Alioli, et~al.
+\newblock \enquote{{A general framework for implementing NLO calculations in
+  shower Monte Carlo programs: the POWHEG BOX}}.
+\newblock \emph{JHEP}, 1006:043, 2010.
+
+\bibitem[{Sjostrand et~al.(2001)}]{pythia}
+T.~Sjostrand, et~al.
+\newblock \enquote{{PYTHIA 6.2: Physics and manual}}.
+\newblock 2001.
+
+\bibitem[{Corcella et~al.(2001)}]{Corcella:2000bw}
+G.~Corcella, et~al.
+\newblock \enquote{{HERWIG 6: An Event generator for hadron emission reactions
+  with interfering gluons (including supersymmetric processes)}}.
+\newblock \emph{JHEP}, 0101:010, 2001.
+
+\bibitem[{Agostinelli et~al.(2003)}]{Agostinelli2003250}
+S.~Agostinelli, et~al.
+\newblock \enquote{{Geant4 — a simulation toolkit}}.
+\newblock \emph{{Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment}}, 506(3):250
+  -- 303, 2003.
+\newblock ISSN 0168-9002.
+
+\bibitem[{Chatrchyan et~al.(2009)}]{pf}
+S.~Chatrchyan et~al. (CMS Collaboration).
+\newblock \enquote{{Particle-Flow Event Reconstruction in CMS and Performance
+  for Jets, Taus, and MET}}.
+\newblock Rapport technique CMS-PAS-PFT-09-001, CERN, 2009. Geneva, 2009.
+
+\bibitem[{Chatrchyan et~al.(2010{\natexlab{a}})}]{cms_pf_2}
+S.~Chatrchyan et~al. (CMS Collaboration).
+\newblock \enquote{{Commissioning of the Particle-flow Event Reconstruction
+  with the first LHC collisions recorded in the CMS detector}}.
+\newblock Rapport technique CMS-PAS-PFT-10-001, Geneva, 2010{\natexlab{a}}.
+
+\bibitem[{Chatrchyan et~al.(2010{\natexlab{b}})}]{cms_pf_jets}
+S.~Chatrchyan et~al. (CMS Collaboration).
+\newblock \enquote{{Commissioning of the Particle-Flow reconstruction in
+  Minimum-Bias and Jet Events from pp Collisions at 7 TeV}}.
+\newblock Rapport technique CMS-PAS-PFT-10-002, CERN, Geneva,
+  2010{\natexlab{b}}.
+
+\bibitem[{Chatrchyan et~al.(2010{\natexlab{c}})}]{cms_pf_leptons}
+S.~Chatrchyan et~al. (CMS Collaboration).
+\newblock \enquote{{Particle-flow commissioning with muons and electrons from
+  J/$\Psi$ and W events at 7 TeV}}.
+\newblock Rapport technique CMS-PAS-PFT-10-003, CERN, Geneva,
+  2010{\natexlab{c}}.
+
+\bibitem[{Beaudette et~al.(2010)}]{cms_pf_electrons}
+F.~Beaudette, et~al.
+\newblock \enquote{{Electron Reconstruction within the Particle Flow Algorithm
+  (note priv{\'e}e)}}.
+\newblock Rapport technique CMS-NOTE-2010-034, CERN, Geneva, 2010.
+
+\bibitem[{Adam et~al.(2006)}]{cms_tracks}
+W.~Adam, et~al.
+\newblock \enquote{{Track Reconstruction in the CMS tracker}}.
+\newblock Rapport technique CMS-NOTE-2006-041, CERN, Geneva, 2006.
+
+\bibitem[{Frühwirth et~al.(2007)}]{Frühwirth:1027031}
+R.~Frühwirth, et~al.
+\newblock \enquote{{Adaptive Vertex Fitting}}.
+\newblock Rapport technique CMS-NOTE-2007-008, CERN, Geneva, 2007.
+
+\bibitem[{Chatrchyan et~al.(2012{\natexlab{c}})}]{cms_muons_reco}
+S.~Chatrchyan et~al. (CMS Collaboration).
+\newblock \enquote{{Performance of CMS muon reconstruction in $pp$ collision
+  events at $\sqrt{s}=7$ TeV}}.
+\newblock \emph{JINST}, 7:P10002, 2012{\natexlab{c}}.
+
+\bibitem[{Cacciari et~al.(2012)}]{Cacciari_2012}
+M.~Cacciari, et~al.
+\newblock \enquote{Fastjet user manual}.
+\newblock \emph{The European Physical Journal C}, 72(3), 2012.
+\newblock ISSN 1434-6052.
+\newblock \doi{10.1140/epjc/s10052-012-1896-2}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1140/epjc/s10052-012-1896-2}.
+
+\bibitem[{Cacciari et~al.(2008)}]{antikt}
+M.~Cacciari, et~al.
+\newblock \enquote{The anti- k t jet clustering algorithm}.
+\newblock \emph{Journal of High Energy Physics}, 2008(04):063, 2008.
+
+\bibitem[{Dokshitzer et~al.(1997)}]{ca_jets}
+Y.~Dokshitzer, et~al.
+\newblock \enquote{Better jet clustering algorithms}.
+\newblock \emph{Journal of High Energy Physics}, 1997(08):001, 1997.
+
+\bibitem[{Sarle(1994)}]{Sarle94}
+W.~S. Sarle.
+\newblock \enquote{Neural networks and statistical models}.
+\newblock 1994.
+
+\bibitem[{Sirunyan et~al.(2018)}]{Sirunyan_2018}
+A.~Sirunyan, et~al.
+\newblock \enquote{Identification of heavy-flavour jets with the cms detector
+  in pp collisions at 13 tev}.
+\newblock \emph{Journal of Instrumentation}, 13(05):P05011–P05011, 2018.
+\newblock ISSN 1748-0221.
+\newblock \doi{10.1088/1748-0221/13/05/p05011}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1088/1748-0221/13/05/P05011}.
+
+\bibitem[{Guest et~al.(2016)}]{Guest_2016}
+D.~Guest, et~al.
+\newblock \enquote{Jet flavor classification in high-energy physics with deep
+  neural networks}.
+\newblock \emph{Physical Review D}, 94(11), 2016.
+\newblock ISSN 2470-0029.
+\newblock \doi{10.1103/physrevd.94.112002}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1103/PhysRevD.94.112002}.
+
+\bibitem[{Chollet et~al.(2015)}]{chollet2015}
+F.~Chollet et~al.
+\newblock \enquote{Keras}.
+\newblock \url{https://github.com/fchollet/keras}, 2015.
+
+\bibitem[{Abadi et~al.(2016)}]{abadi2016}
+M.~Abadi, et~al.
+\newblock \enquote{Tensorflow: Large-scale machine learning on heterogeneous
+  distributed systems}.
+\newblock 2016.
+\newblock \eprint{1603.04467}.
+
+\bibitem[{Khachatryan et~al.(2014)}]{Khachatryan_2014}
+V.~Khachatryan, et~al.
+\newblock \enquote{Search for the associated production of the higgs boson with
+  a top-quark pair}.
+\newblock \emph{Journal of High Energy Physics}, 2014(9), 2014.
+\newblock ISSN 1029-8479.
+\newblock \doi{10.1007/jhep09(2014)087}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1007/JHEP09(2014)087}.
+
+\bibitem[{Carle et~al.(2020{\natexlab{b}})}]{heppy}
+A.~Carle, et~al.
+\newblock \enquote{Heppy $t\bar{t}$ analysis}.
+\newblock \url{https://github.com/Arc-Pintade/ttbar-analysis-heppy},
+  2020{\natexlab{b}}.
+
+\bibitem[{com(2011)}]{combine}
+ATLAS, CMS, LHC Higgs Combination Group.
+\newblock \enquote{{Procedure for the LHC Higgs boson search combination in
+  Summer 2011}}.
+\newblock 2011.
+
+\bibitem[{Carle et~al.(2021)}]{ANnous}
+A.~Carle, et~al.
+\newblock \enquote{Cms analysis note}.
+\newblock Rapport technique, 2021.
+
+\bibitem[{Chenarani et~al.(2019)}]{ANJason}
+S.~Chenarani, et~al.
+\newblock \enquote{Cms analysis note}.
+\newblock Rapport technique, 2019.
+\newblock
+  \urlprefix\url{https://cms.cern.ch/iCMS/user/noteinfo?cmsnoteid=CMS%20AN-2019/140}.
+
+\bibitem[{CMS(2011{\natexlab{a}})}]{CMSAtlasStat}
+The ATLAS Collaboration, The CMS Collaboration, The LHC Higgs Combination
+  Group.
+\newblock \enquote{{Procedure for the LHC Higgs boson search combination in
+  Summer 2011}}.
+\newblock Rapport technique, CERN, Geneva, 2011{\natexlab{a}}.
+\newblock \urlprefix\url{http://cds.cern.ch/record/1379837}.
+
+\bibitem[{Conway(2011)}]{Conway}
+J.~S. Conway.
+\newblock \enquote{Incorporating nuisance parameters in likelihoods for
+  multisource spectra}.
+\newblock 2011.
+\newblock \eprint{1103.0354}.
+
+\bibitem[{Barlow et Beeston(1993)}]{Barlow}
+R.~Barlow et C.~Beeston.
+\newblock \enquote{Fitting using finite monte carlo samples}.
+\newblock \emph{Computer Physics Communications}, 77(2):219--228, 1993.
+\newblock ISSN 0010-4655.
+\newblock \doi{https://doi.org/10.1016/0010-4655(93)90005-W}.
+\newblock
+  \urlprefix\url{https://www.sciencedirect.com/science/article/pii/001046559390005W}.
+
+\bibitem[{Neyman et Pearson(1933)}]{Neyman}
+J.~Neyman et E.~S. Pearson.
+\newblock \enquote{On the problem of the most efficient tests of statistical
+  hypotheses}.
+\newblock \emph{Philosophical Transactions of the Royal Society of London},
+  231(694-706), 1933.
+\newblock ISSN 0264-3952.
+\newblock \doi{https://doi.org/10.1098/rsta.1933.0009}.
+\newblock
+  \urlprefix\url{https://royalsocietypublishing.org/doi/10.1098/rsta.1933.0009}.
+
+\bibitem[{CMS(2011{\natexlab{b}})}]{CMS_CLs}
+The ATLAS Collaboration, The CMS Collaboration, The LHC Higgs Combination
+  Group.
+\newblock \enquote{{Procedure for the LHC Higgs boson search combination in
+  Summer 2011}}.
+\newblock Rapport technique, CERN, Geneva, 2011{\natexlab{b}}.
+\newblock \urlprefix\url{https://cds.cern.ch/record/1379837}.
+
+\bibitem[{Sirunyan et Bloch(2020)}]{Sirunyan2020}
+A.~M. Sirunyan et D.~Bloch.
+\newblock \enquote{Extraction and validation of a new set of cms pythia8 tunes
+  from underlying-event measurements}.
+\newblock \emph{The European Physical Journal C}, 80(1):4, 2020.
+\newblock ISSN 1434-6052.
+\newblock \doi{10.1140/epjc/s10052-019-7499-4}.
+\newblock \urlprefix\url{https://doi.org/10.1140/epjc/s10052-019-7499-4}.
+
+\bibitem[{Aaij et~al.(2016)}]{B0}
+R.~Aaij, et~al.
+\newblock \enquote{{Search for Violations of Lorentz Invariance and C P T
+  Symmetry in B$_{(s}$$^{) 0}$ Mixing}}.
+\newblock \emph{Physical Review Letters}, 116(24):241601, 2016.
+\newblock \doi{10.1103/PhysRevLett.116.241601}.
+\newblock \eprint{1603.04804}.
+
+\end{thebibliography}

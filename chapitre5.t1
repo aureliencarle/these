@@ -1,0 +1,11 @@
+% chapitre5.t1 -- generated from chapitre5.mp
+\fmfL(91.24428,91.87596,rb){\Ptop }%
+\fmfL(91.24423,58.12271,rt){\APtop }%
+\fmfL(117.90436,33.12306,rt){\PWminus }%
+\fmfL(117.90488,116.87541,rb){\PWplus }%
+\fmfL(166.15402,-4.32834,lt){\textcolor {blue}{\Pleptonminus }}%
+\fmfL(178.69945,26.02663,lt){\APnulepton }%
+\fmfL(185.17438,58.38655,l){\textcolor {red}{\APbottom }}%
+\fmfL(185.1746,91.611,l){\textcolor {red}{\Pbottom }}%
+\fmfL(178.70021,123.97093,lb){\Pnulepton }%
+\fmfL(166.15521,154.32614,lb){\textcolor {blue}{\Pleptonplus }}%

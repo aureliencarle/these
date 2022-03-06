@@ -1,0 +1,36 @@
+\documentclass[twoside,titlepage,paper=a4,fontsize=12pt,numbers=noenddot,cleardoublepage=empty,DIV=13,BCOR=5mm,open=right,footexclude]{scrreprt}
+
+\include{config}
+\usepackage{diagbox}
+
+\begin{document}
+\pagenumbering{Roman}
+
+\raggedbottom % Makes all pages the height of the text on that page
+
+\pagestyle{plain}
+% Title
+%\include{FrontBackMatter/titlepage_official}
+\include{FrontBackMatter/titlepage}
+%\cleardoublepage\include{FrontBackMatter/abstract}
+%\cleardoublepage\include{FrontBackMatter/remerciements}
+%\pagestyle{scrheadings} % Show chapter titles as headings
+
+%\cleardoublepage\include{FrontBackMatter/contents} % Contents, list of figures/tables/listings and acronyms
+%\pagenumbering{arabic}
+
+
+%\cleardoublepage\input{chapitre1/content}
+%\cleardoublepage\input{chapitre2/content}
+%\cleardoublepage\input{chapitre3/content}
+%\cleardoublepage\input{chapitre4/content}
+%\cleardoublepage\input{chapitre5/content}
+%\cleardoublepage\include{conclusion/content}
+
+%\appendix
+%\cleardoublepage\input{appendixA/content}
+%\cleardoublepage\input{appendixB/content}
+%\cleardoublepage\input{appendixC/content} 
+% Bibliography
+%\cleardoublepage\include{FrontBackMatter/bibliography}
+\end{document}

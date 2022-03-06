@@ -1,0 +1,67 @@
+
+\documentclass{article}
+
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+
+
+% split figures into pages
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{1pt}%
+
+
+
+\begin{document}
+
+\begin{tikzpicture}
+
+
+\definecolor{redQCD}{RGB}{255,0,0}
+\definecolor{greenQCD}{RGB}{0,255,0}
+\definecolor{blueQCD}{RGB}{0,0,255}
+\definecolor{yellowQCD}{RGB}{255,255,0}
+\definecolor{cyanQCD}{RGB}{0,255,255}
+\definecolor{magentaQCD}{RGB}{255,0,255}
+
+
+\def\rcircle{1.2}
+\def\overlappct{.9}
+\def\Dypct{2.5}
+
+\draw (30:\Dypct*\rcircle) coordinate (r);
+\draw (150:\Dypct*\rcircle) coordinate (g);
+\draw (-90:\Dypct*\rcircle) coordinate (b);
+
+\fill [redQCD] (r)+(-\overlappct*\rcircle/2,0) circle (\rcircle);
+\fill [greenQCD] (g)+(-\overlappct*\rcircle/2,0) circle (\rcircle);
+\fill [blueQCD] (b)+(-\overlappct*\rcircle/2,0) circle (\rcircle);
+
+\fill [cyanQCD] (r)+(\overlappct*\rcircle/2,0) circle (\rcircle);
+\fill [magentaQCD] (g)+(\overlappct*\rcircle/2,0) circle (\rcircle);
+\fill [yellowQCD] (b)+(\overlappct*\rcircle/2,0) circle (\rcircle);
+
+\foreach \pos in {r, g, b}{
+\begin{scope}
+\clip (\pos)+(-\overlappct*\rcircle/2,0) circle (\rcircle);
+\clip (\pos)+(\overlappct*\rcircle/2,0) circle (\rcircle);
+\fill [white] (\pos)+(\overlappct*\rcircle/2,0) circle (\rcircle);
+\end{scope}
+%\draw (\pos) node {blanc} ;
+}
+
+%\draw (r)+(-\overlappct*\rcircle/2,0) node {rouge} ;
+%\draw (b)+(-\overlappct*\rcircle/2,0) node {bleu} ;
+%\draw (g)+(-\overlappct*\rcircle/2,0) node {vert} ;
+%
+%\draw (r)+(\overlappct*\rcircle/2,0) node {antirouge} ;
+%\draw (b)+(\overlappct*\rcircle/2,0) node {antibleu} ;
+%\draw (g)+(\overlappct*\rcircle/2,0) node {antivert} ;
+
+\def\rcircle{1.5}
+\def\overlappct{.6}
+\draw (-90:\overlappct*\rcircle)+(0, -\rcircle) coordinate (bottom);
+\end{tikzpicture}
+
+
+\end{document}

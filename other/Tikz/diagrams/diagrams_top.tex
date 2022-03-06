@@ -1,0 +1,32 @@
+% Author: Izaak Neutelings (June 2017)
+% taken from https://tex.stackexchange.com/questions/159445/draw-in-cylindrical-and-spherical-coordinates
+
+\documentclass{standalone}
+
+\usepackage[utf8]{inputenc}
+\usepackage{feynmp-auto}
+\RequirePackage{hepnicenames}
+% split figures into pages
+%\usepackage[active,tightpage]{preview}
+%\setlength\PreviewBorder{1pt}%
+
+
+\begin{document}
+
+\begin{fmffile}{top1}% choose something better!
+\begin{fmfgraph*}(160,70)
+        \fmfpen{0.5}
+        \fmfleft{i1,i2}
+        \fmfright{o1,o2}
+        \fmf{fermion}{i1,v1,i2}
+        \fmf{gluon}{v1,v2}
+        \fmf{fermion}{o1,v2,o2}
+        \fmfdot{v1,v2}
+        \fmflabel{\Pquark}{i1}
+        \fmflabel{t}{i2}
+        \fmflabel{\Ptop}{o2}
+        \fmflabel{\APtop}{o1}
+    \end{fmfgraph*}
+\end{fmffile}
+
+\end{document}

@@ -1,0 +1,14 @@
+This is MetaPost, version 2.000 (TeX Live 2017/Debian) (kpathsea version 6.2.3)  16 JUN 2021 18:36
+**chapitre5.mp
+(/usr/share/texlive/texmf-dist/metapost/base/mpost.mp
+(/usr/share/texlive/texmf-dist/metapost/base/plain.mp
+Preloading the plain mem file, version 1.005) ) (./chapitre5.mp
+(/usr/share/texmf/metapost/feynmf/feynmp.mp) [1] [2] [3] [4] )
+ 
+Here is how much of MetaPost's memory you used:
+ 627 strings using 12450 characters
+ 2045088 bytes of node memory
+ 926 symbolic tokens
+ 14i,77n,33p,110b,3f stack positions out of 16i,96n,40p,200b,4f
+4 output files written: chapitre5.1 .. chapitre5.4
+

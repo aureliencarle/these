@@ -1,0 +1,9 @@
+% chapitre5.t2 -- generated from chapitre5.mp
+\fmfL(110.52362,44.28857,b){\PWminus }%
+\fmfL(110.52327,105.71149,t){\PWplus }%
+\fmfL(13.84598,-4.32834,rt){\Pquark }%
+\fmfL(13.84598,154.32834,rb){\APquark }%
+\fmfL(166.15402,-4.32834,lt){\Pleptonminus }%
+\fmfL(183.71889,47.43869,l){\APnulepton }%
+\fmfL(183.71861,102.56258,l){\Pnulepton }%
+\fmfL(166.15402,154.32834,lb){\Pleptonplus }%

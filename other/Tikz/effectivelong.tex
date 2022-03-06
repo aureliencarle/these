@@ -1,0 +1,74 @@
+
+\documentclass{article}
+
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+
+% split figures into pages
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{1pt}%
+\usepackage{verbatim}
+\usetikzlibrary{calc,fadings,decorations.pathreplacing,shadings}
+
+\makeatletter
+\tikzset{vertical custom shading/.code={%
+  \pgfmathsetmacro\tikz@vcs@middle{#1}
+  \pgfmathsetmacro\tikz@vcs@bottom{\tikz@vcs@middle/2}
+  \pgfmathsetmacro\tikz@vcs@top{(100-\tikz@vcs@middle)/2+\tikz@vcs@middle}
+  \pgfdeclareverticalshading[tikz@axis@top,tikz@axis@middle,tikz@axis@bottom]{newaxis}{100bp}{%
+    color(0bp)=(tikz@axis@bottom);
+    color(\tikz@vcs@bottom bp)=(tikz@axis@bottom);
+    color(\tikz@vcs@middle bp)=(tikz@axis@middle);
+    color(\tikz@vcs@top bp)=(tikz@axis@top);
+    color(100bp)=(tikz@axis@top)}
+    \pgfkeysalso{/tikz/shading=newaxis}
+  }
+}
+\makeatother
+
+
+\begin{document}
+
+    \tdplotsetmaincoords{70}{120}
+\begin{tikzpicture}[tdplot_main_coords, scale=2.5]
+        \def\radius{0.98}
+        
+        % Earth
+        \tdplotsetrotatedcoords{20}{80}{0}
+        \draw [ball color=cyan!30!blue, opacity=0.5,very thin,tdplot_rotated_coords] (0,0,0) circle (1) ;
+        % Equator
+        \draw [thin, dashed,gray] (0,0,0) circle (\radius) ;
+        \node[gray] at (0.4,-1.3) {Equateur};
+        \node[right,blue] at (-3,-1) {Terre};
+                
+        % Greenwich
+        \draw[green!40!black,rotate =-90] ( -60:\radius) arc (-60:120:\radius);
+        \node[right,green!40!black, very thick] at (-2, -3) {Meridien de Greenwich};
+
+        % Axis
+        \draw[thick,->, rotate=15] (0,0,0) -- (2,0,0) node[anchor=north east]{$X$};
+        \draw[thick,->, rotate=10] (0,0,0) -- (0,1.5,0) node[anchor=west]{$Y$};
+        \draw[thick,->] (0,0,0) -- (0,0,1.5) node[anchor=south]{$Z$};
+        %\draw[thick, dashed, ->] (0,0,0) -- (0,0,1.5) node[anchor=south]{$N$};
+
+        % Projections
+        \draw[thick, dashed,-, rotate=15] (0.5,0,0) -- (0.65,0.6,0) node  at (0.5,1.05)
+        {$z_\mathrm{SCF}(x)$};
+        \draw[thick, dashed,-, rotate=10] (0,0.6,0) -- (0.6,0.65,0) node  at (0.9,0.5)
+        {$z_\mathrm{SCF}(y)$};
+        
+        % Omega
+        \pgfmathsetmacro{\bx}{1}
+        \pgfmathsetmacro{\by}{1}
+        \pgfmathsetmacro{\bz}{0}
+
+        \draw[thin, dashed, rotate=15] (0,0,0) -- (\bx,\by,\bz) node[anchor=north]{};
+
+        \tdplotdefinepoints(0.1,0.15,0.1)(1.4 ,0.2,0)(\bx,\by,\bz);
+        \tdplotdrawpolytopearc[red, thick]{0.5}{anchor=north}{}
+        \node[red] at (-0.5,-0) {$\phi_\mathrm{(long)}$};
+
+    \end{tikzpicture}
+
+\end{document}

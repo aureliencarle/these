@@ -1,0 +1,178 @@
+\chapter{Annexe : Outils mathématiques} \label{chap:appA}
+% PRL Mtt
+
+\begin{fmffile}{appendixA}
+
+\section{Structure algébrique}
+
+\subsection{Groupe}\label{A:groupe}
+
+En mathématique un groupe est un couple constitué d'un ensemble $G$ et d'une opération $\ast$. On note $\left( G, \ast\right)$ le groupe doté d'un ensemble $G$ muni d'une loi de composition $\ast$. 
+Un groupe doit respecter quatre caractéristiques : 
+\begin{itemize}[label=$\triangleright$]
+    \item La loi de composition doit être interne : \newline
+    $\forall a,b \in G, \quad a\ast b \in G$.
+    \item La loi de composition doit être associative : \newline
+    $ (a \ast b) \ast c = a \ast (b \ast c)$.
+    \item L'existence d'un élément neutre $e\in G$ : \newline
+    $\forall a,b \in G, \quad a\ast e = e \ast a = a$.
+    \item L'existence d'un élément symétrique dans $G$ : \newline
+    $\forall a \in G, \, \exists s \in G,  \quad a\ast s = s \ast a = e $. On note le symétrique de $a$, $a^{-1}$.
+\end{itemize}
+Éventuellement, un groupe peut être muni d'une dernière contrainte. Si l'opération est commutative $\left( \forall a,b \in G\setminus\{e\} , \,  a*b = b*a \right)$, le groupe est dit abélien.
+
+
+\subsection{Algèbre}\label{A:algebre}
+Pour construire une algèbre il faut batir une structure intermédiaire. 
+Soit un groupe auquel on ajoute un ensemble $\mathbb{K}$ muni d'une opération addition $+$  et de multiplication $\cdot$ que l'on lie par les relations suivantes : 
+\begin{equation}
+    \lambda \cdot (u + v) = \lambda \cdot u + \lambda \cdot v  \qquad \forall u,v \in G, \, \forall \lambda \in \mathbb{K}
+\end{equation}
+\begin{equation}
+    (\lambda + \mu) \cdot u = \lambda \cdot u + \mu \cdot u  \qquad \forall u \in G, \, \forall \lambda,\mu \in \mathbb{K}
+\end{equation}
+\begin{equation}
+    (\lambda \mu) \cdot u = \lambda \cdot (\mu \cdot u)  \qquad \forall u \in G, \, \forall \lambda,\mu \in \mathbb{K}
+\end{equation}
+Cette structure est un espace vectoriel si $(\mathbb{K},+, \cdot)$ est un corps, un module si $(\mathbb{K},+, \cdot)$ est un anneau.
+
+Une algèbre noté $\left( G, \mathbb{K}, +, \cdot, \star \right)$ est un espace vectoriel ou module auquel on ajoute une opération bilinéaire : 
+\begin{align*}
+\star : G \times G &\longrightarrow G \\
+     g_1, g_2 &\longmapsto g_3 = g_1 \star g_2
+\end{align*}
+
+\textbf{Une algèbre de Lie} est une algèbre $\left( G, \mathbb{K}, +, \cdot, [\,] \right)$ dont l'opération bilinéaire, nommée "crochet de Lie", a pour propriétés : 
+\begin{itemize}[label=$\triangleright$]
+    \item $[x,y] = - [y,x]  $
+    \item $[x,[y,z]] + [y,[z,x]] + [z,[x,y]] = 0$
+\end{itemize}
+Un espace vectoriel $\mathbb{R}^3$ munie du produit vectoriel est un exemple d'algèbre de Lie. 
+
+\section{Groupe et algèbre de Lie}\label{A:Lie}
+Un groupe de Lie peut être intégralement construit à partir d'un ensemble réduit d'objets nommées générateurs et répondant à :
+\begin{equation} 
+ g = e^{\alpha_k T^k}
+\end{equation}  
+avec $T^k$ les générateurs du groupe et $\alpha_k$ des paramètres du groupe. 
+
+\subsubsection*{Exemple simple $SO(2)$}
+Un exemple très simple est le groupe des matrices de rotations dans l'espace $\mathbb{R}^2$ spéciales orthogonales $\mathrm{SO}(2)$ dont le générateur $T$ est donné par:
+\begin{equation}
+    T = 
+    \begin{pmatrix}
+        0 & -1 \\
+        1 & 0
+    \end{pmatrix}
+\end{equation}
+Pour un paramètre $\theta$ représentant l'angle de rotation, $R \in \mathrm{SO}(2)$ :  
+\begin{align*}
+    R &= e^{\theta T} = \sum_{n=0}^{+\infty} \frac{\theta^n}{n!} 
+    \begin{pmatrix}
+        0 & -1 \\
+        1 & 0
+    \end{pmatrix}^n \\
+    &= \begin{pmatrix}
+            1 & 0 \\
+            0 & 1
+        \end{pmatrix}
+      +
+      \begin{pmatrix}
+              0 & -\theta \\
+              \theta & 0
+          \end{pmatrix}
+      +\frac{1}{2}
+      \begin{pmatrix}
+               -\theta^2 & 0 \\
+              0 &  -\theta^2
+      \end{pmatrix} + ... \\
+    &= \begin{pmatrix}
+            \cos(\theta) & -\sin(\theta) \\
+            \sin(\theta) & \cos(\theta)
+        \end{pmatrix}
+\end{align*}
+
+
+\subsection{Algèbre et crochet de Lie}
+Les générateurs sont éléments d'une algèbre, l'algèbre de Lie. Une algèbre de Lie peut être reconnue par la valeurs du crochet de Lie de ses générateurs. 
+\begin{table}[H]\label{A:groupedesmetrie}
+\begin{center}
+    \begin{tabular}{c|cc}
+    \noalign{\smallskip}\hline\noalign{\smallskip}
+    Groupe & Crochet de Lie & Générateur  \\
+    de Lie &   de l'algèbre& du groupe\\
+    \noalign{\smallskip}
+    \hline \hline
+    \noalign{\smallskip}
+     $\mathrm{SU}(2)$ &  $[\frac{\sigma_a}{2}, \frac{\sigma_b}{2}] = i\epsilon_{abc}\frac{\sigma_c}{2}$ & $\{i\sigma_a\}$ matrices de Pauli\\
+     $\mathrm{SU}(3)$ &  $[\frac{\lambda_a}{2},\frac{\lambda_b}{2}] = if_{abc}\frac{\lambda_c}{2}$ & $\{i\lambda_a\}$ matrices de Gell-Man\\
+     \noalign{\smallskip}\hline\noalign{\smallskip}
+     $\mathrm{SO}(1,3)$ & $[J_a, J_b] = i \epsilon_{abc}J_c  $ & $\{J_a\}$ Générateurs de rotation\\
+     & $[K_a,K_b] = -i \epsilon_{abc}J_c $ &   $\{K_a\}$ Générateurs de boosts\\ 
+     &$[J_a,K_b] = i \epsilon_{abc}K_c $ & \\ 
+    \noalign{\smallskip}\hline\noalign{\smallskip}
+    $\mathrm{SU}(2)\otimes\mathrm{SU}(2)$ & $[J^+_a, J^+_b] = \frac{i}{2} \epsilon_{abc}J^+_c $ & $\{J^+_a\}$ Générateurs de $SU(2)$\\
+     & $[J^-_a, J^-_b] = \frac{i}{2} \epsilon_{abc}J^-_c $ & $\{J^-_a\}$ Générateurs de $SU(2)$\\
+    &$[J^+_a, J^-_b] = 0$& \\
+    \noalign{\smallskip}\hline\noalign{\smallskip}
+    \end{tabular}
+\end{center}
+\end{table}
+
+
+\section{Théorie des représentations}\label{A:représentation}
+
+\subsection{Définition}
+    
+La représentation d'un groupe $\left( G, \ast\right)$ ou d'une algèbre de Lie $\left( G, \mathbb{K}, +, \cdot, [\,] \right)$  est action sur un espace vectoriel V défini par l'application :
+\begin{align*}
+\Phi : G \times V &\longrightarrow V \\
+     v &\longmapsto \Phi(g,v)
+\end{align*}
+Avec la notation $ \rho(g)$ pour $\Phi(g,v)$, la représentation de $g$ doit suivre la relation : 
+\begin{equation}\label{representation}
+ \rho(g_1) \cdot  \rho(g_2) = \rho(g_1 g_2) 
+\end{equation}
+
+Dans les cas physiques, la représentation est très souvent une matrice agissant sur des espaces vectoriels $\mathbb{R}^n$ ou $\mathbb{C}^n$.
+
+\subsection{La représentation triviale}
+
+On peut remarquer que $\forall g \in G, \quad \rho(g) = \mathbbm{1}$ obéis à la règle \eqref{representation}. Dans un tel cas, tout élément de $G$ est représenté par la matrice identité et on nomme cette représentation la représentation triviale. Alors l'espace vectoriel $V$ est le corps $\mathbb{K}$, autrement dit un espace scalaire.
+
+\subsection{La représentation fondamentale}
+
+La représentation fondamentale est la représentation irréductible (qui ne peut être décomposée en représentations plus petites). Dans la plupart des cas il s'agit des matrices qui définissent le groupe. 
+
+
+\subsection{Exemples de groupes présent en physique}\label{A:groupedesymetrie}
+
+\begin{table}[H]
+\begin{center}
+    \begin{tabular}{c|cc}
+    \noalign{\smallskip}\hline\noalign{\smallskip}
+    & Représentation & Représentation  \\
+    Groupe &  triviale & fondamentale \\
+    \noalign{\smallskip}
+    \hline \hline
+    \noalign{\smallskip}
+    $U(1)$ & 1 & $\left\{ e^{i\theta} :\, \theta \in \mathbb{R}\right\}$ \\
+    $\mathrm{SO}(2)$ &  $\mathbbm{1}$ & $\left\{  M = 
+    \begin{pmatrix}
+        a & -b \\ b & a
+    \end{pmatrix} :\, a,b\in \mathbb{R}, \, a^2 + b^2 =1 
+     \right\}$ \\
+     $\mathrm{SU}(2)$ &  $\mathbbm{1}$ & $\left\{  M = 
+     \begin{pmatrix}
+             \alpha & -\overline{\beta} \\ \beta & \overline{\alpha} 
+         \end{pmatrix} :\, \alpha,\beta\in \mathbb{C}, \, |\alpha|^2 + |\beta|^2 =1 
+      \right\}$ \\
+    \noalign{\smallskip}\hline\noalign{\smallskip}
+    \end{tabular}
+\end{center}
+\end{table}
+
+
+
+
+\end{fmffile}

@@ -1,0 +1,14 @@
+% \def \def .{.}\edef  on input line 17{ on input line 17}\def .{.}\edef  on input line 17{ on input line 17}\char "0307\relax \char "0307\relax \global \let  
+pickup pencircle scaled 0.5;
+vleft (__i1, __i2);
+vright (__o1, __o2);
+vconnect ("gluon", __i1, __v1, __i2);
+vconnect ("gluon", __v1, __v2);
+vconnect ("fermion", __o1, __v2, __o2);
+vdot (__v1, __v2);
+vlabel ("$t$", __o2);
+vlabel ("$\bar {t}$", __o1);
+vfreeze;
+vdraw;
+endsubgraph;
+endchar;

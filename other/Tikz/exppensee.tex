@@ -1,0 +1,66 @@
+
+\documentclass{article}
+
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+
+% split figures into pages
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{1pt}%
+\usepackage{verbatim}
+\usetikzlibrary{calc,fadings,decorations.pathreplacing,shadings}
+
+\makeatletter
+\tikzset{vertical custom shading/.code={%
+  \pgfmathsetmacro\tikz@vcs@middle{#1}
+  \pgfmathsetmacro\tikz@vcs@bottom{\tikz@vcs@middle/2}
+  \pgfmathsetmacro\tikz@vcs@top{(100-\tikz@vcs@middle)/2+\tikz@vcs@middle}
+  \pgfdeclareverticalshading[tikz@axis@top,tikz@axis@middle,tikz@axis@bottom]{newaxis}{100bp}{%
+    color(0bp)=(tikz@axis@bottom);
+    color(\tikz@vcs@bottom bp)=(tikz@axis@bottom);
+    color(\tikz@vcs@middle bp)=(tikz@axis@middle);
+    color(\tikz@vcs@top bp)=(tikz@axis@top);
+    color(100bp)=(tikz@axis@top)}
+    \pgfkeysalso{/tikz/shading=newaxis}
+  }
+}
+\makeatother
+
+\begin{document}
+
+\begin{figure}[!h]
+\centering
+\begin{tikzpicture}
+%lines
+    \draw [red, line width=0.5mm](-2.37,0) -- (0,0);
+    \draw [red, dashed, line width=0.5mm, opacity=0.5](0,0) -- (0,4);
+    \draw [red, line width=0.5mm, opacity=0.5](4,0) -- (0,0);
+    \draw [green!50!black, ->, line width=0.5mm, opacity=0.5] (0,4) -> (3.5,0.5);
+
+%beam splitter
+    \draw [line width=1mm, opacity=0.5] (0.5,0.5) -- (45:0.5cm);
+    \draw [line width=1mm, opacity=0.5] (-0.5,-0.5) -- (45:0.5cm);
+%mirrors
+    \draw [blue, fill, line width=1mm, opacity=0.5] (0,4) circle (0.2);
+    \draw [blue, fill, line width=1mm, opacity=0.5] (4,0) circle (0.2);
+%rectangles
+    \node (rect) at (-3,0) [draw,minimum width=1.25cm,minimum height=0.6cm] {};
+
+
+%harpoons
+    \draw [black, line width=0.5mm] (-0.25,2) -- (0.25,2.5);
+    \draw [black, line width=0.5mm] (-0.25,2.5) -- (0.25,2);
+
+%labels
+    \node at (-3,0){\footnotesize{$X \rightarrow \gamma$}};
+    \node at (-0.5,4){\footnotesize{$Q$}};
+    \node at (4.5,0){\footnotesize{$G$}};
+    \node at (4.5,0.5)[green!50!black]{\footnotesize{$\neg (X \rightarrow \gamma)$}};
+    \node at (4.5,-0.5)[red]{\footnotesize{$(X \rightarrow \gamma)$}};
+    \node at (1.,0.75){\footnotesize{Miroir}};
+\end{tikzpicture}
+\caption{Rudimentary Michaelson interferometer schematic}
+\end{figure}
+
+\end{document}

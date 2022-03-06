@@ -1,0 +1,664 @@
+
+% All code inspired by Classic Thesis package, and customization by arsclassica
+
+% Flags
+\RequirePackage{ifthen}
+    \newboolean{@drafting} % print version information on pages
+    \newboolean{@tocaligned} % the left column of the toc will be aligned (no indention)
+    \newboolean{@eulerchapternumbers} % use AMS Euler for chapter font (otherwise Palatino)
+    \newboolean{@linedheaders} % chaper headers will have line above and beneath
+    \newboolean{@listsseparated} % toggles the vertical space between lof/lot entries of different chapters
+    \newboolean{@nochapters} % disable all chapter-specific commands
+    \newboolean{@beramono} % toggle nice monospaced font (w/ bold) + pre-installed
+    \newboolean{@eulermath} % use awesome Euler fonts for math
+    \newboolean{@parts} % use part division for the text
+    \newboolean{@minionpro} % setup for minion pro font
+    \newboolean{@minionprospacing} % use minion pro's textssc for letter spacing
+    \newboolean{@pdfspacing} % use pdftex for letterspacing (via microtype)
+    \newboolean{@a5paper} % use those tiny DIN A5 pages
+    \newboolean{@dottedtoc} % page numbers in ToC flushed right
+  	\newboolean{@listings} % load listings package (if not already) and setup LoL
+	  \newboolean{@manychapters} % additional space in ToC after chapter number (if two digits are needed)
+	  \newboolean{@floatperchapter} % numbering per chapter for all floats (i.e., Figure 1.1)
+
+\setboolean{@drafting}{true}
+% \setboolean{@drafting}{false}
+
+\newboolean{full_colors}
+\setboolean{full_colors}{true}
+
+\newboolean{enable-backrefs} % enable backrefs in the bibliography
+\setboolean{enable-backrefs}{false} % true false
+
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+\usepackage[autostyle,french=guillemets*]{csquotes}
+\MakeOuterQuote{"}
+\frenchspacing
+
+\usepackage{fontspec}
+
+% Main font to Palatino
+\setmainfont
+     [Ligatures={Common}, Fractions=On, Mapping=tex-text,
+      BoldFont       = texgyrepagella-bold.otf,
+      ItalicFont     = texgyrepagella-italic.otf,
+      BoldItalicFont = texgyrepagella-bolditalic.otf]{texgyrepagella-regular.otf}
+
+% Lato font
+% \setmainfont
+%      [Ligatures={Common}, Fractions=On, Mapping=tex-text,
+%       Path           = fonts/,
+%       Extension      = .otf,
+%       UprightFont    = *-Reg,
+%       BoldFont       = *-Bol,
+%       ItalicFont     = *-RegIta,
+%       BoldItalicFont = *-BolIta]{Lato}
+
+\setsansfont[
+    Ligatures={Common}, Mapping=tex-text,
+    Extension=.otf,
+    UprightFont= *-Regular,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    BoldItalicFont=*-BoldItalic,
+    Numbers={Uppercase}
+]{Iwona}
+
+\usepackage[protrusion=true]{microtype} % character protruding and other micro-typography stuff
+\RequirePackage{amsmath} % ``Proper'' math commands and environments
+\RequirePackage{braket} % Dirac bra-ket notation
+\RequirePackage{slashed} % also for slash notation: take your pick!
+\RequirePackage{hepnicenames} % A ``friendly'' macro set for selected PEN symbols
+                              % which includes hepparticles and heppennames
+
+\RequirePackage[separate-uncertainty=true,multi-part-units=single]{siunitx}
+\sisetup{locale = US}
+
+%\usepackage[]{unicode-math}
+%\setmathfont[Path=fonts/]{texgyrepagella-math.otf}
+%\setmathfont{Asana Math}
+%\DeclareSymbolFont{calletters}{OMS}{cmsy}{m}{n}
+%\DeclareSymbolFontAlphabet{\mathcal}{calletters}
+
+\setmonofont[
+    Ligatures={Common}, Mapping=tex-text,
+    BoldFont=SourceCodePro-Bold.otf,
+    Path=fonts/
+]{SourceCodePro-Regular.otf}
+
+\linespread{1.05}
+
+% Font for chapter numbers
+\newfontface{\chapterNumber}[Scale=4.5,Path=fonts/]{euler.otf}
+\newfontface{\chapterName}[Scale=4,Path=fonts/]{euler.otf}
+
+\newcounter{dummy} % Necessary for correct hyperlinks (to index, bib, etc.)
+
+% Bibliography
+\PassOptionsToPackage{square,numbers,sort&compress}{natbib}
+\usepackage{natbib}
+
+\usepackage{lipsum}
+
+%\usepackage{listings}
+\usepackage{tabularx} % Better tables
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{empheq}
+\usepackage{amssymb}
+\usepackage{bbm}
+\usepackage{lscape}
+\usepackage{pgf}
+\newcommand*\widefbox[1]{\fbox{\hspace{2em}#1\hspace{2em}}}
+
+
+
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\RequirePackage{xcolor}
+\definecolor{halfgray}{gray}{0.55} % chapter numbers will be semi transparent .5 .55 .6 .0
+\definecolor{webgreen}{rgb}{0,.5,0}
+\definecolor{webbrown}{rgb}{.6,0,0}
+
+%\definecolor{darkblue}{HTML}{054D73} % URL colors
+%\definecolor{darkblue}{HTML}{044262} % URL colors
+\definecolor{darkblue}{HTML}{033651} % URL colors
+
+\definecolor{chapter_in_toc}{HTML}{8B1B26}
+
+% \makeatletter
+% \let\latex@include\include
+% \def\include#1{\include@aux#1\@nil}
+% \def\include@aux#1/#2\@nil{\@mkdir{#1}\latex@include{#1/#2}}
+% %\def\include@aux#1/#2\@nil{\latex@include{#1/#2}}
+% \ifnum\shellescape=\@ne
+%   \def\@mkdir#1{\immediate\write18{mkdir -p output/#1}}
+% \else
+%   \def\@mkdir{\typeout{Expect errors}}
+% \fi
+% \makeatother
+
+
+\usepackage{graphicx}
+\graphicspath{{figs/}{logos/}{chapitre1/figs/}{chapitre2/figs/}{chapitre3/figs/}{chapitre4/figs/}{chapitre5/figs/}{appendixA/figs/}{appendixB/figs/}{appendixC/figs/}}
+
+% Disable single lines at the start of a paragraph (Schusterjungen)
+\clubpenalty = 10000
+% Disable single lines at the end of a paragraph (Hurenkinder)
+\widowpenalty = 10000
+\displaywidowpenalty = 10000 % formulas
+
+% Graffiti as in GKP's book "Concrete Mathematics"
+% thanks to Lorenzo Pantieri and Enrico Gregorio
+\def\graffito@setup{%
+   \slshape\footnotesize%
+   \parindent=0pt \lineskip=0pt \lineskiplimit=0pt %
+   \tolerance=2000 \hyphenpenalty=300 \exhyphenpenalty=300%
+   \doublehyphendemerits=100000%
+   \finalhyphendemerits=\doublehyphendemerits}
+%\DeclareRobustCommand{\graffito}[1]{\marginpar%
+% [\graffito@setup\raggedleft\hspace{0pt}{#1}]%
+% {\graffito@setup\raggedright\hspace{0pt}{#1}}}
+\let\oldmarginpar\marginpar
+\renewcommand{\marginpar}[1]{\oldmarginpar%
+ [\graffito@setup\raggedleft\hspace{0pt}{#1}]%
+ {\graffito@setup\raggedright\hspace{0pt}{#1}}}
+
+\RequirePackage{xfrac}
+\RequirePackage{booktabs} % for better rules in tables
+\RequirePackage{multirow}
+\RequirePackage{textcase} % for \MakeTextUppercase
+
+\newcommand\xetextls[2]{{\addfontfeature{LetterSpace=#1}#2}}
+%\DeclareRobustCommand{\spacedallcaps}[1]{\MakeTextUppercase{#1}}%
+\DeclareRobustCommand{\spacedallcaps}[1]{\sffamily\xetextls{10}{\MakeTextUppercase{#1}}}%
+\DeclareRobustCommand{\spacedlowsmallcaps}[1]{\sffamily\xetextls{10}{\scshape\MakeTextLowercase{#1}}}%
+\DeclareRobustCommand{\lessspacedlowsmallcaps}[1]{\sffamily\xetextls{5}{\scshape\MakeTextLowercase{#1}}}%
+
+% ********************************************************************
+% headlines
+% ************************************************************
+\PassOptionsToPackage{automark}{scrlayer-scrpage}
+	\RequirePackage{scrlayer-scrpage} % provides headers and footers (KOMA Script)
+    \clearscrheadings
+    \setheadsepline{0pt}
+
+    \renewcommand{\chaptermark}[1]{\markboth{\spacedlowsmallcaps{#1}}{\spacedlowsmallcaps{#1}}}
+    \renewcommand{\sectionmark}[1]{\markright{\textsc{\MakeTextLowercase{\thesection}}\enspace\spacedlowsmallcaps{#1}}}
+
+    \ifthenelse{\boolean{full_colors}}{%
+      \lehead{\mbox{\llap{\small\thepage\kern1em\color{halfgray}\vline}\color{halfgray}\hspace*{0.5em}\headmark\hfil}}
+      \rohead{\mbox{\hfil{\color{halfgray}\headmark\hspace{0.5em}}\rlap{\small{\color{halfgray}\vline}\kern1em\thepage}}}%
+    }{%
+      \lehead{\mbox{\llap{\small\thepage\kern1em\vline}\hspace*{0.5em}\headmark\hfil}}
+      \rohead{\mbox{\hfil{\headmark\hspace{0.5em}}\rlap{\small{\vline}\kern1em\thepage}}}%
+    }
+
+    % \lehead{\mbox{\llap{\small\thepage\kern1em\color{halfgray}\vline}\color{halfgray}\hspace*{0.5em}\headmark\hfil}}
+    % \rohead{\mbox{\hfil{\color{halfgray}\headmark\hspace{0.5em}}\rlap{\small{\color{halfgray}\vline}\kern1em\thepage}}}
+
+    \renewcommand{\headfont}{\small}
+
+    \renewcommand{\headfont}{\normalfont\sffamily}
+    \renewcommand{\pnumfont}{\small\sffamily}
+%    \DeclareRobustCommand{\fixBothHeadlines}[2]{} % <--- ToDo
+    % hack to get the content headlines right (thanks, Lorenzo!)
+		\def\toc@heading{%
+	 		\chapter*{\contentsname}%chapters
+	 		\@mkboth{\spacedlowsmallcaps{\contentsname}}{\spacedlowsmallcaps{\contentsname}}}
+
+
+
+% ********************************************************************
+% layout of the chapter-, section-, subsection-, subsubsection-,
+% paragraph and description-headings
+% ********************************************************************
+\RequirePackage{titletoc}
+\RequirePackage[calcwidth]{titlesec}
+    \makeatletter
+    \patchcmd{\ttl@select}{\strut}{}{}{}
+    \patchcmd{\ttlh@display}{\strut}{}{}{}
+    \patchcmd{\ttlh@display}{\strut}{}{}{}
+    \patchcmd{\ttlh@hang}{\strut}{}{}{}
+    \patchcmd{\ttlh@hang}{\strut}{}{}{}
+    \patchcmd{\ttlh@runin}{\strut}{}{}{}
+    \makeatother
+
+%    \titleformat{\chapter}[display]%
+%          {\relax}{\mbox{}\oldmarginpar{\vspace*{-1.35\baselineskip}\color{halfgray}\chapterNumber\thechapter}}{0pt}%
+%          {\begingroup\setlength{\baselineskip}{1.35\baselineskip}\raggedright\headingFont\addfontfeature{Scale=1.4}\spacedallcaps}[\endgroup\normalsize\vspace*{.8\baselineskip}\titlerule\vspace*{1pc}\startcontents\printcontents{mini}{1}{}]%
+%    \titleformat{\chapter}[display]%
+%          {\relax}{\raggedleft{\color{halfgray}\chapterName\chaptername\chapterNumber\thechapter}}{10pt}%
+%          {\raggedright\headingFont\addfontfeature{Scale=1.4}\spacedallcaps}[\normalsize\vspace*{.8\baselineskip}\titlerule%
+%          \vspace*{1pc}\startcontents\printcontents{}{1}{}]%
+
+%    \titleformat{\chapter}[hang]%
+%          {\relax}{\thechapter}{0pt}%
+%          {\headingFont\addfontfeature{Scale=1.4}}[\normalsize\vspace*{.8\baselineskip}\titlerule\vspace*{1pc}]%
+
+%     % sections \FloatBarrier
+%     \titleformat{\section}
+%         {\relax}{\headingFont\addfontfeature{Scale=1.25}\thesection}{1em}{\headingFont\addfontfeature{Scale=1.25}}
+%     % subsections
+%     \titleformat{\subsection}
+%         {\relax}{\headingFont\addfontfeature{Scale=1.10}\thesubsection}{1em}{\headingFont\addfontfeature{Scale=1.10}}
+%     % subsubsections
+%     \titleformat{\subsubsection}
+%         {\relax}{\headingFont\thesubsubsection}{1em}{\headingFont\bfseries}
+%     % paragraphs
+%     \titleformat{\paragraph}[runin]
+%         {\normalfont\normalsize}{\theparagraph}{0pt}{\spacedlowsmallcaps}
+%     % descriptionlabels
+%         \renewcommand{\descriptionlabel}[1]{\hspace*{\labelsep}\spacedlowsmallcaps{#1}}   % spacedlowsmallcaps textit textsc
+
+
+% \renewcommand{\tabularxcolumn}[1]{b{#1}}%
+% \newcommand\formatchapter[1]{%
+% \begin{tabularx}{\titlewidth}[b]{@{} X @{}}
+%   \filright\spacedallcaps{#1}
+% \end{tabularx}}
+
+\titleformat{\chapter}[block]{\normalfont\Large\sffamily}{{\color{halfgray}\chapterNumber\thechapter\hspace{10pt}\vline}}{10pt}{\formatchapter}
+\titleformat{\section}{\normalfont\LARGE\sffamily}{\textsc{\MakeTextLowercase{\thesection}}}{1em}{\lineskiplimit=-10pt\linespread{0.8}\spacedlowsmallcaps}
+%\titleformat{\section}{\normalfont\Large\sffamily}{\textsc{\MakeTextLowercase{\thesection}}}{1em}{\linespread{0.8}\spacedlowsmallcaps}
+
+% subsections
+\titleformat{\subsection}{\normalfont\Large\sffamily}{\textsc{\MakeTextLowercase{\thesubsection}}}{1em}{\linespread{0.8}\spacedlowsmallcaps}
+% subsubsections
+\titleformat{\subsubsection}{\normalfont\sffamily\itshape}{\textsc{\MakeTextLowercase{\thesubsubsection}}}{1em}{\spacedlowsmallcaps\itshape}
+
+    % descriptionlabels
+    \renewcommand{\descriptionlabel}[1]{\hspace*{\labelsep}\bfseries\lessspacedlowsmallcaps{#1}}
+
+\titlespacing*{\chapter}{0pt}{1\baselineskip}{2\baselineskip}
+\titlespacing*{\section}{0pt}{2\baselineskip}{.8\baselineskip}[\marginparsep]
+\titlespacing*{\subsection}{0pt}{1.5\baselineskip}{.8\baselineskip}[\marginparsep]
+\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titlespacing*{\paragraph}{0pt}{1\baselineskip}{1\baselineskip}
+
+%     \newcommand\formatchapter[1]{%
+%     \vbox to \ht\strutbox{
+%     \setbox0=\hbox{\chapterNumber\thechapter\hspace{10pt}\vline\ }
+%     \advance\hsize-\wd0 \advance\hsize-10pt\raggedright
+%     \spacedallcaps{#1}\vss}}
+%     \titleformat{\chapter}[block]
+%        {\normalfont\Large\sffamily}
+%        {\textcolor{halfgray}{\chapterNumber\thechapter}
+%        \hspace{10pt}\vline\ }{10pt}
+%     {\formatchapter}
+
+
+  \renewcommand{\tabularxcolumn}[1]{b{#1}}
+
+  \newcommand\formatchapter[1]{%
+  \begin{tabularx}{\linewidth}{@{}l@{}@{\hspace{20pt}}X@{}}
+       \textcolor{halfgray}{\chapterNumber\thechapter\hspace*{8pt}\vline} & \spacedallcaps{#1}
+  \end{tabularx}}
+
+  \newcommand\formatchapternonumber[1]{%
+  \begin{tabularx}{\linewidth}{@{}X@{}}
+       \spacedallcaps{#1}
+  \end{tabularx}}
+
+  \titleformat{name=\chapter}[block]{\normalfont\Large\sffamily}{\relax}{0pt}{\formatchapter}[\normalsize\vspace*{.8\baselineskip}\vspace*{1pc}\startcontents\printcontents{mini}{1}{}]
+
+  \titleformat{name=\chapter,numberless}[block]{\normalfont\Large\sffamily}{\relax}{0pt}{\formatchapternonumber}[\normalsize\vspace*{.8\baselineskip}\titlerule]
+
+	\makeatletter
+	\if@twoside\rofoot[\mbox{\makebox[0pt][l]{\kern1em\thepage}}]{}\fi
+	\makeatother
+
+%************************************************************
+% itemize
+%************************************************************
+\renewcommand\labelitemi{\color{halfgray}$\bullet$}
+
+%************************************************************
+% caption
+%************************************************************
+\usepackage{newfloat}
+\DeclareFloatingEnvironment[fileext=eqs,placement={tbp},name=Éq.]{eq}
+
+\usepackage{subcaption}
+\DeclareCaptionSubType{figure}
+\DeclareCaptionSubType{table}
+\DeclareCaptionSubType{eq}
+
+\captionsetup{format=plain,indention=0.2cm,font=small,labelfont={sf,bf}}
+
+
+% ********************************************************************
+% footnotes setup
+% ********************************************************************
+\ifdefined\deffootnote
+  % KOMA-command, footnotemark not superscripted at the bottom
+  \deffootnote{0em}{0em}{\thefootnotemark\hspace*{.5em}}%
+  \message{Using KOMA-command "deffootnote" for footnote setup}%
+\else
+	\PassOptionsToPackage{flushmargin}{footmisc}%
+	\RequirePackage{footmisc}%
+	\setlength{\footnotemargin}{-.5em}%
+  	\PackageWarningNoLine{classicthesis}{Using package "footmisc" with option %
+  		"flushmargin" for footnote setup (not 100\% the same as with KOMA)}%
+\fi
+
+\PassOptionsToPackage{titles}{tocloft}
+	\RequirePackage{tocloft}
+
+% ********************************************************************
+% Drafting Stuff
+% ********************************************************************
+\usepackage{xspace} % To get the spacing after macros right
+\newcommand{\myVersion}{\xspace}
+\RequirePackage{scrtime} % time access
+\newcommand{\finalVersionString}{}
+ \ifthenelse{\boolean{@drafting}}{%
+% %    \RequirePackage{draftwatermark}%
+% %    	\SetWatermarkLightness{0.9}
+% %			\SetWatermarkScale{.5}
+% %			\SetWatermarkText{\today\ at \thistime}
+ 		\PassOptionsToPackage{draft}{prelim2e}
+ 		\RequirePackage{prelim2e}
+       %\renewcommand{\PrelimWords}{Version préliminaire}
+         \renewcommand{\PrelimText}{\myVersion}
+ }{\relax}
+
+\usepackage{fixltx2e} % fixes some LaTeX stuff
+\PassOptionsToPackage{smaller}{acronym}
+	\usepackage{acronym} % nice macros for handling all acronyms in the thesis
+%\renewcommand{\bflabel}[1]{{#1}\hfill} % fix the list of acronyms
+\newcommand{\bflabel}[1]{{#1}\hfill} % fix the list of acronyms
+
+\setlength{\extrarowheight}{3pt} % Increase table row height
+\newcommand{\tableheadline}[1]{\multicolumn{1}{c}{\spacedlowsmallcaps{#1}}}
+\newcommand{\myfloatalign}{\centering} % To be used with each float for alignment
+
+\PassOptionsToPackage{hyperfootnotes=false,pdfpagelabels}{hyperref}
+\usepackage{hyperref}  % backref linktocpage pagebackref
+%\pdfcompresslevel=9
+%\pdfadjustspacing=1
+
+% Back references
+
+\newcommand{\backrefnotcitedstring}{\relax}%(Not cited.)
+\newcommand{\backrefcitedsinglestring}[1]{(Cité en page~#1)}
+\newcommand{\backrefcitedmultistring}[1]{(Cité en pages~#1)}
+\ifthenelse{\boolean{enable-backrefs}}%
+{%
+		\PassOptionsToPackage{hyperpageref}{backref}
+		\usepackage{backref} % to be loaded after hyperref package
+		   \renewcommand{\backreftwosep}{ et~} % separate 2 pages
+		   \renewcommand{\backreflastsep}{, et~} % separate last of longer list
+		   \renewcommand*{\backref}[1]{}  % disable standard
+		   \renewcommand*{\backrefalt}[4]{% detailed backref
+		      \ifcase #1 %
+		         \backrefnotcitedstring%
+		      \or%
+		         \backrefcitedsinglestring{#2}%
+		      \else%
+		         \backrefcitedmultistring{#2}%
+		      \fi}%
+}{\relax}
+
+\hypersetup{
+ % Uncomment the line below to remove all links (to references, figures, tables, etc)
+ %draft,
+ colorlinks=true, linktocpage=false, pdfstartpage=3, pdfstartview=FitV,
+ % Uncomment the line below if you want to have black links (e.g. for printing black and white)
+ %colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=3, pdfstartview=FitV,
+ breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,
+ plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,
+ hypertexnames=true, pdfhighlight=/O, urlcolor=webbrown, linkcolor=darkblue, citecolor=webgreen,
+ %------------------------------------------------
+ % PDF file meta-information
+ % pdftitle={\myTitle},
+ % pdfauthor={\textcopyright\ \myName, \myUni, \myFaculty},
+ pdfsubject={},
+ pdfkeywords={},
+ pdfcreator={XeTeX}
+}
+
+\contentsmargin{2.5em}
+
+% Mini-toc style
+\titlecontents{minisection}[2.3em]{\color{darkblue}}{\contentslabel{2.3em}}{\hspace*{-2.3em}}{\titlerule*[0.8pc]{.}\contentspage}
+\titlecontents{minisubsection}[5.5em]{\color{darkblue}}{\contentslabel{3.2em}}{\hspace*{-3.2em}}{\titlerule*[0.8pc]{.}\contentspage}
+
+% Main toc style
+
+\titlecontents{chapter}[1.3em]{\addvspace{1pc}\hypersetup{linkcolor=chapter_in_toc}\color{chapter_in_toc}}{\contentslabel{1.3em}}{\hspace*{-1.3em}}{\titlerule*[0.8pc]{.}\contentspage}
+\titlecontents{section}[3.2em]{\addvspace{0.6pc}\hypersetup{linkcolor=black}}{\contentslabel{1.9em}}{\hspace*{-1.9em}}{\titlerule*[0.8pc]{.}\contentspage}
+\titlecontents{subsection}[5.8em]{\addvspace{0.2em}\hypersetup{linkcolor=black}}{\contentslabel{2.6em}}{\hspace*{0em}}{\titlerule*[0.8pc]{.}\contentspage}
+
+% Reset footnote counter each time a new chapter starts
+\makeatletter
+\pretocmd{\@schapter}{\setcounter{footnote}{0}}{}{}
+\pretocmd{\@chapter}{\setcounter{footnote}{0}}{}{}
+\makeatother
+
+\usepackage{feynmp}
+\DeclareGraphicsRule{*}{eps}{*}{}
+
+% Usefull macro
+% \newcommand{\MeVc}{\MeVoverc}
+% \newcommand{\MeVcc}{\MeVovercsq}
+% \newcommand{\GeVc}{\GeVoverc}
+% \newcommand{\GeVcc}{\GeVovercsq}
+% \newcommand{\TeVc}{\TeVoverc}
+% \newcommand{\TeVcc}{\TeVovercsq}
+
+\newcommand{\lumi}{\ensuremath{\mathcal{L}}\xspace}
+\newcommand{\Lumi}{\ensuremath{\mathcal{L}}\xspace} % both upper and lower
+
+\newcommand{\PT}{\ensuremath{p_{\mathrm{T}}}\xspace}
+\newcommand{\pt}{\PT}
+\newcommand{\ET}{\ensuremath{E_{\mathrm{T}}}\xspace}
+\newcommand{\et}{\ET}
+\newcommand{\HT}{\ensuremath{H_{\mathrm{T}}}\xspace}
+\newcommand{\Em}{\ensuremath{\slashed{E}}\xspace}
+\newcommand{\Pm}{\ensuremath{\slashed{p}}\xspace}
+\newcommand{\PTm}{\ensuremath{\slashed{p}_\mathrm{T}}\xspace}
+\newcommand{\PTslash}{\PTm}
+\newcommand{\ETm}{\ensuremath{E_{\mathrm{T}}^{\text{miss}}}\xspace}
+\newcommand{\ETmiss}{\ETm}
+\newcommand{\ETslash}{\ensuremath{\slashed{E}_{\mathrm{T}}}\xspace}
+\newcommand{\MET}{\ETslash}
+\newcommand{\met}{\MET}
+\newcommand{\METx}{\ensuremath{\slashed{E}_{\mathrm{x}}}\xspace}
+\newcommand{\METy}{\ensuremath{\slashed{E}_{\mathrm{y}}}\xspace}
+\newcommand{\VEtmiss}{\ensuremath{{\vec E}_{\mathrm{T}}^{\text{miss}}}\xspace}
+\newcommand{\ptvec}{\ensuremath{{\vec p}_{\mathrm{T}}}\xspace}
+
+\newcommand{\abs}[1]{\ensuremath{\lvert #1 \rvert}}
+\newcommand{\norm}[1]{\ensuremath{\left\lVert \, #1 \, \right\rVert}}
+
+\newcommand{\ttbar}{\texorpdfstring{\ensuremath{\Ptop\APtop}\xspace}{top-antitop\xspace}}
+\newcommand{\bbbar}{\ensuremath{\Pbottom\APbottom}\xspace}
+\newcommand{\mtt}{\ensuremath{m_{\Pqt\Paqt}}\xspace}
+\newcommand{\zprime}{\ensuremath{\PZ^{\prime}}\xspace}
+\newcommand{\mzp}{\ensuremath{m_{\PZ^{\prime}}}\xspace}
+\newcommand{\kkglu}{K. K. gluon\xspace}
+\newcommand{\msz}{\ensuremath{m_{\sz}}\xspace}
+\newcommand{\kkg}{\ensuremath{\Pgluon^\text{(1)}}\xspace}
+\newcommand{\sz}{\HepParticle{S}{0}{}\xspace}
+\newcommand{\mtop}{\ensuremath{m_{\Ptop}}\xspace}
+
+\newcommand{\mbottom}{\ensuremath{m_{\Pbottom}}\xspace}
+\newcommand{\mW}{\ensuremath{m_{\PW}}\xspace}
+\newcommand{\mHplus}{\ensuremath{m_{\PHiggsplus}}\xspace}
+\newcommand{\mHpm}{\ensuremath{m_{\PHiggspm}}\xspace}
+
+\newcommand{\gmu}{\ensuremath{\gamma_\mu}}
+\newcommand{\gzero}{\ensuremath{\gamma_0}}
+\newcommand{\gfive}{\ensuremath{\gamma_5}}
+\newcommand{\dmu}{\ensuremath{\partial_\mu}}
+
+\newcommand{\gmuc}{\ensuremath{\gamma^\mu}}
+\newcommand{\gzeroc}{\ensuremath{\gamma^0}}
+\newcommand{\gfivec}{\ensuremath{\gamma^5}}
+\newcommand{\dmuc}{\ensuremath{\partial^\mu}}
+
+\newcommand{\Psib}{\ensuremath{\bar{\Psi}}}
+
+\newcommand{\pu}{\emph{pile-up}\xspace}
+\newcommand{\pf}{\emph{particle-flow}\xspace}
+\newcommand{\trg}{\emph{trigger}\xspace}
+
+\newcommand{\aeta}{\ensuremath{\abs{\eta}}\xspace}
+\newcommand{\vl}{\emph{vector-like}\xspace}
+
+\newcommand{\beq}{\begin{eqnarray}}
+\newcommand{\eeq}{\end{eqnarray}}
+\def\lappeq{\mathrel{\rlap{\raise.5ex\hbox{$<$}}{\lower.5ex\hbox{$\sim$}}}}
+\def\meg{\Pmu \to \Pe \Pgamma}
+\def\topqme{\Ptop \to \Pquark \Pmupm \Pemp}
+\def\topqij{\Ptop \to \Pquark \Plepton_i^+ \Plepton_j^-}
+\def \lsim{\mathrel{\vcenter
+     {\hbox{$<$}\nointerlineskip\hbox{$\sim$}}}}
+\def \gsim{\mathrel{\vcenter
+     {\hbox{$>$}\nointerlineskip\hbox{$\sim$}}}}
+
+
+\newcommand{\dzero}{DØ\xspace}
+
+% High energy physics
+\DeclareSIUnit\c{c}
+\DeclareSIUnit\micron{\micro\metre}
+\DeclareSIUnit\mrad{\milli\rad}
+\DeclareSIUnit\gauss{G}
+\DeclareSIUnit\eVperc{\eV\per\clight}
+\DeclareSIUnit\nanobarn{\nano\barn}
+\DeclareSIUnit\picobarn{\pico\barn}
+\DeclareSIUnit\femtobarn{\femto\barn}
+\DeclareSIUnit\attobarn{\atto\barn}
+\DeclareSIUnit\zeptobarn{\zepto\barn}
+\DeclareSIUnit\yoctobarn{\yocto\barn}
+\DeclareSIUnit\nb{\nano\barn}
+\DeclareSIUnit\pb{\pico\barn}
+\DeclareSIUnit\fb{\femto\barn}
+\DeclareSIUnit\ab{\atto\barn}
+\DeclareSIUnit\zb{\zepto\barn}
+\DeclareSIUnit\yb{\yocto\barn}
+
+\DeclareSIUnit\invpb{\per\pico\barn}
+\DeclareSIUnit\invfb{\per\femto\barn}
+
+\DeclareSIUnit\GeVc{\GeV\per\c}
+\DeclareSIUnit\GeVcc{\GeV\per\square\c}
+\DeclareSIUnit\TeVc{\TeV\per\c}
+\DeclareSIUnit\TeVcc{\TeV\per\square\c}
+
+\DeclareSIUnit\octet{io}
+\DeclareSIUnit\rads{\si{\radian\per\s}}
+
+% Column matrix
+\newcount\colveccount
+\newcommand*\colvec[1]{
+        \global\colveccount#1
+        \begin{pmatrix}
+        \colvecnext
+}
+\def\colvecnext#1{
+        #1
+        \global\advance\colveccount-1
+        \ifnum\colveccount>0
+                \\
+                \expandafter\colvecnext
+        \else
+                \end{pmatrix}
+        \fi
+}
+
+% Row matrix
+\def\and{&\xspace}
+\newcount\rowveccount
+\newcommand*\rowvec[1]{
+        \global\rowveccount#1
+        \begin{pmatrix}
+        \rowvecnext
+}
+\def\rowvecnext#1{
+        #1
+        \global\advance\rowveccount-1
+        \ifnum\rowveccount>0
+                \and
+                \expandafter\rowvecnext
+        \else
+                \end{pmatrix}
+        \fi
+}
+
+% Tilde
+% \renewcommand{\tilde}{{\raise.17ex\hbox{$\scriptstyle\sim$}}}
+
+
+\ifthenelse{\boolean{@drafting}}{%
+\PassOptionsToPackage{status=draft}{fixme}
+ }{\relax}
+\RequirePackage[layout=inline]{fixme}
+
+\usepackage{cleveref}
+
+\usepackage{tikz}
+
+\usepackage{multicol}
+
+\usepackage{longtable}
+
+\usepackage{fmtcount}
+
+\newcommand{\ptg}{\ensuremath{p_T^{\Pphoton}}\xspace}
+\newcommand{\ptfjet}{\ensuremath{p_T^{\text{\ordinalnum{1} jet}}}\xspace}
+\newcommand{\ptjet}{\ensuremath{p_T^{\text{jet}}}\xspace}
+\newcommand{\chid}{\ensuremath{\chi^{2}}\xspace}
+
+\usepackage{afterpage}
+
+
+\definecolor{bleu_gris}{HTML}{556270}
+\definecolor{bleu}{HTML}{0B486B}
+\definecolor{rouge_grandmere}{HTML}{C44D58}
+\definecolor{orange}{HTML}{FA6900}
+\definecolor{orange2}{HTML}{E97F02}
+\definecolor{violet}{HTML}{542437}
+\definecolor{vert}{HTML}{8A9B0F}
+
+\newcommand{\rouge}{\textcolor{rouge_grandmere}{rouge}\xspace}
+\newcommand{\vertc}{\textcolor{vert}{vert}\xspace}
+\newcommand{\verte}{\textcolor{vert}{verte}\xspace}
+\newcommand{\gris}{\textcolor{bleu_gris}{gris}\xspace}
+\newcommand{\grise}{\textcolor{bleu_gris}{grise}\xspace}
+\newcommand{\bleu}{\textcolor{bleu}{bleu}\xspace}
+\newcommand{\violet}{\textcolor{violet}{violet}\xspace}
+\newcommand{\violette}{\textcolor{violet}{violette}\xspace}
+\newcommand{\orange}{\textcolor{orange}{orange}\xspace}
+
+\newcommand{\oranged}{\textcolor{orange2}{orange}\xspace}
+
+% Ajouté par stéphane
+\usepackage{pdfpages}
+
+\DeclareRobustCommand{\Pl}{\HepParticle{\ell}{}{}\xspace} % lepton
+\DeclareRobustCommand{\Plpm}{\HepParticle{\ell}{}{\pm}\xspace} % charged lepton
+\DeclareRobustCommand{\Plmp}{\HepParticle{\ell}{}{\mp}\xspace} % charged lepton
+\DeclareRobustCommand{\Plp}{\HepParticle{\ell}{}{+}\xspace} % positive lepton
+\DeclareRobustCommand{\Plm}{\HepParticle{\ell}{}{-}\xspace} % negative lepton
+\DeclareRobustCommand{\Pal}{\HepAntiParticle{\ell}{}{}\xspace} % anti-lepton
+\DeclareRobustCommand{\Pgn}{\HepParticle{\nu}{}{}\xspace} % generic neutrino
+\DeclareRobustCommand{\Pgnl}{\HepParticle{\nu}{\ell}{}\xspace} % neutrino (for lepton \ell)
+\DeclareRobustCommand{\Pagn}{\HepAntiParticle{\nu}{}{}\xspace} % generic anti-neutrino
+\DeclareRobustCommand{\Pagnl}{\HepAntiParticle{\nu}{\ell}{}\xspace} % anti-neutrino (for lepton \ell)
+\DeclareRobustCommand{\PV}{\HepParticle{V}{}{}\xspace} % generic vector boson
+
+\DeclareRobustCommand{\PX}{\HepParticle{X}{5/3}{}\xspace} % X vector boson
+\DeclareRobustCommand{\PaX}{\HepAntiParticle{X}{5/3}{}\xspace} % X vector boson
+\DeclareRobustCommand{\PTp}{\HepParticle{T}{2/3}{}\xspace} % T vector quark
+\DeclareRobustCommand{\PBp}{\HepParticle{B}{-1/3}{}\xspace} % B vector quark
+\DeclareRobustCommand{\PYp}{\HepParticle{Y}{-4/3}{}\xspace} % Y vector quark
+
+\DeclareRobustCommand{\PY}{\HepParticle{Y}{}{}\xspace} % generic vector boson
+\DeclareRobustCommand{\PTT}{\HepParticle{T}{}{}\xspace} % T vector quark
+\DeclareRobustCommand{\APTT}{\HepAntiParticle{T}{}{}\xspace} % T vector quark
+\DeclareRobustCommand{\Pr}{\HepParticle{r}{}{}\xspace} % T vector quark
+\DeclareRobustCommand{\Ph}{\HepParticle{h}{}{}\xspace} % T vector quark

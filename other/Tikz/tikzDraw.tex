@@ -1,0 +1,258 @@
+% Author: Izaak Neutelings (June 2017)
+% taken from https://tex.stackexchange.com/questions/159445/draw-in-cylindrical-and-spherical-coordinates
+
+\documentclass{article}
+
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+
+% split figures into pages
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{1pt}%
+
+
+\makeatletter
+\tikzset{vertical custom shading/.code={%
+  \pgfmathsetmacro\tikz@vcs@middle{#1}
+  \pgfmathsetmacro\tikz@vcs@bottom{\tikz@vcs@middle/2}
+  \pgfmathsetmacro\tikz@vcs@top{(100-\tikz@vcs@middle)/2+\tikz@vcs@middle}
+  \pgfdeclareverticalshading[tikz@axis@top,tikz@axis@middle,tikz@axis@bottom]{newaxis}{100bp}{%
+    color(0bp)=(tikz@axis@bottom);
+    color(\tikz@vcs@bottom bp)=(tikz@axis@bottom);
+    color(\tikz@vcs@middle bp)=(tikz@axis@middle);
+    color(\tikz@vcs@top bp)=(tikz@axis@top);
+    color(100bp)=(tikz@axis@top)}
+    \pgfkeysalso{/tikz/shading=newaxis}
+  }
+}
+\makeatother
+\begin{document}
+
+% CMS conventional coordinate system with LHC and other detectors
+\tdplotsetmaincoords{75}{50} % to reset previous setting
+\begin{tikzpicture}[scale=2.7,tdplot_main_coords,rotate around x=90]
+
+  % variables
+  \def\rvec{1.2}
+  \def\thetavec{40}
+  \def\phivec{70}
+  \def\R{1.1}
+  \def\w{0.3}
+
+  % axes
+  \coordinate (O) at (0,0,0);
+  \draw[thick,->] (0,0,0) -- (1,0,0) node[below left]{$x$};
+  \draw[thick,->] (0,0,0) -- (0,1,0) node[below right]{$y$};
+  \draw[thick,->] (0,0,0) -- (0,0,1) node[below right]{$z$};
+  \tdplotsetcoord{P}{\rvec}{\thetavec}{\phivec}
+
+  % vectors
+  \draw[->,red] (O) -- (P) node[above left] {$P$};
+  \draw[dashed,red] (O)  -- (Pxy);
+  \draw[dashed,red] (P)  -- (Pxy);
+  \draw[dashed,red] (Py) -- (Pxy);
+
+  % circle - LHC
+  \tdplotdrawarc[thick,rotate around x=90,black!70!blue]{(\R,0,0)}{\R}{0}{360}{}{}
+
+  % compass - the line between CMS and ATLAS has a ~12° declination (http://googlecompass.com)
+  \begin{scope}[shift={(1.1*\R,0,1.65*\R)},rotate around y=12]
+    \draw[<->,black!50] (-\w,0,0) -- (\w,0,0);
+    \draw[<->,black!50] (0,0,-\w) -- (0,0,\w);
+    \node[above left,black!50,scale=0.6] at (-\w,0,0) {N};
+  \end{scope}
+
+  % nodes
+  \node[left,align=center] at (0,0,1.1) {Jura};
+  \node[right] at (\R,0,0) {LHC};
+  \fill[radius=0.8pt,black!20!red]
+    (O) circle node[left=4pt,below=2pt] {CMS};
+  \draw[thick] (0.02,0,0) -- (0.5,0,0); % partially overdraw x-axis and CMS point
+  \fill[radius=0.8pt,black!20!blue]
+    (2*\R,0,0) circle
+    node[right=4pt,below=2pt,scale=0.9] {ATLAS};
+  \fill[radius=0.8pt,black!10!orange]
+    ({\R*sqrt(2)/2+\R},0,{ \R*sqrt(2)/2}) circle
+    node[left=2pt,below=2pt,scale=0.8] {ALICE};
+  \fill[radius=0.8pt,black!60!green]
+    ({\R*sqrt(2)/2+\R},0,{-\R*sqrt(2)/2}) circle
+    node[below=2pt,right=2pt,scale=0.8] {LHCb};
+
+  % arcs
+  \tdplotdrawarc[->]{(O)}{0.2}{0}{\phivec}
+    {above=2pt,right=-1pt,anchor=mid west}{$\phi$}
+  \tdplotdrawarc[->,rotate around z=\phivec-90,rotate around y=-90]{(0,0,0)}{0.5}{0}{\thetavec}
+    {anchor=mid east}{$\theta$}
+
+\end{tikzpicture}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% CMS conventional coordinate system with LHC and other detectors
+\tdplotsetmaincoords{75}{50} % to reset previous setting
+\begin{tikzpicture}[scale=2.7,tdplot_main_coords,rotate around x=90]
+
+  % variables
+  \def\R{1.1}
+  \def\w{0.3}
+
+
+  % axes
+  \coordinate (O) at (0,0,0);
+  \draw[thick,->] (0,0,0) -- (1,0,0) node[below left]{$x$};
+  \draw[thick,->] (0,0,0) -- (0,1,0) node[below right]{$y$};
+  \draw[thick,->] (0,0,0) -- (0,0,1) node[below right]{$z$};
+
+  % circle - LHC
+  \tdplotdrawarc[thick,rotate around x=90,black!70!blue]{(\R,0,0)}{\R}{0}{360}{}{}
+
+  % compass - the line between CMS and ATLAS has a ~12° declination (http://googlecompass.com)
+  \begin{scope}[shift={(1.1*\R,0,1.65*\R)},rotate around y=12]
+    \draw[<->,black!50] (-\w,0,0) -- (\w,0,0);
+    \draw[<->,black!50] (0,0,-\w) -- (0,0,\w);
+    \node[above left,black!50,scale=0.6] at (-\w,0,0) {N};
+  \end{scope}
+
+  % nodes
+  \node[left,align=center] at (0,0,1.1) {Jura};
+  \node[right] at (\R,0,0) {LHC};
+  \fill[radius=0.8pt,black!20!red]
+    (O) circle node[left=4pt,below=2pt] {CMS};
+  \draw[thick] (0.02,0,0) -- (0.5,0,0); % partially overdraw x-axis and CMS point
+  \fill[radius=0.8pt,black!20!blue]
+    (2*\R,0,0) circle
+    node[right=4pt,below=2pt,scale=0.9] {ATLAS};
+  \fill[radius=0.8pt,black!10!orange]
+    ({\R*sqrt(2)/2+\R},0,{ \R*sqrt(2)/2}) circle
+    node[left=2pt,below=2pt,scale=0.8] {ALICE};
+  \fill[radius=0.8pt,black!60!green]
+    ({\R*sqrt(2)/2+\R},0,{-\R*sqrt(2)/2}) circle
+    node[below=2pt,right=2pt,scale=0.8] {LHCb};
+
+    % arcs
+    \tdplotdrawarc[->]{(O)}{0.5}{0}{70}
+      {above=2pt,right=-1pt,anchor=mid west}{$R_z(\frac{\pi}{2})$}
+\end{tikzpicture}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tdplotsetmaincoords{75}{50} % to reset previous setting
+\begin{tikzpicture}[scale=3,cap=round]
+  % Local definitions
+  \def\rayon{0.75}
+  \def\cosazim{0.1908}
+  \def\sinazim{0.9816}
+  \def\ATLASx{-\cosazim}
+  \def\ATLASy{-\sinazim}
+  \def\LHCbx{0.5592}
+  \def\LHCby{-0.8290}
+  \def\ALICEx{-0.8290}
+  \def\ALICEy{-0.5592}
+
+
+  % Colors
+  \colorlet{anglecolor}{green!50!black}
+  \colorlet{sincolor}{red}
+  \colorlet{tancolor}{orange!80!black}
+  \colorlet{coscolor}{blue}
+
+  % Styles
+  \tikzstyle{axes}=[]
+  \tikzstyle{important line}=[very thick]
+  \tikzstyle{information text}=[rounded corners,fill=red!10,inner sep=1ex]
+
+  % The graphic
+  \draw (0,0) circle (\rayon);
+
+  \draw[thick,->] (\rayon*\cosazim,\rayon*\sinazim) -- (\rayon*\cosazim-0.5*\sinazim,\rayon*\sinazim+\rayon*\cosazim)
+  node[anchor=north east]{$z$};
+  \draw[thick,dashed] (\rayon*\cosazim,\rayon*\sinazim) -- (\rayon*\cosazim+0.5*\sinazim,\rayon*\sinazim-\rayon*\cosazim)
+  node[anchor=north east]{};
+
+  \draw[thick,->] (\rayon*\cosazim,\rayon*\sinazim) -- (\rayon*\cosazim+\rayon*\cosazim,0.5*\sinazim+\rayon*\sinazim)
+  node[anchor=north west]{$y'$};
+
+  \draw (\rayon*\cosazim,\rayon*\sinazim) circle (0.05)
+  node[anchor=south west]{$x'$};
+
+  \begin{scope}[style=axes]
+    \draw[->,black!50] (\rayon*\cosazim,\rayon*\sinazim-0.5) -- (\rayon*\cosazim,1.5) node[above] {N};
+%    \draw[->] (-1,0) -- (1,0) node[right] {E};
+  \end{scope}
+
+  % arcs
+  \tdplotdrawarc[->]{(\rayon*\cosazim,\rayon*\sinazim)}{-0.3}{-16}{-90}
+    {above=2pt,right=1pt,anchor=mid east}{$R_{x'}(\textcolor{red}{-}(\pi - \theta))$}
+
+  % points
+    \fill[radius=0.8pt,black!20!blue]
+        (\rayon*\ATLASx,\rayon*\ATLASy) circle
+        node[right=4pt,below=2pt,scale=0.9] {ATLAS};
+    \fill[radius=0.8pt,black!60!green]
+        (\rayon*\LHCbx,\rayon*\LHCby) circle
+        node[right=4pt,below=2pt,scale=0.9] {LHCb};
+    \fill[radius=0.8pt,black!10!orange]
+        (\rayon*\ALICEx,\rayon*\ALICEy) circle
+        node[right=4pt,below=2pt,scale=0.9] {ALICE};
+    \fill[radius=0.8pt,black!20!red]
+        (\rayon*\cosazim,\rayon*\sinazim) circle
+        node[right=4pt,below=2pt,scale=0.9] {CMS};
+    \node[right] at (-0.3,0.2) {LHC};
+
+\end{tikzpicture}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tdplotsetmaincoords{75}{50} % to reset previous setting
+\begin{tikzpicture}[scale=3,cap=round]
+
+    \def\rayon{0.75}
+    \def\LHCx{-0.6947}
+    \def\LHCy{0.7193}
+
+
+    % The graphic
+    \draw[blue] (0,0) circle (\rayon);
+    \node[right,blue] at (0.1,0.2) {Earth};
+
+    \draw[thick,->] (\rayon*\LHCx,\rayon*\LHCy) -- (1.75*\rayon*\LHCx,1.75*\rayon*\LHCy)
+    node[anchor=north east]{$x'$};
+    \draw[thick,->] (\rayon*\LHCx,\rayon*\LHCy) -- (\rayon*\LHCx+0.75*\rayon*\LHCy,\rayon*\LHCy+0.75*\rayon*\LHCy)
+    node[anchor=west]{$z''$};
+    \draw (\rayon*\LHCx,\rayon*\LHCy) circle (0.05)
+    node[anchor=east]{$y''$};
+
+    \draw[thick,dashed] (0,0) -- (\rayon*\LHCx,\rayon*\LHCy)
+    node[anchor=north east]{};
+    \draw[thick,dashed] (0,0) -- (-\rayon,0)
+    node[anchor=north east]{};
+
+    \begin{scope}[]
+      \draw[->,black!50] (\rayon*\LHCx,\rayon*\LHCy) -- (\rayon*\LHCx,\rayon*\LHCy*2.5) node[above] {Z (SCF)};
+    \end{scope}
+
+    % angle
+    \filldraw[fill=green!20,draw=green!50!black] (0,0) -- (134:3mm) arc(134:180:3mm);
+            \draw (160:5mm) node[green!50!black] {$\lambda$};
+
+    % arcs
+    \tdplotdrawarc[->]{(\rayon*\LHCx,\rayon*\LHCy) }{0.3}{45}{90}
+      {above=2pt,right=1pt,anchor=south}{$R_{y''}(\lambda)$}
+
+    % points
+    \fill[radius=0.8pt,black!20!red]
+        (\rayon*\LHCx,\rayon*\LHCy) circle
+        node[right=4pt,below=2pt,scale=0.9] {LHC};
+
+\end{tikzpicture}
+
+
+
+\end{document}

@@ -1,0 +1,69 @@
+
+\documentclass{article}
+
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+
+
+% split figures into pages
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{1pt}%
+
+
+
+\begin{document}
+
+\begin{tikzpicture}
+\def\rcircle{3}
+\def\overlappct{.6}
+
+
+\definecolor{redQCD}{RGB}{255,0,0}
+\definecolor{greenQCD}{RGB}{0,255,0}
+\definecolor{blueQCD}{RGB}{0,0,255}
+\definecolor{yellowQCD}{RGB}{255,255,0}
+\definecolor{cyanQCD}{RGB}{0,255,255}
+\definecolor{magentaQCD}{RGB}{255,0,255}
+
+\fill [yellowQCD] (90:\overlappct*\rcircle) circle (\rcircle);
+\fill [magentaQCD] (90-120:\overlappct*\rcircle) circle (\rcircle);
+\fill [cyanQCD] (90+120:\overlappct*\rcircle) circle (\rcircle);
+
+\begin{scope}
+\clip (90:\overlappct*\rcircle) circle (\rcircle);
+\clip (90+120:\overlappct*\rcircle) circle (\rcircle);
+\fill [greenQCD] (90:\overlappct*\rcircle) circle (\rcircle);
+\end{scope}
+
+\begin{scope}
+\clip (90:\overlappct*\rcircle) circle (\rcircle);
+\clip (90-120:\overlappct*\rcircle) circle (\rcircle);
+\fill [redQCD] (90:\overlappct*\rcircle) circle (\rcircle);
+\end{scope}
+
+\begin{scope}
+\clip (90-120:\overlappct*\rcircle) circle (\rcircle);
+\clip (90+120:\overlappct*\rcircle) circle (\rcircle);
+\fill [blueQCD] (90-120:\overlappct*\rcircle) circle (\rcircle);
+\end{scope}
+
+\begin{scope}
+\clip (90:\overlappct*\rcircle) circle (\rcircle);
+\clip (90-120:\overlappct*\rcircle) circle (\rcircle);
+\clip (90+120:\overlappct*\rcircle) circle (\rcircle);
+\fill [white] (90-120:\overlappct*\rcircle) circle (\rcircle);
+\end{scope}
+
+\draw (90:\overlappct*\rcircle+.5*\rcircle) node {} ;
+\draw (90-120:\overlappct*\rcircle+.5*\rcircle) node [rotate=60] {} ;
+\draw (90+120:\overlappct*\rcircle+.5*\rcircle) node [rotate=-60] {} ;
+
+%\draw (-90:\overlappct*\rcircle+0*\rcircle) node {bleu} ;
+%\draw (-90-120:\overlappct*\rcircle+0*\rcircle) node [rotate=60] {vert} ;
+%\draw (-90+120:\overlappct*\rcircle+0*\rcircle) node [rotate=-60] {rouge} ;
+
+\draw (0,0) node {};
+
+\end{tikzpicture}
+\end{document}
